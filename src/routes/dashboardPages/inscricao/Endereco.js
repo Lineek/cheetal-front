@@ -1,7 +1,7 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import Select from 'react-select';
-import ControlLabel from 'react-bootstrap';
+// import Select from 'react-select';
+// import ControlLabel from 'react-bootstrap';
 
 const validate = values => {
   const errors = {};
@@ -52,7 +52,7 @@ const Endereco = (
     </div>
     <div className="content">
       <form onSubmit>
-        <div className="form-group">
+        {/* <div className="form-group">
           <ControlLabel>Logradouro *</ControlLabel>
           <Field
             name="logradouro"
@@ -90,7 +90,7 @@ const Endereco = (
             name="cep"
             type="text"
           />
-        </div>
+        </div> */}
         <button type="submit" className="btn btn-fill btn-info">Concluir</button>
       </form>
     </div>

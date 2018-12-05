@@ -1,7 +1,7 @@
 import React from 'react';
-import { Field, reduxForm } from 'redux-form';
+// import { Field, reduxForm } from 'redux-form';
 
-const ComoConheceu = (
+function ComoConheceu(props, context) {
   <div className="card">
     <div className="header">
       <h4>Como Conheceu o projeto Geração Futura?</h4>
@@ -9,10 +9,10 @@ const ComoConheceu = (
     <div className="content">
       <form onSubmit>
         <div className="form-group">
-          <Field
+          {/* <Field
             name="comoconheceu"
             type="text"
-          />
+          /> */}
           <select name="**SELECIONE**">
             <option value="**SELECIONE**">**SELECIONE**</option>
             <option value="id">VALOR BANCO</option>
@@ -22,9 +22,7 @@ const ComoConheceu = (
       </form>
     </div>
   </div>
-);
+}
 
-export default reduxForm({
-  form: 'comoconheceu',
-})(ComoConheceu);
+export default ComoConheceu;
 

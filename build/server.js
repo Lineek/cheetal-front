@@ -116,7 +116,7 @@ module.exports =
   
   var _routes2 = _interopRequireDefault(_routes);
   
-  var _assets = __webpack_require__(196);
+  var _assets = __webpack_require__(203);
   
   var _assets2 = _interopRequireDefault(_assets);
   
@@ -975,7 +975,11 @@ module.exports =
   
   var _create2 = _interopRequireDefault(_create);
   
-  var _error = __webpack_require__(195);
+  var _teste = __webpack_require__(204);
+  
+  var _teste2 = _interopRequireDefault(_teste);
+  
+  var _error = __webpack_require__(202);
   
   var _error2 = _interopRequireDefault(_error);
   
@@ -984,16 +988,6 @@ module.exports =
   var _Header2 = _interopRequireDefault(_Header);
   
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-  
-  // Child routes
-  /**
-   * React Starter Kit (https://www.reactstarterkit.com/)
-   *
-   * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.
-   *
-   * This source code is licensed under the MIT license found in the
-   * LICENSE.txt file in the root directory of this source tree.
-   */
   
   exports.default = [{
     path: '/login',
@@ -1046,7 +1040,7 @@ module.exports =
     // contact,
     _tables2.default, _buttons2.default, _flotCharts2.default, _forms2.default, _grid2.default, _icons2.default, _morrisjsCharts2.default, _notification2.default, _panelWells2.default, _typography2.default,
     // register,
-    _blank2.default, _processoSeletivo2.default,
+    _blank2.default, _processoSeletivo2.default, _teste2.default,
   
     // place new routes before...
     // content,
@@ -1145,6 +1139,16 @@ module.exports =
       }))();
     }
   }];
+  
+  // Child routes
+  /**
+   * React Starter Kit (https://www.reactstarterkit.com/)
+   *
+   * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.
+   *
+   * This source code is licensed under the MIT license found in the
+   * LICENSE.txt file in the root directory of this source tree.
+   */
 
 /***/ }),
 /* 28 */
@@ -30707,7 +30711,14 @@ module.exports =
   exports.default = displayProcessoSeletivoCreate;
 
 /***/ }),
-/* 195 */
+/* 195 */,
+/* 196 */,
+/* 197 */,
+/* 198 */,
+/* 199 */,
+/* 200 */,
+/* 201 */,
+/* 202 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -30756,10 +30767,152 @@ module.exports =
       */
 
 /***/ }),
-/* 196 */
+/* 203 */
 /***/ (function(module, exports) {
 
   module.exports = require("./assets");
+
+/***/ }),
+/* 204 */
+/***/ (function(module, exports, __webpack_require__) {
+
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  
+  var _react = __webpack_require__(11);
+  
+  var _react2 = _interopRequireDefault(_react);
+  
+  var _comoConheceu = __webpack_require__(205);
+  
+  var _comoConheceu2 = _interopRequireDefault(_comoConheceu);
+  
+  var _processoSeletivo = __webpack_require__(187);
+  
+  var _processoSeletivo2 = _interopRequireDefault(_processoSeletivo);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  exports.default = {
+  
+    path: '/teste',
+  
+    action: function action() {
+      return _react2.default.createElement(_comoConheceu2.default, null);
+    }
+  };
+
+/***/ }),
+/* 205 */
+/***/ (function(module, exports, __webpack_require__) {
+
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
+      value: true
+  });
+  
+  var _react = __webpack_require__(11);
+  
+  var _react2 = _interopRequireDefault(_react);
+  
+  var _reactBootstrap = __webpack_require__(38);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  var title = 'Teste';
+  
+  function ComoConheceu(props, context) {
+      context.setTitle(title);
+      return _react2.default.createElement(
+          'div',
+          { className: 'card' },
+          _react2.default.createElement(
+              'div',
+              { className: 'header' },
+              _react2.default.createElement(
+                  'h4',
+                  null,
+                  'Como Conheceu o projeto Gera\xE7\xE3o Futura?'
+              )
+          ),
+          _react2.default.createElement(
+              'div',
+              { className: 'content' },
+              _react2.default.createElement(
+                  'form',
+                  { onSubmit: true },
+                  _react2.default.createElement(
+                      'div',
+                      { className: 'form-group' },
+                      _react2.default.createElement(
+                          _reactBootstrap.FormGroup,
+                          { controlId: 'formControlsSelect' },
+                          _react2.default.createElement(
+                              _reactBootstrap.ControlLabel,
+                              null,
+                              'Select'
+                          ),
+                          _react2.default.createElement(
+                              _reactBootstrap.FormControl,
+                              { componentClass: 'select', placeholder: 'select' },
+                              _react2.default.createElement(
+                                  'option',
+                                  { value: '1' },
+                                  '1'
+                              ),
+                              _react2.default.createElement(
+                                  'option',
+                                  { value: '2' },
+                                  '2'
+                              ),
+                              _react2.default.createElement(
+                                  'option',
+                                  { value: '3' },
+                                  '3'
+                              ),
+                              _react2.default.createElement(
+                                  'option',
+                                  { value: '4' },
+                                  '4'
+                              ),
+                              _react2.default.createElement(
+                                  'option',
+                                  { value: '5' },
+                                  '5'
+                              )
+                          )
+                      ),
+                      _react2.default.createElement(
+                          'select',
+                          { name: '**SELECIONE**' },
+                          _react2.default.createElement(
+                              'option',
+                              { value: '**SELECIONE**' },
+                              '**SELECIONE**'
+                          ),
+                          _react2.default.createElement(
+                              'option',
+                              { value: 'id' },
+                              'VALOR BANCO'
+                          )
+                      )
+                  ),
+                  _react2.default.createElement(
+                      'button',
+                      { type: 'submit', className: 'btn btn-fill btn-info btn-label-right' },
+                      'Pr\xF3ximo'
+                  )
+              )
+          )
+      );
+  }
+  
+  ComoConheceu.contextTypes = { setTitle: _react.PropTypes.func.isRequired };
+  exports.default = ComoConheceu;
 
 /***/ })
 /******/ ]);

@@ -46,7 +46,6 @@
     "sequelize": "3.24.1",
     "source-map-support": "0.4.2",
     "sqlite": "^3.0.0",
-    "sqlite3": "^3.1.13",
     "universal-router": "1.2.2",
     "whatwg-fetch": "1.0.0"
   },
@@ -199,4 +198,3 @@
     "start": "babel-node tools/run start"
   }
 }
-

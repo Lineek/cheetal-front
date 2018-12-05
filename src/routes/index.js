@@ -27,6 +27,7 @@ import blank from './dashboardPages/blank';
 import processoseletivo from './dashboardPages/processoSeletivo';
 import processoseletivoEdit from './dashboardPages/processoSeletivo/edit';
 import processoseletivoCreate from './dashboardPages/processoSeletivo/create';
+import inscricao from './dashboardPages/teste';
 import error from './error';
 
 import Header from '../components/Header';
@@ -68,6 +69,7 @@ export default [
       // register,
       blank,
       processoseletivo,
+      inscricao,
 
       // place new routes before...
       // content,

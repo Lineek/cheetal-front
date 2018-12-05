@@ -1,6 +1,6 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import ControlLabel from 'react-bootstrap';
+// import ControlLabel from 'react-bootstrap';
 
 const validate = values => {
   const errors = {};
@@ -20,11 +20,11 @@ const CriarSenha = (
     <div className="content">
       <form onSubmit>
         <div className="form-group">
-          <ControlLabel>Senha *</ControlLabel>
+          {/* <ControlLabel>Senha *</ControlLabel>
           <Field
             name="password"
             type="password"
-          />
+          /> */}
         </div>
         <button type="submit" className="btn btn-fill btn-info">Próximo</button>
       </form>

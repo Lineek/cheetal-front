@@ -1,6 +1,6 @@
 import React from 'react';
-import { Field, reduxForm } from 'redux-form';
-import ControlLabel from 'react-bootstrap';
+// import { reduxForm } from 'redux-form';
+// import {ControlLabel, FormControl} from 'react-bootstrap';
 
 const validate = values => {
   const errors = {};
@@ -22,44 +22,44 @@ const validate = values => {
   return errors;
 };
 
-const DadosPessoais = (
+function DadosPessoais(props, context) {
   <div className="card">
     <div className="header">
       <h4>Dados Pessoais</h4>
     </div>
     <div className="content">
-      <form onSubmit>
+      {/* <form onSubmit>
         <div className="form-group">
           <ControlLabel>Nome Completo *</ControlLabel>
-          <Field
+          <FormControl
             name="nome"
             type="text"
           />
         </div>
         <div className="form-group">
           <ControlLabel>Email *</ControlLabel>
-          <Field
+          <FormControl
             name="email"
             type="email"
           />
         </div>
         <div className="form-group">
           <ControlLabel>Data de Nascimento*</ControlLabel>
-          <Field
+          <FormControl
             name="date"
             type="date"
           />
         </div>
         <div className="form-group">
           <ControlLabel>RG *</ControlLabel>
-          <Field
+          <FormControl
             name="rg"
             type="text"
           />
         </div>
         <div className="form-group">
           <ControlLabel>CPF *</ControlLabel>
-          <Field
+          <FormControl
             name="cpf"
             type="text"
           />
@@ -67,19 +67,19 @@ const DadosPessoais = (
         <div className="form-group">
           <ControlLabel col-md-3>Sexo *</ControlLabel>
           <div className="col-md-9 checkbox-group">
-            <Field
+            <FormControl
               name="radioGroupSex"
               type="radio"
               label="Masculino"
               value="masculino"
             />
-            <Field
+            <FormControl
               name="radioGroupSex"
               type="radio"
               label="Feminino"
               value="feminino"
             />
-            <Field
+            <FormControl
               name="radioGroupSex"
               type="radio"
               label="Não declarado"
@@ -89,11 +89,11 @@ const DadosPessoais = (
         </div>
         <div className="form-group">
           <ControlLabel>Nome da Mãe *</ControlLabel>
-          <Field
+          <FormControl
             name="mae"
             type="text"
           />
-          <Field
+          <FormControl
             name="radioMae"
             type="radio"
             label="Não declarado"
@@ -102,11 +102,11 @@ const DadosPessoais = (
         </div>
         <div className="form-group">
           <ControlLabel>Nome do Pai *</ControlLabel>
-          <Field
+          <FormControl
             name="pai"
             type="text"
           />
-          <Field
+          <FormControl
             name="radioPai"
             type="radio"
             label="Não declarado"
@@ -115,23 +115,20 @@ const DadosPessoais = (
         </div>
         <div className="form-group">
           <ControlLabel>Telefone *</ControlLabel>
-          <Field
+          <FormControl
             name="telefone"
             type="text"
           />
           <ControlLabel>Celular *</ControlLabel>
-          <Field
+          <FormControl
             name="celular"
             type="text"
           />
         </div>
         <button type="submit" className="btn btn-info">Próximo</button>
-      </form>
+      </form> */}
     </div>
   </div>
-);
+}
 
-export default reduxForm({
-  form: 'dadosPessoais',
-  validate,
-})(DadosPessoais);
+export default DadosPessoais;
