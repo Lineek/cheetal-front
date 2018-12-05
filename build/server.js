@@ -116,7 +116,7 @@ module.exports =
   
   var _routes2 = _interopRequireDefault(_routes);
   
-  var _assets = __webpack_require__(195);
+  var _assets = __webpack_require__(196);
   
   var _assets2 = _interopRequireDefault(_assets);
   
@@ -971,11 +971,11 @@ module.exports =
   
   var _edit2 = _interopRequireDefault(_edit);
   
-  var _create = __webpack_require__(196);
+  var _create = __webpack_require__(193);
   
   var _create2 = _interopRequireDefault(_create);
   
-  var _error = __webpack_require__(194);
+  var _error = __webpack_require__(195);
   
   var _error2 = _interopRequireDefault(_error);
   
@@ -30495,6 +30495,10 @@ module.exports =
   
       var _this = (0, _possibleConstructorReturn3.default)(this, (ProcessoSeletivoEdit.__proto__ || (0, _getPrototypeOf2.default)(ProcessoSeletivoEdit)).call(this, props));
   
+      _this.handleChange = function (e) {
+        _this.setState({ descricao: e.target.value });
+      };
+  
       _this.state = {
         id: getParameterByName('id'),
         descricao: '',
@@ -30502,6 +30506,7 @@ module.exports =
         dataFim: null,
         schemas: {}
       };
+  
       _this.theurl = 'https://jcapi.azurewebsites.net/';
       return _this;
     }
@@ -30520,12 +30525,25 @@ module.exports =
           }).catch(function (error) {
             return console.log(error.response);
           });
-        }
+        };
       }
     }, {
-      key: 'handleChangeDescricao',
-      value: function handleChangeDescricao(e) {
-        this.setState({ descricao: e.target.value });
+      key: 'handleSubmitButton',
+      value: function handleSubmitButton() {
+        if (this.state.id !== null) {
+          var x = {
+            id: this.state.id,
+            descricao: this.state.descricao,
+            dataInicio: this.state.dataInicio,
+            dataFim: this.state.dataFim
+          };
+          console.log(x);
+          // if (x !== this.state.schemas) {
+          //   axios
+          //   .put(this.theurl + "processoseletivo/" + x.id, x)
+          //   .catch(error => console.log(error.response));
+          // }
+        } else {}
       }
     }, {
       key: 'render',
@@ -30572,10 +30590,10 @@ module.exports =
                     null,
                     _react2.default.createElement(
                       'div',
-                      { className: 'col-lg-6' },
+                      { className: 'col-lg-12' },
                       _react2.default.createElement(
                         _reactBootstrap.FormGroup,
-                        { controlId: 'inputId' },
+                        { controlId: 'descInput' },
                         _react2.default.createElement(
                           _reactBootstrap.ControlLabel,
                           null,
@@ -30585,35 +30603,17 @@ module.exports =
                           type: 'text',
                           value: this.state.descricao,
                           placeholder: this.state.schemas.descricao,
-                          onChange: this.handleChangeDescricao
+                          onChange: this.handleChange
                         })
                       )
                     ),
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'col-lg-6' },
-                      _react2.default.createElement(
-                        _reactBootstrap.FormGroup,
-                        { controlId: 'teste' },
-                        _react2.default.createElement(
-                          _reactBootstrap.ControlLabel,
-                          null,
-                          'Descri\xE7\xE3o'
-                        ),
-                        _react2.default.createElement(_reactBootstrap.FormControl, {
-                          type: 'text',
-                          value: this.state.descricao,
-                          placeholder: this.state.schemas.descricao,
-                          onChange: this.handleChangeDescricao
-                        })
-                      )
-                    )
+                    _react2.default.createElement('div', { className: 'col-lg-6' })
                   )
                 ),
                 _react2.default.createElement(
                   _reactBootstrap.Button,
                   { onClick: function onClick() {
-                      return console.log(_this3.state.id);
+                      return console.log(_this3.state.descricao);
                     } },
                   'Click Me'
                 )
@@ -30629,8 +30629,85 @@ module.exports =
   exports.default = ProcessoSeletivoEdit;
 
 /***/ }),
-/* 193 */,
+/* 193 */
+/***/ (function(module, exports, __webpack_require__) {
+
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  
+  var _react = __webpack_require__(11);
+  
+  var _react2 = _interopRequireDefault(_react);
+  
+  var _create = __webpack_require__(194);
+  
+  var _create2 = _interopRequireDefault(_create);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  exports.default = {
+  
+    path: '/pscriar',
+  
+    action: function action() {
+      return _react2.default.createElement(_create2.default, null);
+    }
+  };
+
+/***/ }),
 /* 194 */
+/***/ (function(module, exports, __webpack_require__) {
+
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  
+  var _react = __webpack_require__(11);
+  
+  var _react2 = _interopRequireDefault(_react);
+  
+  var _reactBootstrap = __webpack_require__(38);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  var title = 'Criação de Processo Seletivo';
+  
+  function displayProcessoSeletivoCreate(props, context) {
+    context.setTitle(title);
+    return _react2.default.createElement(
+      'div',
+      null,
+      _react2.default.createElement(
+        'div',
+        { className: 'row' },
+        _react2.default.createElement(
+          'div',
+          { className: 'col-lg-12' },
+          _react2.default.createElement(
+            _reactBootstrap.PageHeader,
+            null,
+            'Cria\xE7\xE3o de Processo Seletivo'
+          )
+        )
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'row' },
+        _react2.default.createElement('div', { className: 'col-lg-12' })
+      )
+    );
+  }
+  
+  displayProcessoSeletivoCreate.contextTypes = { setTitle: _react.PropTypes.func.isRequired };
+  exports.default = displayProcessoSeletivoCreate;
+
+/***/ }),
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -30679,89 +30756,10 @@ module.exports =
       */
 
 /***/ }),
-/* 195 */
+/* 196 */
 /***/ (function(module, exports) {
 
   module.exports = require("./assets");
-
-/***/ }),
-/* 196 */
-/***/ (function(module, exports, __webpack_require__) {
-
-  'use strict';
-  
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  
-  var _react = __webpack_require__(11);
-  
-  var _react2 = _interopRequireDefault(_react);
-  
-  var _create = __webpack_require__(198);
-  
-  var _create2 = _interopRequireDefault(_create);
-  
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-  
-  exports.default = {
-  
-    path: '/pscriar',
-  
-    action: function action() {
-      return _react2.default.createElement(_create2.default, null);
-    }
-  };
-
-/***/ }),
-/* 197 */,
-/* 198 */
-/***/ (function(module, exports, __webpack_require__) {
-
-  'use strict';
-  
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  
-  var _react = __webpack_require__(11);
-  
-  var _react2 = _interopRequireDefault(_react);
-  
-  var _reactBootstrap = __webpack_require__(38);
-  
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-  
-  var title = 'Criação de Processo Seletivo';
-  
-  function displayProcessoSeletivoCreate(props, context) {
-    context.setTitle(title);
-    return _react2.default.createElement(
-      'div',
-      null,
-      _react2.default.createElement(
-        'div',
-        { className: 'row' },
-        _react2.default.createElement(
-          'div',
-          { className: 'col-lg-12' },
-          _react2.default.createElement(
-            _reactBootstrap.PageHeader,
-            null,
-            'Cria\xE7\xE3o de Processo Seletivo'
-          )
-        )
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'row' },
-        _react2.default.createElement('div', { className: 'col-lg-12' })
-      )
-    );
-  }
-  
-  displayProcessoSeletivoCreate.contextTypes = { setTitle: _react.PropTypes.func.isRequired };
-  exports.default = displayProcessoSeletivoCreate;
 
 /***/ })
 /******/ ]);

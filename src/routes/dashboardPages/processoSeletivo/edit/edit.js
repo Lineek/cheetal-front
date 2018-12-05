@@ -24,6 +24,7 @@ function getParameterByName(name, url) {
 class ProcessoSeletivoEdit extends Component {
     constructor (props) {
       super(props);
+
       this.state = {
         id: getParameterByName('id'),
         descricao: '',
@@ -31,6 +32,7 @@ class ProcessoSeletivoEdit extends Component {
         dataFim: null,
         schemas: {}
       };
+
       this.theurl='https://jcapi.azurewebsites.net/';
     }
 
@@ -45,12 +47,29 @@ class ProcessoSeletivoEdit extends Component {
               })
             )
           .catch(error => console.log(error.response));
-          }
+          };
     }
 
-    handleChangeDescricao(e) {
+    handleChange = (e) => {
       this.setState({ descricao: e.target.value });
     }
+
+    handleSubmitButton() {
+      if (this.state.id !== null) {
+        var x = { 
+          id: this.state.id,
+          descricao: this.state.descricao,
+          dataInicio: this.state.dataInicio,
+          dataFim: this.state.dataFim
+        };
+        console.log(x);
+        // if (x !== this.state.schemas) {
+        //   axios
+        //   .put(this.theurl + "processoseletivo/" + x.id, x)
+        //   .catch(error => console.log(error.response));
+        // }
+      } else {}
+    };
 
     render() {
         return (
@@ -65,31 +84,31 @@ class ProcessoSeletivoEdit extends Component {
                 <Panel header={<span>Editar</span>} >
                   <div className="row">
                     <Form>
-                      <div className="col-lg-6">
-                        <FormGroup controlId="inputId">
+                      <div className="col-lg-12">
+                        <FormGroup controlId="descInput">
                           <ControlLabel>Descrição</ControlLabel>
                           <FormControl
                             type="text"
                             value={this.state.descricao}
                             placeholder={this.state.schemas.descricao}
-                            onChange={this.handleChangeDescricao} 
+                            onChange={this.handleChange} 
                           />
                         </FormGroup>
                       </div>
                       <div className="col-lg-6">
-                        <FormGroup controlId="testes">
+                        {/* <FormGroup controlId="testes">
                           <ControlLabel>Descrição</ControlLabel>
                           <FormControl
                             type="text"
-                            value={this.state.descricao}
+                            // value={this.state.descricao}
                             placeholder={this.state.schemas.descricao}
-                            onChange={this.handleChangeDescricao} 
+                            // onChange={this.handleChangeDescricao} 
                           />
-                        </FormGroup>
+                        </FormGroup> */}
                       </div>
                     </Form>
                   </div>
-                  <Button onClick={() => console.log(this.state.id)}>Click Me</Button>
+                  <Button onClick={() => console.log(this.state.descricao)}>Click Me</Button>
                 </Panel>
               </div>
             </div>
