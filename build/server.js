@@ -30568,11 +30568,11 @@ module.exports =
                   'div',
                   { className: 'row' },
                   _react2.default.createElement(
-                    'div',
-                    { className: 'col-lg-6' },
+                    _reactBootstrap.Form,
+                    null,
                     _react2.default.createElement(
-                      _reactBootstrap.Form,
-                      null,
+                      'div',
+                      { className: 'col-lg-6' },
                       _react2.default.createElement(
                         _reactBootstrap.FormGroup,
                         { controlId: 'inputId' },
@@ -30585,7 +30585,27 @@ module.exports =
                           type: 'text',
                           value: this.state.descricao,
                           placeholder: this.state.schemas.descricao,
-                          onChange: this.handleChangeDescricao })
+                          onChange: this.handleChangeDescricao
+                        })
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'col-lg-6' },
+                      _react2.default.createElement(
+                        _reactBootstrap.FormGroup,
+                        { controlId: 'teste' },
+                        _react2.default.createElement(
+                          _reactBootstrap.ControlLabel,
+                          null,
+                          'Descri\xE7\xE3o'
+                        ),
+                        _react2.default.createElement(_reactBootstrap.FormControl, {
+                          type: 'text',
+                          value: this.state.descricao,
+                          placeholder: this.state.schemas.descricao,
+                          onChange: this.handleChangeDescricao
+                        })
                       )
                     )
                   )
@@ -30596,8 +30616,7 @@ module.exports =
                       return console.log(_this3.state.id);
                     } },
                   'Click Me'
-                ),
-                _react2.default.createElement('br', null)
+                )
               )
             )
           )

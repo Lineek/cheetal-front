@@ -64,20 +64,32 @@ class ProcessoSeletivoEdit extends Component {
                <div className="col-lg-12">
                 <Panel header={<span>Editar</span>} >
                   <div className="row">
-                    <div className="col-lg-6">
-                      <Form>
+                    <Form>
+                      <div className="col-lg-6">
                         <FormGroup controlId="inputId">
                           <ControlLabel>Descrição</ControlLabel>
                           <FormControl
-                          type="text"
-                          value={this.state.descricao}
-                          placeholder={this.state.schemas.descricao}
-                          onChange={this.handleChangeDescricao} />
+                            type="text"
+                            value={this.state.descricao}
+                            placeholder={this.state.schemas.descricao}
+                            onChange={this.handleChangeDescricao} 
+                          />
                         </FormGroup>
-                      </Form>
-                    </div>
+                      </div>
+                      <div className="col-lg-6">
+                        <FormGroup controlId="testes">
+                          <ControlLabel>Descrição</ControlLabel>
+                          <FormControl
+                            type="text"
+                            value={this.state.descricao}
+                            placeholder={this.state.schemas.descricao}
+                            onChange={this.handleChangeDescricao} 
+                          />
+                        </FormGroup>
+                      </div>
+                    </Form>
                   </div>
-                  <Button onClick={() => console.log(this.state.id)}>Click Me</Button><br />
+                  <Button onClick={() => console.log(this.state.id)}>Click Me</Button>
                 </Panel>
               </div>
             </div>
