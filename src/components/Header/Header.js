@@ -143,7 +143,11 @@ function Header() {
                     <span> <i className = "fa fa-eye fa-fw" /> Premium React Themes </span>
                   </MenuItem>
                   <MenuItem divider />
-                  <MenuItem eventKey = "4" onClick = {(event) => { history.push('/login');}}>
+                  <MenuItem eventKey = "4" onClick = {(event) => { 
+                    localStorage.removeItem("userId");
+                    localStorage.removeItem("userName");
+                    localStorage.removeItem("userType");
+                    history.push('/login');}}>
                     <span> <i className = "fa fa-sign-out fa-fw" /> Logout </span>
                   </MenuItem>
             </NavDropdown>

@@ -15,9 +15,16 @@ class Sidebar extends Component {
     };
   }
 
+  componentWillMount() {
+    if (localStorage.getItem("userType") !== "admin") {
+      history.push('/login');
+    }
+  }
+
   render() {
     return (
       <div className="navbar-default sidebar" style={{ marginLeft: '-20px' }} role="navigation">
+        <div ref='root' className='root'></div>
         <div className="sidebar-nav navbar-collapse collapse">
           <ul className="nav in" id="side-menu">
             <li className="sidebar-search">

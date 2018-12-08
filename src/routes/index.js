@@ -48,6 +48,19 @@ export default [
     },
   },
 
+  {
+    path: '/teste',
+    children: [
+      inscricao,
+    ],
+    async action({ next, render, context }) {
+      const component = await next();
+      if (component === undefined) return component;
+      return render(
+        <App context={context}>{component}</App>
+      );
+    },
+  },
 
   {
     path: '/',
@@ -69,7 +82,6 @@ export default [
       // register,
       blank,
       processoseletivo,
-      inscricao,
 
       // place new routes before...
       // content,

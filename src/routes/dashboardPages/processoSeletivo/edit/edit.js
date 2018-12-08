@@ -9,6 +9,7 @@ import {
   Panel
    } from 'react-bootstrap';
 import axios from 'axios';
+import Select from 'react-select';
 
 
 function getParameterByName(name, url) {
@@ -95,7 +96,8 @@ class ProcessoSeletivoEdit extends Component {
                           />
                         </FormGroup>
                       </div>
-                      <div className="col-lg-6">
+                      <div className="col-lg-12">
+                        <Select />
                         {/* <FormGroup controlId="testes">
                           <ControlLabel>Descrição</ControlLabel>
                           <FormControl

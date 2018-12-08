@@ -38,7 +38,7 @@ function Home(props, context) {
     <div>
       <div className="row">
         <div className="col-lg-12">
-          <PageHeader>Dashboard</PageHeader>
+          <PageHeader>Bem vindo, {localStorage.getItem("userType")} {localStorage.getItem("userName")}</PageHeader>
         </div>
       </div>
 
