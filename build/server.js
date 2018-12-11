@@ -116,7 +116,7 @@ module.exports =
   
   var _routes2 = _interopRequireDefault(_routes);
   
-  var _assets = __webpack_require__(201);
+  var _assets = __webpack_require__(207);
   
   var _assets2 = _interopRequireDefault(_assets);
   
@@ -979,7 +979,7 @@ module.exports =
   
   var _teste2 = _interopRequireDefault(_teste);
   
-  var _error = __webpack_require__(200);
+  var _error = __webpack_require__(206);
   
   var _error2 = _interopRequireDefault(_error);
   
@@ -2054,13 +2054,6 @@ module.exports =
     }
   
     (0, _createClass3.default)(Sidebar, [{
-      key: 'componentWillMount',
-      value: function componentWillMount() {
-        if (localStorage.getItem("userType") !== "admin") {
-          _history2.default.push('/login');
-        }
-      }
-    }, {
       key: 'render',
       value: function render() {
         var _this2 = this;
@@ -2068,7 +2061,6 @@ module.exports =
         return _react2.default.createElement(
           'div',
           { className: 'navbar-default sidebar', style: { marginLeft: '-20px' }, role: 'navigation' },
-          _react2.default.createElement('div', { ref: 'root', className: 'root' }),
           _react2.default.createElement(
             'div',
             { className: 'sidebar-nav navbar-collapse collapse' },
@@ -2446,17 +2438,6 @@ module.exports =
                           e.preventDefault();_history2.default.push('/login');
                         } },
                       'Login'
-                    )
-                  ),
-                  _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                      'a',
-                      { href: '', onClick: function onClick(e) {
-                          e.preventDefault();_history2.default.push('/ps');
-                        } },
-                      'Processo Seletivo'
                     )
                   )
                 )
@@ -21011,20 +20992,21 @@ module.exports =
   
         event.preventDefault();
         this.setState({ submit: true });
-        var req = _axios2.default.get('https://jcapi.azurewebsites.net/pessoa/validacao?email=' + this.state.email + '&senha=' + this.state.password).then(function (response) {
+        var req = _axios2.default.get('https://jcapi-225112.appspot.com/pessoa/validacao?email=' + this.state.email + '&senha=' + this.state.password).then(function (response) {
           console.log(response.data);
           if (response.status === 200) {
-            if (response.data.origin !== null) {
+            console.log(response.data.origem);
+            if (response.data.origem === null || response.data.origem === undefined) {
               _this2.setState({ type: "admin" });
               localStorage.setItem("userId", response.data.id);
               localStorage.setItem("userName", response.data.nome);
-              localStorage.setItem("userType", "user");
-              _history2.default.push('/');
+              localStorage.setItem("userType", "admin");
+              _history2.default.push('/admin');
             } else {
               _this2.setState({ type: "user" });
               localStorage.setItem("userId", response.data.id);
               localStorage.setItem("userName", response.data.nome);
-              localStorage.setItem("userType", "admin");
+              localStorage.setItem("userType", "user");
               _history2.default.push('/teste');
             }
             _this2.setState({ schema: response.data });
@@ -21071,7 +21053,7 @@ module.exports =
               ), className: 'login-panel' },
             _react2.default.createElement(
               'div',
-              { id: 'errorPanel', className: 'col-lg-12', style: { 'display': 'none' } },
+              { id: 'errorPanel', style: { 'display': 'none' } },
               _react2.default.createElement(_Panel2.default, { header: _react2.default.createElement(
                   'span',
                   null,
@@ -30453,7 +30435,7 @@ module.exports =
       _this.state = {
         schemas: []
       };
-      _this.theurl = 'https://jcapi.azurewebsites.net/';
+      _this.theurl = 'https://jcapi-225112.appspot.com/';
       return _this;
     }
   
@@ -30516,42 +30498,73 @@ module.exports =
               'tbody',
               null,
               this.state.schemas.map(function (e, key) {
-                return _react2.default.createElement(
-                  'tr',
-                  { key: key },
-                  _react2.default.createElement(
-                    'td',
-                    null,
-                    e.id
-                  ),
-                  _react2.default.createElement(
-                    'td',
-                    null,
-                    e.descricao
-                  ),
-                  _react2.default.createElement(
-                    'td',
-                    null,
-                    e.dataInicio
-                  ),
-                  _react2.default.createElement(
-                    'td',
-                    null,
-                    e.dataFim
-                  ),
-                  _react2.default.createElement(
-                    'td',
-                    null,
+                if (e.dataInicio !== null && e.dataFim !== null) {
+                  return _react2.default.createElement(
+                    'tr',
+                    { key: key },
                     _react2.default.createElement(
-                      _reactBootstrap.Button,
-                      { href: '', onClick: function onClick(k) {
-                          k.preventDefault();_history2.default.push({ pathname: '/psedit', search: '?id=' + e.id });
-                        } },
-                      _react2.default.createElement('i', { className: 'fa fa-pencil' }),
-                      ' Editar'
+                      'td',
+                      null,
+                      e.id
+                    ),
+                    _react2.default.createElement(
+                      'td',
+                      null,
+                      e.descricao
+                    ),
+                    _react2.default.createElement(
+                      'td',
+                      null,
+                      e.dataInicio
+                    ),
+                    _react2.default.createElement(
+                      'td',
+                      null,
+                      e.dataFim
+                    ),
+                    _react2.default.createElement(
+                      'td',
+                      null,
+                      _react2.default.createElement(
+                        _reactBootstrap.Button,
+                        { href: '', onClick: function onClick(k) {
+                            k.preventDefault();_history2.default.push({ pathname: '/psedit', search: '?id=' + e.id });
+                          } },
+                        _react2.default.createElement('i', { className: 'fa fa-pencil' }),
+                        ' Editar'
+                      )
                     )
-                  )
-                );
+                  );
+                } else {
+                  return _react2.default.createElement(
+                    'tr',
+                    { key: key },
+                    _react2.default.createElement(
+                      'td',
+                      null,
+                      e.id
+                    ),
+                    _react2.default.createElement(
+                      'td',
+                      null,
+                      e.descricao
+                    ),
+                    _react2.default.createElement('td', null),
+                    _react2.default.createElement('td', null),
+                    _react2.default.createElement(
+                      'td',
+                      null,
+                      _react2.default.createElement(
+                        _reactBootstrap.Button,
+                        { href: '', onClick: function onClick(k) {
+                            k.preventDefault();_history2.default.push({ pathname: '/psedit', search: '?id=' + e.id });
+                          } },
+                        _react2.default.createElement('i', { className: 'fa fa-pencil' }),
+                        ' Editar'
+                      )
+                    )
+                  );
+                }
               })
             )
           )
@@ -30668,7 +30681,7 @@ module.exports =
         schemas: {}
       };
   
-      _this.theurl = 'https://jcapi.azurewebsites.net/';
+      _this.theurl = 'https://jcapi-225112.appspot.com/';
       return _this;
     }
   
@@ -30895,6 +30908,10 @@ module.exports =
   
   var _comoConheceu2 = _interopRequireDefault(_comoConheceu);
   
+  var _jornadaCandidato = __webpack_require__(200);
+  
+  var _jornadaCandidato2 = _interopRequireDefault(_jornadaCandidato);
+  
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
   
   exports.default = {
@@ -30902,7 +30919,7 @@ module.exports =
     path: '/',
   
     action: function action() {
-      return _react2.default.createElement(_comoConheceu2.default, null);
+      return _react2.default.createElement(_jornadaCandidato2.default, null);
     }
   };
 
@@ -31030,7 +31047,7 @@ module.exports =
       _this.state = {
         schemas: []
       };
-      _this.theurl = 'https://jcapi.azurewebsites.net/';
+      _this.theurl = 'https://jcapi-225112.appspot.com/';
       return _this;
     }
   
@@ -31134,7 +31151,7 @@ module.exports =
       _this.state = {
         schemas: []
       };
-      _this.theurl = 'https://jcapi.azurewebsites.net/';
+      _this.theurl = 'https://jcapi-225112.appspot.com/';
       return _this;
     }
   
@@ -31192,6 +31209,557 @@ module.exports =
   'use strict';
   
   Object.defineProperty(exports, "__esModule", {
+      value: true
+  });
+  
+  var _react = __webpack_require__(11);
+  
+  var _react2 = _interopRequireDefault(_react);
+  
+  var _reactBootstrap = __webpack_require__(38);
+  
+  var _Navbar = __webpack_require__(39);
+  
+  var _Navbar2 = _interopRequireDefault(_Navbar);
+  
+  var _Jornada = __webpack_require__(201);
+  
+  var _Jornada2 = _interopRequireDefault(_Jornada);
+  
+  var _history = __webpack_require__(40);
+  
+  var _history2 = _interopRequireDefault(_history);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  var title = 'Jornada do Candidato';
+  
+  function displayJornadaCandidato(props, context) {
+      context.setTitle(title);
+      try {
+          if (localStorage.getItem("userType") !== "user") {
+              _history2.default.push('/login');
+          }
+      } catch (error) {
+          _history2.default.push('/login');
+      }
+      return _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement(
+              'div',
+              { id: 'wrapper', className: 'content' },
+              _react2.default.createElement(
+                  _Navbar2.default,
+                  { fluid: true, style: { margin: 0 } },
+                  _react2.default.createElement(
+                      'ul',
+                      { className: 'nav navbar-top-links navbar-right' },
+                      _react2.default.createElement(
+                          _reactBootstrap.NavDropdown,
+                          { title: _react2.default.createElement('i', { className: 'fa fa-user fa-fw' }), id: 'navDropdown4' },
+                          _react2.default.createElement(
+                              _reactBootstrap.MenuItem,
+                              { eventKey: '1', onClick: function onClick(event) {
+                                      event.preventDefault();
+                                      localStorage.removeItem("userId");
+                                      localStorage.removeItem("userName");
+                                      localStorage.removeItem("userType");
+                                      _history2.default.push('/');
+                                  } },
+                              _react2.default.createElement(
+                                  'span',
+                                  null,
+                                  ' ',
+                                  _react2.default.createElement('i', { className: 'fa fa-sign-out fa-fw' }),
+                                  ' Logout '
+                              )
+                          )
+                      )
+                  )
+              )
+          ),
+          _react2.default.createElement(
+              'div',
+              { className: 'row' },
+              _react2.default.createElement(
+                  'div',
+                  { className: 'col-lg-12' },
+                  _react2.default.createElement(
+                      _reactBootstrap.PageHeader,
+                      null,
+                      'Ol\xE1 ',
+                      localStorage.getItem("userName"),
+                      ', Bem vindo a sua Jornada!'
+                  )
+              )
+          ),
+          _react2.default.createElement(_Jornada2.default, null)
+      );
+  }
+  
+  displayJornadaCandidato.contextTypes = { setTitle: _react.PropTypes.func.isRequired };
+  exports.default = displayJornadaCandidato;
+
+/***/ }),
+/* 201 */
+/***/ (function(module, exports, __webpack_require__) {
+
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
+      value: true
+  });
+  
+  var _getPrototypeOf = __webpack_require__(29);
+  
+  var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+  
+  var _classCallCheck2 = __webpack_require__(30);
+  
+  var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+  
+  var _createClass2 = __webpack_require__(31);
+  
+  var _createClass3 = _interopRequireDefault(_createClass2);
+  
+  var _possibleConstructorReturn2 = __webpack_require__(32);
+  
+  var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+  
+  var _inherits2 = __webpack_require__(33);
+  
+  var _inherits3 = _interopRequireDefault(_inherits2);
+  
+  var _react = __webpack_require__(11);
+  
+  var _react2 = _interopRequireDefault(_react);
+  
+  var _reactBootstrap = __webpack_require__(38);
+  
+  var _axios = __webpack_require__(154);
+  
+  var _axios2 = _interopRequireDefault(_axios);
+  
+  var _Etapa = __webpack_require__(202);
+  
+  var _Etapa2 = _interopRequireDefault(_Etapa);
+  
+  var _Modal = __webpack_require__(205);
+  
+  var _Modal2 = _interopRequireDefault(_Modal);
+  
+  var _util = __webpack_require__(204);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  var EtapaForm = function (_Component) {
+      (0, _inherits3.default)(EtapaForm, _Component);
+  
+      function EtapaForm() {
+          (0, _classCallCheck3.default)(this, EtapaForm);
+  
+          var _this = (0, _possibleConstructorReturn3.default)(this, (EtapaForm.__proto__ || (0, _getPrototypeOf2.default)(EtapaForm)).call(this));
+  
+          _this.state = {
+              schemas: {},
+              showModal: false,
+              etapaId: null,
+              calendarioEtapaId: null
+          };
+          _this.theurl = 'https://jcapi-225112.appspot.com/';
+          return _this;
+      }
+  
+      (0, _createClass3.default)(EtapaForm, [{
+          key: 'componentDidMount',
+          value: function componentDidMount() {
+              var _this2 = this;
+  
+              _axios2.default.get(this.theurl + "pessoa/" + localStorage.getItem('userId')).then(function (response) {
+                  _this2.setState({ schemas: response.data });
+                  if (response.data.mudancaEtapa) {
+                      try {
+                          if (parseInt(localStorage.getItem('ultimaEtapa')) !== response.data.etapa.id) {
+                              _this2.setState({ showModal: true });
+                          }
+                      } catch (error) {
+                          localStorage.setItem('ultimaEtapa', response.data.etapa.id);
+                          _this2.setState({ showModal: true });
+                      }
+                  };
+                  console.log(_this2.state.showModal);
+                  _this2.setState({ etapaId: response.data.etapa.id });
+                  console.log(_this2.state.etapaId);
+                  localStorage.setItem('ultimaEtapa', response.data.etapa.id);
+              }).catch(function (error) {
+                  return console.log(error.response);
+              });
+          }
+      }, {
+          key: 'render',
+          value: function render() {
+              var _this3 = this;
+  
+              var close = function close() {
+                  return _this3.setState({ showModal: false });
+              };
+              var etapas = [];
+  
+              if (this.state.etapaId !== null) {
+                  for (var i = this.state.etapaId; i >= 1; i--) {
+                      etapas.push(i);
+                  }
+                  etapas = etapas.map(function (x, i, arr) {
+                      var calendario = null;
+                      var icone = "fa fa-check";
+                      var inverted = "";
+                      var color = "";
+                      if (arr.length - 1 === i && _this3.state.calendarioEtapaId !== _util.isNullOrUndefined) {
+                          calendario = _this3.state.calendarioEtapaId;
+                          icone = "fa fa-book";
+                          color = " warning";
+                      }
+                      if (i % 2 === 1) {
+                          inverted = "timeline-inverted";
+                      }
+  
+                      return _react2.default.createElement(_Etapa2.default, { key: i, inverted: inverted, icone: icone, calendarioEtapaId: calendario, color: color, IdEtapa: i + 1 });
+                  });
+              }
+  
+              return _react2.default.createElement(
+                  _reactBootstrap.Panel,
+                  { header: _react2.default.createElement(
+                          'span',
+                          null,
+                          _react2.default.createElement('i', { className: 'fa fa-clock-o fa-fw' }),
+                          ' Jornada de ',
+                          localStorage.getItem('userName')
+                      ) },
+                  _react2.default.createElement(
+                      'div',
+                      null,
+                      _react2.default.createElement(
+                          'ul',
+                          { className: 'timeline' },
+                          etapas
+                      )
+                  ),
+                  _react2.default.createElement(_Modal2.default, { show: this.state.showModal, onHide: close })
+              );
+          }
+      }]);
+      return EtapaForm;
+  }(_react.Component);
+  
+  exports.default = EtapaForm;
+
+/***/ }),
+/* 202 */
+/***/ (function(module, exports, __webpack_require__) {
+
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
+      value: true
+  });
+  
+  var _getPrototypeOf = __webpack_require__(29);
+  
+  var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+  
+  var _classCallCheck2 = __webpack_require__(30);
+  
+  var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+  
+  var _createClass2 = __webpack_require__(31);
+  
+  var _createClass3 = _interopRequireDefault(_createClass2);
+  
+  var _possibleConstructorReturn2 = __webpack_require__(32);
+  
+  var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+  
+  var _inherits2 = __webpack_require__(33);
+  
+  var _inherits3 = _interopRequireDefault(_inherits2);
+  
+  var _react = __webpack_require__(11);
+  
+  var _react2 = _interopRequireDefault(_react);
+  
+  var _reactBootstrap = __webpack_require__(38);
+  
+  var _axios = __webpack_require__(154);
+  
+  var _axios2 = _interopRequireDefault(_axios);
+  
+  var _propTypes = __webpack_require__(203);
+  
+  var _propTypes2 = _interopRequireDefault(_propTypes);
+  
+  var _util = __webpack_require__(204);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  var EtapaForm = function (_Component) {
+      (0, _inherits3.default)(EtapaForm, _Component);
+  
+      function EtapaForm(props) {
+          (0, _classCallCheck3.default)(this, EtapaForm);
+  
+          var _this = (0, _possibleConstructorReturn3.default)(this, (EtapaForm.__proto__ || (0, _getPrototypeOf2.default)(EtapaForm)).call(this, props));
+  
+          _this.state = {
+              id: 1,
+              idEtapa: null,
+              inverted: "",
+              schemas: {},
+              avaliacao: [],
+              calendarioEtapa: null
+          };
+          _this.theurl = 'https://jcapi-225112.appspot.com/';
+          return _this;
+      }
+  
+      (0, _createClass3.default)(EtapaForm, [{
+          key: 'handleClick',
+          value: function handleClick(e) {}
+      }, {
+          key: 'render',
+          value: function render() {
+              var _this2 = this;
+  
+              var IdEtapa = this.props.IdEtapa;
+              if (IdEtapa !== null) {
+                  _axios2.default.get(this.theurl + "etapa/" + this.props.IdEtapa).then(function (response) {
+                      return _this2.setState({
+                          schemas: response.data
+                      });
+                  }).catch(function (error) {
+                      return console.log(error.response);
+                  });
+  
+                  // Informações da avaliação
+                  _axios2.default.get(this.theurl + "avaliacao/etapa/" + this.props.IdEtapa).then(function (response) {
+                      return _this2.setState({
+                          avaliacao: response.data
+                      });
+                  }).catch(function (error) {
+                      return console.log(error.response);
+                  });
+              }
+  
+              var calendarioEtapa = this.props.calendarioEtapaId;
+              if (calendarioEtapa === _util.isNullOrUndefined) {
+                  _axios2.default.get(this.theurl + "calendarioetapa/" + this.props.IdEtapa).then(function (response) {
+                      return _this2.setState({
+                          calendarioEtapa: response.data
+                      });
+                  }).catch(function (error) {
+                      return console.log(error.response);
+                  });
+              }
+  
+              return _react2.default.createElement(
+                  'li',
+                  { className: this.props.inverted },
+                  _react2.default.createElement(
+                      'div',
+                      { className: "timeline-badge" + this.props.color },
+                      _react2.default.createElement('i', { className: this.props.icone })
+                  ),
+                  _react2.default.createElement(
+                      'div',
+                      { className: 'timeline-panel' },
+                      _react2.default.createElement(
+                          'div',
+                          { className: 'timeline-heading' },
+                          _react2.default.createElement(
+                              'h4',
+                              { className: 'timeline-title' },
+                              this.state.schemas.descricao
+                          )
+                      ),
+                      _react2.default.createElement(
+                          'div',
+                          { className: 'timeline-body' },
+                          _react2.default.createElement(
+                              'h5',
+                              null,
+                              'Nesta etapa voc\xEA ter\xE1 as seguintes avalia\xE7\xF5es:'
+                          ),
+                          _react2.default.createElement(
+                              'ol',
+                              null,
+                              this.state.avaliacao.map(function (e, key) {
+                                  return _react2.default.createElement(
+                                      'div',
+                                      { key: key },
+                                      _react2.default.createElement(
+                                          'h4',
+                                          { value: e.id },
+                                          e.titulo
+                                      ),
+                                      _react2.default.createElement(
+                                          'p',
+                                          null,
+                                          e.descricao
+                                      )
+                                  );
+                              })
+                          )
+                      )
+                  )
+              );
+          }
+      }]);
+      return EtapaForm;
+  }(_react.Component);
+  
+  exports.default = EtapaForm;
+
+/***/ }),
+/* 203 */
+/***/ (function(module, exports) {
+
+  module.exports = require("prop-types");
+
+/***/ }),
+/* 204 */
+/***/ (function(module, exports) {
+
+  module.exports = require("util");
+
+/***/ }),
+/* 205 */
+/***/ (function(module, exports, __webpack_require__) {
+
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  
+  var _getPrototypeOf = __webpack_require__(29);
+  
+  var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+  
+  var _classCallCheck2 = __webpack_require__(30);
+  
+  var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+  
+  var _createClass2 = __webpack_require__(31);
+  
+  var _createClass3 = _interopRequireDefault(_createClass2);
+  
+  var _possibleConstructorReturn2 = __webpack_require__(32);
+  
+  var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+  
+  var _inherits2 = __webpack_require__(33);
+  
+  var _inherits3 = _interopRequireDefault(_inherits2);
+  
+  var _react = __webpack_require__(11);
+  
+  var _react2 = _interopRequireDefault(_react);
+  
+  var _reactBootstrap = __webpack_require__(38);
+  
+  var _Modal = __webpack_require__(181);
+  
+  var _Modal2 = _interopRequireDefault(_Modal);
+  
+  var _axios = __webpack_require__(154);
+  
+  var _axios2 = _interopRequireDefault(_axios);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  var ModalMudancaEtapa = function (_Component) {
+    (0, _inherits3.default)(ModalMudancaEtapa, _Component);
+  
+    function ModalMudancaEtapa() {
+      (0, _classCallCheck3.default)(this, ModalMudancaEtapa);
+  
+      var _this = (0, _possibleConstructorReturn3.default)(this, (ModalMudancaEtapa.__proto__ || (0, _getPrototypeOf2.default)(ModalMudancaEtapa)).call(this));
+  
+      _this.state = {
+        id: 1,
+        schemas: []
+      };
+      _this.theurl = 'https://jcapi-225112.appspot.com/';
+      return _this;
+    }
+  
+    (0, _createClass3.default)(ModalMudancaEtapa, [{
+      key: 'componentDidMount',
+      value: function componentDidMount() {
+        var _this2 = this;
+  
+        _axios2.default.get(this.theurl + "etapa/1").then(function (response) {
+          return _this2.setState({
+            schemas: response.data
+          });
+        }).catch(function (error) {
+          return console.log(error.response);
+        });
+      }
+    }, {
+      key: 'close',
+      value: function close() {
+        this.setState({ showModal: false });
+      }
+    }, {
+      key: 'render',
+      value: function render() {
+        return _react2.default.createElement(
+          _Modal2.default,
+          this.props,
+          _react2.default.createElement(
+            _Modal.Header,
+            { closeButton: true },
+            _react2.default.createElement(
+              _Modal.Title,
+              { className: 'text-center' },
+              'Parab\xE9ns! Voc\xEA mudou de Etapa!'
+            )
+          ),
+          _react2.default.createElement(
+            _Modal.Body,
+            null,
+            _react2.default.createElement(
+              'p',
+              null,
+              ' Continue assim, falta s\xF3 mais um pouco.'
+            )
+          ),
+          _react2.default.createElement(
+            _Modal.Footer,
+            null,
+            _react2.default.createElement(
+              _reactBootstrap.Button,
+              { onClick: this.props.onHide },
+              'Fechar'
+            )
+          )
+        );
+      }
+    }]);
+    return ModalMudancaEtapa;
+  }(_react.Component);
+  
+  exports.default = ModalMudancaEtapa;
+
+/***/ }),
+/* 206 */
+/***/ (function(module, exports, __webpack_require__) {
+
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
     value: true
   });
   
@@ -31235,7 +31803,7 @@ module.exports =
       */
 
 /***/ }),
-/* 201 */
+/* 207 */
 /***/ (function(module, exports) {
 
   module.exports = require("./assets");

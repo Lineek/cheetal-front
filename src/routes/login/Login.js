@@ -47,21 +47,22 @@ class Login extends Component {
     event.preventDefault();
     this.setState({ submit: true });
       const req = axios
-        .get('https://jcapi.azurewebsites.net/pessoa/validacao?email=' + this.state.email + '&senha=' + this.state.password)
+        .get('https://jcapi-225112.appspot.com/pessoa/validacao?email=' + this.state.email + '&senha=' + this.state.password)
         .then(response => {
           console.log(response.data)
           if (response.status === 200) {
-            if (response.data.origin !== null) {
+            console.log(response.data.origem)
+            if (response.data.origem === null || response.data.origem === undefined) {
               this.setState({type: "admin"});
               localStorage.setItem("userId", response.data.id);
               localStorage.setItem("userName", response.data.nome);
-              localStorage.setItem("userType", "user");
-              history.push('/')
+              localStorage.setItem("userType", "admin");
+              history.push('/admin')
             } else {
               this.setState({type: "user"})
               localStorage.setItem("userId", response.data.id);
               localStorage.setItem("userName", response.data.nome);
-              localStorage.setItem("userType", "admin");
+              localStorage.setItem("userType", "user");
               history.push('/teste')
             }
             this.setState({schema: response.data})
@@ -82,7 +83,7 @@ class Login extends Component {
 
         <Panel header={<h3>Por favor, entre com sua conta</h3>} className="login-panel">
 
-          <div id='errorPanel' className="col-lg-12" style={{'display':'none'}}>
+          <div id='errorPanel' style={{'display':'none'}}>
               <Panel header={<span>Email ou senha inválido</span>} className="panel-danger">
               </Panel>
           </div>

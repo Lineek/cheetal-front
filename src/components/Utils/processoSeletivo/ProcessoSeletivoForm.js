@@ -12,7 +12,7 @@ class ProcessoSeletivoForm extends Component {
       this.state = {
         schemas: []
       }
-      this.theurl='https://jcapi.azurewebsites.net/'
+      this.theurl='https://jcapi-225112.appspot.com/'
     }
 
     componentDidMount() {
@@ -41,14 +41,25 @@ class ProcessoSeletivoForm extends Component {
               </thead>
               <tbody>
                 {this.state.schemas.map((e, key) => {
-                  return ( 
-                  <tr key={key}>
-                    <td>{e.id}</td>
-                    <td>{e.descricao}</td>
-                    <td>{e.dataInicio}</td>
-                    <td>{e.dataFim}</td>
-                    <td><Button href="" onClick={(k) => { k.preventDefault(); history.push({pathname: '/psedit', search: '?id=' + e.id}); }}><i className="fa fa-pencil" /> Editar</Button></td>
-                  </tr>)
+                  if(e.dataInicio !== null && e.dataFim !== null) {
+                    return ( 
+                      <tr key={key}>
+                        <td>{e.id}</td>
+                        <td>{e.descricao}</td>
+                        <td>{e.dataInicio}</td>
+                        <td>{e.dataFim}</td>
+                        <td><Button href="" onClick={(k) => { k.preventDefault(); history.push({pathname: '/psedit', search: '?id=' + e.id}); }}><i className="fa fa-pencil" /> Editar</Button></td>
+                      </tr>)
+                  } else {
+                    return ( 
+                    <tr key={key}>
+                      <td>{e.id}</td>
+                      <td>{e.descricao}</td>
+                      <td>{}</td>
+                      <td>{}</td>
+                      <td><Button href="" onClick={(k) => { k.preventDefault(); history.push({pathname: '/psedit', search: '?id=' + e.id}); }}><i className="fa fa-pencil" /> Editar</Button></td>
+                    </tr>)
+                  }
                 })}
               </tbody>
             </table>

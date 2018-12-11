@@ -34,7 +34,7 @@ class ProcessoSeletivoEdit extends Component {
         schemas: {}
       };
 
-      this.theurl='https://jcapi.azurewebsites.net/';
+      this.theurl='https://jcapi-225112.appspot.com/';
     }
 
     componentDidMount() {

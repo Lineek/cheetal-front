@@ -12,7 +12,7 @@ class OrigemForm extends Component {
       this.state = {
         schemas: []
       }
-      this.theurl='https://jcapi.azurewebsites.net/'
+      this.theurl='https://jcapi-225112.appspot.com/'
     }
 
     componentDidMount() {
