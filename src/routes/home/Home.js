@@ -38,11 +38,11 @@ function Home(props, context) {
     <div>
       <div className="row">
         <div className="col-lg-12">
-          <PageHeader>Bem vindo, {localStorage.getItem("userType")} {localStorage.getItem("userName")}</PageHeader>
+          <PageHeader>Bem vindo, {localStorage.getItem("userName")}</PageHeader>
         </div>
       </div>
 
-      <div className="row">
+      {/* <div className="row">
         <div className="col-lg-3 col-md-6">
           <StatWidget
             style="panel-primary"
@@ -276,8 +276,8 @@ function Home(props, context) {
 
         </div>
 
-      </div>
-    </div>
+      </div>*/}
+    </div> 
   );
 }
 

@@ -28,6 +28,10 @@ import processoseletivo from './dashboardPages/processoSeletivo';
 import processoseletivoEdit from './dashboardPages/processoSeletivo/edit';
 import processoseletivoCreate from './dashboardPages/processoSeletivo/create';
 import inscricao from './dashboardPages/teste';
+import Publico from './dashboardPages/publico';
+import DadosPessoais from './dashboardPages/dadosPessoais';
+import Endereco from './dashboardPages/endereco';
+import CriarSenha from './dashboardPages/criarSenha';
 import error from './error';
 
 import Header from '../components/Header';
@@ -52,6 +56,23 @@ export default [
     path: '/teste',
     children: [
       inscricao,
+    ],
+    async action({ next, render, context }) {
+      const component = await next();
+      if (component === undefined) return component;
+      return render(
+        <App context={context}>{component}</App>
+      );
+    },
+  },
+
+  {
+    path: '/vestibular',
+    children: [
+      DadosPessoais,
+      Endereco,
+      Publico,
+      CriarSenha,
     ],
     async action({ next, render, context }) {
       const component = await next();

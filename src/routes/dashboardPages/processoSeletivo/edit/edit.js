@@ -9,8 +9,6 @@ import {
   Panel
    } from 'react-bootstrap';
 import axios from 'axios';
-import Select from 'react-select';
-
 
 function getParameterByName(name, url) {
   if (!url) url = window.location.href;
@@ -36,6 +34,7 @@ class ProcessoSeletivoEdit extends Component {
 
       this.theurl='https://jcapi-225112.appspot.com/';
     }
+    
 
     componentDidMount() {
       console.log(this.state.id);
@@ -51,11 +50,15 @@ class ProcessoSeletivoEdit extends Component {
           };
     }
 
-    handleChange = (e) => {
-      this.setState({ descricao: e.target.value });
+    handleChange = event => {
+      this.setState({
+        [event.target.id]: event.target.value
+      });
     }
 
-    handleSubmitButton() {
+    handleSubmitButton(e) {
+      e.preventDefault();
+      console.log(x);
       if (this.state.id !== null) {
         var x = { 
           id: this.state.id,
@@ -63,13 +66,22 @@ class ProcessoSeletivoEdit extends Component {
           dataInicio: this.state.dataInicio,
           dataFim: this.state.dataFim
         };
-        console.log(x);
-        // if (x !== this.state.schemas) {
-        //   axios
-        //   .put(this.theurl + "processoseletivo/" + x.id, x)
-        //   .catch(error => console.log(error.response));
-        // }
-      } else {}
+        
+        if (x !== this.state.schemas) {
+          axios
+          .put(this.theurl + "processoseletivo/" + x.id, x)
+          .then((response) => { 
+            console.log(response);
+            if(response.status === 204) { document.getElementById('successPanel').style.display = "block"; };
+          })
+          .catch(error => {
+            document.getElementById('errorPanel').style.display = "block";
+            console.log(error.response);
+          });
+        }
+      } else {
+        document.getElementById('errorPanel').style.display = "block";
+      }
     };
 
     render() {
@@ -81,12 +93,20 @@ class ProcessoSeletivoEdit extends Component {
               </div>
             </div>
               <div className="row">
+                <div id='successPanel' style={{'display':'none'}}>
+                  <Panel header={<span>Processo Seletivo Editado com Sucesso!</span>} className="panel-success">
+                  </Panel>
+                </div>
+                <div id='errorPanel' style={{'display':'none'}}>
+                  <Panel header={<span>Houve erro ao criar o Processo Seletivo</span>} className="panel-danger">
+                  </Panel>
+                </div>
                <div className="col-lg-12">
                 <Panel header={<span>Editar</span>} >
                   <div className="row">
                     <Form>
                       <div className="col-lg-12">
-                        <FormGroup controlId="descInput">
+                        <FormGroup controlId="descricao">
                           <ControlLabel>Descrição</ControlLabel>
                           <FormControl
                             type="text"
@@ -96,21 +116,31 @@ class ProcessoSeletivoEdit extends Component {
                           />
                         </FormGroup>
                       </div>
-                      <div className="col-lg-12">
-                        <Select />
-                        {/* <FormGroup controlId="testes">
-                          <ControlLabel>Descrição</ControlLabel>
+                      <div className="col-lg-6">
+                      <FormGroup controlId="dataInicio">
+                          <ControlLabel>Data Ínicio</ControlLabel>
                           <FormControl
                             type="text"
-                            // value={this.state.descricao}
-                            placeholder={this.state.schemas.descricao}
-                            // onChange={this.handleChangeDescricao} 
+                            value={this.state.dataInicio}
+                            placeholder={this.state.schemas.dataInicio}
+                            onChange={this.handleChange} 
                           />
-                        </FormGroup> */}
+                        </FormGroup>
+                      </div>
+                      <div className="col-lg-6">
+                      <FormGroup controlId="dataFim">
+                          <ControlLabel>Data Fim</ControlLabel>
+                          <FormControl
+                            type="text"
+                            value={this.state.dataFim}
+                            placeholder={this.state.schemas.dataFim}
+                            onChange={this.handleChange} 
+                          />
+                        </FormGroup>
                       </div>
                     </Form>
                   </div>
-                  <Button onClick={() => console.log(this.state.descricao)}>Click Me</Button>
+                  <Button onClick={(e) => this.handleSubmitButton(e)}>Editar</Button>
                 </Panel>
               </div>
             </div>

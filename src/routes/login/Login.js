@@ -56,8 +56,9 @@ class Login extends Component {
               this.setState({type: "admin"});
               localStorage.setItem("userId", response.data.id);
               localStorage.setItem("userName", response.data.nome);
+              localStorage.setItem("userCargo", response.data.cargo);
               localStorage.setItem("userType", "admin");
-              history.push('/admin')
+              history.push('/')
             } else {
               this.setState({type: "user"})
               localStorage.setItem("userId", response.data.id);
@@ -74,15 +75,18 @@ class Login extends Component {
   }
 
   render() {
+    const logo = require('../../components/Header/logo_bandtec_ds_azul.png');
     return (
         <div className="col-md-4 col-md-offset-4">
-        <div className="text-center">
-          <h1 className="login-brand-text">SB Admin React</h1>
-          <h3 className="text-muted">Created by <a href="http://startreact.com">StartReact.com</a> team</h3>
-        </div>
-
+          <div className="hidden-sm-down">
+            <div style={{'visibility':'hidden'}}>
+              <Panel header={<h3></h3>} className="login-panel" />
+            </ div>
+            <div className="text-center">
+              <img src={logo} alt="Bandtec" title="Bandtec" />
+            </div>
+          </div>
         <Panel header={<h3>Por favor, entre com sua conta</h3>} className="login-panel">
-
           <div id='errorPanel' style={{'display':'none'}}>
               <Panel header={<span>Email ou senha inválido</span>} className="panel-danger">
               </Panel>

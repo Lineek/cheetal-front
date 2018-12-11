@@ -1,1 +1,1 @@
-module.exports = {"main":{"js":"/assets/main.js?0d6a0b1d98346719130f"},"":{"json":"/assets/5380584a18fea466ec77.hot-update.json"}};
+module.exports = {"main":{"js":"/assets/main.js?ac6de76db877513ac8a5"},"":{"png":"/assets/components/Header/logo_bandtec_ds_azul.png?57540bce96441ca6daca25a9e75a1aa4","json":"/assets/9207da514bec024a6028.hot-update.json"}};

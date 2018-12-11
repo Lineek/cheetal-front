@@ -16,11 +16,18 @@ class Sidebar extends Component {
   }
 
   render() {
+    try {
+      if(localStorage.getItem("userType") !== "admin") {
+        history.push('/login');
+      }
+    } catch (error) {
+      history.push('/login');
+    }
     return (
       <div className="navbar-default sidebar" style={{ marginLeft: '-20px' }} role="navigation">
         <div className="sidebar-nav navbar-collapse collapse">
           <ul className="nav in" id="side-menu">
-            <li className="sidebar-search">
+            {/* <li className="sidebar-search">
               <div className="input-group custom-search-form">
                 <input type="text" className="form-control" placeholder="Search..." />
                 <span className="input-group-btn">
@@ -29,15 +36,15 @@ class Sidebar extends Component {
                   </button>
                 </span>
               </div>
-            </li>
+            </li> */}
 
             <li>
               <a href="" onClick={(e) => { e.preventDefault(); history.push('/'); }} >
-                <i className="fa fa-dashboard fa-fw" /> &nbsp;Dashboard
+                <i className="fa fa-home fa-fw" /> &nbsp;Home
               </a>
             </li>
 
-            <li className={classNames({ active: !this.state.chartsElementsCollapsed })}>
+            {/* <li className={classNames({ active: !this.state.chartsElementsCollapsed })}>
               <a
                 href=""
                 onClick={(e) => {
@@ -71,16 +78,16 @@ class Sidebar extends Component {
                   </a>
                 </li>
               </ul>
-            </li>
+            </li> */}
 
 
             <li>
-              <a href="" onClick={(e) => { e.preventDefault(); history.push('/table'); }} >
-                <i className="fa fa-table fa-fw" /> &nbsp;Tables
+              <a href="" onClick={(e) => { e.preventDefault(); history.push('/ps'); }} >
+                <i className="fa fa-table fa-fw" /> &nbsp;Processo Seletivo
               </a>
             </li>
 
-            <li>
+            {/* <li>
               <a href="" onClick={(e) => { e.preventDefault(); history.push('/forms'); }} >
                 <i className="fa fa-table fa-fw" /> &nbsp;Forms
               </a>
@@ -138,9 +145,9 @@ class Sidebar extends Component {
                   </a>
                 </li>
               </ul>
-            </li>
+            </li> */}
 
-            <li className={classNames({ active: !this.state.multiLevelDropdownCollapsed })}>
+            {/* <li className={classNames({ active: !this.state.multiLevelDropdownCollapsed })}>
               <a
                 href=""
                 onClick={(e) => {
@@ -202,9 +209,9 @@ class Sidebar extends Component {
                   </ul>
                 </li>
               </ul>
-            </li>
+            </li> */}
 
-            <li className={classNames({ active: !this.state.samplePagesCollapsed })}>
+            {/* <li className={classNames({ active: !this.state.samplePagesCollapsed })}>
               <a
                 href=""
                 onClick={(e) => {
@@ -237,11 +244,8 @@ class Sidebar extends Component {
                   </a>
                 </li>
               </ul>
-            </li>
+            </li> */}
 
-            <li>
-              <a href="http://www.strapui.com/">Premium React Themes</a>
-            </li>
           </ul>
         </div>
       </div>

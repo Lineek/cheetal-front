@@ -116,7 +116,7 @@ module.exports =
   
   var _routes2 = _interopRequireDefault(_routes);
   
-  var _assets = __webpack_require__(207);
+  var _assets = __webpack_require__(208);
   
   var _assets2 = _interopRequireDefault(_assets);
   
@@ -971,15 +971,31 @@ module.exports =
   
   var _edit2 = _interopRequireDefault(_edit);
   
-  var _create = __webpack_require__(194);
+  var _create = __webpack_require__(195);
   
   var _create2 = _interopRequireDefault(_create);
   
-  var _teste = __webpack_require__(196);
+  var _teste = __webpack_require__(197);
   
   var _teste2 = _interopRequireDefault(_teste);
   
-  var _error = __webpack_require__(206);
+  var _publico = __webpack_require__(210);
+  
+  var _publico2 = _interopRequireDefault(_publico);
+  
+  var _dadosPessoais = __webpack_require__(212);
+  
+  var _dadosPessoais2 = _interopRequireDefault(_dadosPessoais);
+  
+  var _endereco = __webpack_require__(214);
+  
+  var _endereco2 = _interopRequireDefault(_endereco);
+  
+  var _criarSenha = __webpack_require__(216);
+  
+  var _criarSenha2 = _interopRequireDefault(_criarSenha);
+  
+  var _error = __webpack_require__(207);
   
   var _error2 = _interopRequireDefault(_error);
   
@@ -1076,19 +1092,8 @@ module.exports =
       }))();
     }
   }, {
-    path: '/',
-  
-    // keep in mind, routes are evaluated in order
-    children: [_home2.default,
-    // contact,
-    _tables2.default, _buttons2.default, _flotCharts2.default, _forms2.default, _grid2.default, _icons2.default, _morrisjsCharts2.default, _notification2.default, _panelWells2.default, _typography2.default,
-    // register,
-    _blank2.default, _processoSeletivo2.default,
-  
-    // place new routes before...
-    // content,
-    _edit2.default, _create2.default, _error2.default],
-  
+    path: '/vestibular',
+    children: [_dadosPessoais2.default, _endereco2.default, _publico2.default, _criarSenha2.default],
     action: function action(_ref3) {
       var _this3 = this;
   
@@ -1116,18 +1121,9 @@ module.exports =
   
               case 5:
                 return _context3.abrupt('return', render(_react2.default.createElement(
-                  'div',
-                  null,
-                  _react2.default.createElement(_Header2.default, null),
-                  _react2.default.createElement(
-                    'div',
-                    { id: 'page-wrapper', className: 'page-wrapper' },
-                    _react2.default.createElement(
-                      _App2.default,
-                      { context: context },
-                      component
-                    )
-                  )
+                  _App2.default,
+                  { context: context },
+                  component
                 )));
   
               case 6:
@@ -1139,8 +1135,19 @@ module.exports =
       }))();
     }
   }, {
-    path: '/error',
-    children: [_error2.default],
+    path: '/',
+  
+    // keep in mind, routes are evaluated in order
+    children: [_home2.default,
+    // contact,
+    _tables2.default, _buttons2.default, _flotCharts2.default, _forms2.default, _grid2.default, _icons2.default, _morrisjsCharts2.default, _notification2.default, _panelWells2.default, _typography2.default,
+    // register,
+    _blank2.default, _processoSeletivo2.default,
+  
+    // place new routes before...
+    // content,
+    _edit2.default, _create2.default, _error2.default],
+  
     action: function action(_ref4) {
       var _this4 = this;
   
@@ -1168,9 +1175,18 @@ module.exports =
   
               case 5:
                 return _context4.abrupt('return', render(_react2.default.createElement(
-                  _App2.default,
-                  { context: context },
-                  component
+                  'div',
+                  null,
+                  _react2.default.createElement(_Header2.default, null),
+                  _react2.default.createElement(
+                    'div',
+                    { id: 'page-wrapper', className: 'page-wrapper' },
+                    _react2.default.createElement(
+                      _App2.default,
+                      { context: context },
+                      component
+                    )
+                  )
                 )));
   
               case 6:
@@ -1179,6 +1195,49 @@ module.exports =
             }
           }
         }, _callee4, _this4);
+      }))();
+    }
+  }, {
+    path: '/error',
+    children: [_error2.default],
+    action: function action(_ref5) {
+      var _this5 = this;
+  
+      var next = _ref5.next,
+          render = _ref5.render,
+          context = _ref5.context;
+      return (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee5() {
+        var component;
+        return _regenerator2.default.wrap(function _callee5$(_context5) {
+          while (1) {
+            switch (_context5.prev = _context5.next) {
+              case 0:
+                _context5.next = 2;
+                return next();
+  
+              case 2:
+                component = _context5.sent;
+  
+                if (!(component === undefined)) {
+                  _context5.next = 5;
+                  break;
+                }
+  
+                return _context5.abrupt('return', component);
+  
+              case 5:
+                return _context5.abrupt('return', render(_react2.default.createElement(
+                  _App2.default,
+                  { context: context },
+                  component
+                )));
+  
+              case 6:
+              case 'end':
+                return _context5.stop();
+            }
+          }
+        }, _callee5, _this5);
       }))();
     }
   }];
@@ -1432,14 +1491,14 @@ module.exports =
   
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
   
-  var logo = __webpack_require__(47); /**
-                                     * React Starter Kit (https://www.reactstarterkit.com/)
-                                     *
-                                     * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.
-                                     *
-                                     * This source code is licensed under the MIT license found in the
-                                     * LICENSE.txt file in the root directory of this source tree.
-                                     */
+  var logo = __webpack_require__(209); /**
+                                                     * React Starter Kit (https://www.reactstarterkit.com/)
+                                                     *
+                                                     * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.
+                                                     *
+                                                     * This source code is licensed under the MIT license found in the
+                                                     * LICENSE.txt file in the root directory of this source tree.
+                                                     */
   
   function Header() {
     return _react2.default.createElement(
@@ -1454,17 +1513,7 @@ module.exports =
           _react2.default.createElement(
             'span',
             null,
-            _react2.default.createElement('img', { src: logo, alt: 'Start React', title: 'Start React' }),
-            _react2.default.createElement(
-              'span',
-              null,
-              '\xA0SB Admin React - '
-            ),
-            _react2.default.createElement(
-              'a',
-              { href: 'http://startreact.com/', title: 'Start React', rel: 'home' },
-              'StartReact.com'
-            ),
+            _react2.default.createElement('img', { src: logo, alt: 'Bandtec', title: 'Bandtec' }),
             _react2.default.createElement(
               'button',
               { type: 'button', className: 'navbar-toggle', onClick: function onClick() {
@@ -1486,411 +1535,10 @@ module.exports =
           { className: 'nav navbar-top-links navbar-right' },
           _react2.default.createElement(
             _reactBootstrap.NavDropdown,
-            { bsClass: 'dropdown', title: _react2.default.createElement(
-                'span',
-                null,
-                _react2.default.createElement('i', { className: 'fa fa-envelope fa-fw' })
-              ), id: 'navDropdown1' },
-            _react2.default.createElement(
-              _reactBootstrap.MenuItem,
-              { style: { width: 300 }, eventKey: '1' },
-              _react2.default.createElement(
-                'div',
-                null,
-                ' ',
-                _react2.default.createElement(
-                  'strong',
-                  null,
-                  'John Smith'
-                ),
-                ' ',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted' },
-                  ' ',
-                  _react2.default.createElement(
-                    'em',
-                    null,
-                    'Yesterday'
-                  ),
-                  ' '
-                ),
-                ' '
-              ),
-              _react2.default.createElement(
-                'div',
-                null,
-                ' Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...'
-              )
-            ),
-            _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
-            _react2.default.createElement(
-              _reactBootstrap.MenuItem,
-              { eventKey: '2' },
-              _react2.default.createElement(
-                'div',
-                null,
-                ' ',
-                _react2.default.createElement(
-                  'strong',
-                  null,
-                  'John Smith'
-                ),
-                ' ',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted' },
-                  ' ',
-                  _react2.default.createElement(
-                    'em',
-                    null,
-                    'Yesterday'
-                  ),
-                  ' '
-                ),
-                ' '
-              ),
-              _react2.default.createElement(
-                'div',
-                null,
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...'
-              )
-            ),
-            _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
-            _react2.default.createElement(
-              _reactBootstrap.MenuItem,
-              { eventKey: '3' },
-              _react2.default.createElement(
-                'div',
-                null,
-                ' ',
-                _react2.default.createElement(
-                  'strong',
-                  null,
-                  'John Smith'
-                ),
-                ' ',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted' },
-                  ' ',
-                  _react2.default.createElement(
-                    'em',
-                    null,
-                    'Yesterday'
-                  ),
-                  ' '
-                ),
-                ' '
-              ),
-              _react2.default.createElement(
-                'div',
-                null,
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...'
-              )
-            ),
-            _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
-            _react2.default.createElement(
-              _reactBootstrap.MenuItem,
-              { eventKey: '4', className: 'text-center' },
-              _react2.default.createElement(
-                'strong',
-                null,
-                'Read All Messages'
-              ),
-              ' ',
-              _react2.default.createElement('i', { className: 'fa fa-angle-right' })
-            )
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.NavDropdown,
-            { title: _react2.default.createElement(
-                'span',
-                null,
-                _react2.default.createElement('i', { className: 'fa fa-tasks fa-fw' }),
-                ' '
-              ), id: 'navDropdown2222' },
-            _react2.default.createElement(
-              _reactBootstrap.MenuItem,
-              { eventKey: '1', style: { width: 300 } },
-              _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(
-                  'p',
-                  null,
-                  ' ',
-                  _react2.default.createElement(
-                    'strong',
-                    null,
-                    'Task 1'
-                  ),
-                  ' ',
-                  _react2.default.createElement(
-                    'span',
-                    { className: 'pull-right text-muted' },
-                    '40% Complete'
-                  ),
-                  ' '
-                ),
-                _react2.default.createElement(
-                  'div',
-                  null,
-                  _react2.default.createElement(_reactBootstrap.ProgressBar, { bsStyle: 'success', now: 40 })
-                )
-              )
-            ),
-            _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
-            _react2.default.createElement(
-              _reactBootstrap.MenuItem,
-              { eventKey: '2' },
-              _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(
-                  'p',
-                  null,
-                  ' ',
-                  _react2.default.createElement(
-                    'strong',
-                    null,
-                    'Task 2'
-                  ),
-                  ' ',
-                  _react2.default.createElement(
-                    'span',
-                    { className: 'pull-right text-muted' },
-                    '20% Complete'
-                  ),
-                  ' '
-                ),
-                _react2.default.createElement(
-                  'div',
-                  null,
-                  _react2.default.createElement(_reactBootstrap.ProgressBar, { bsStyle: 'info', now: 20 })
-                )
-              )
-            ),
-            _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
-            _react2.default.createElement(
-              _reactBootstrap.MenuItem,
-              { eventKey: '3' },
-              _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(
-                  'p',
-                  null,
-                  ' ',
-                  _react2.default.createElement(
-                    'strong',
-                    null,
-                    'Task 3'
-                  ),
-                  ' ',
-                  _react2.default.createElement(
-                    'span',
-                    { className: 'pull-right text-muted' },
-                    '60% Complete'
-                  ),
-                  ' '
-                ),
-                _react2.default.createElement(
-                  'div',
-                  null,
-                  _react2.default.createElement(_reactBootstrap.ProgressBar, { bsStyle: 'warning', now: 60 })
-                )
-              )
-            ),
-            _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
-            _react2.default.createElement(
-              _reactBootstrap.MenuItem,
-              { eventKey: '4' },
-              _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(
-                  'p',
-                  null,
-                  ' ',
-                  _react2.default.createElement(
-                    'strong',
-                    null,
-                    'Task 4'
-                  ),
-                  ' ',
-                  _react2.default.createElement(
-                    'span',
-                    { className: 'pull-right text-muted' },
-                    '80% Complete'
-                  ),
-                  ' '
-                ),
-                _react2.default.createElement(
-                  'div',
-                  null,
-                  _react2.default.createElement(_reactBootstrap.ProgressBar, { bsStyle: 'danger', now: 80 })
-                )
-              )
-            ),
-            _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
-            _react2.default.createElement(
-              _reactBootstrap.MenuItem,
-              { eventKey: '5' },
-              _react2.default.createElement(
-                'strong',
-                null,
-                'See All Tasks'
-              ),
-              ' ',
-              _react2.default.createElement('i', { className: 'fa fa-angle-right' })
-            )
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.NavDropdown,
-            { title: _react2.default.createElement('i', { className: 'fa fa-bell fa-fw' }), id: 'navDropdown3' },
-            _react2.default.createElement(
-              _reactBootstrap.MenuItem,
-              { eventKey: '1', style: { width: 300 } },
-              _react2.default.createElement(
-                'div',
-                null,
-                ' ',
-                _react2.default.createElement('i', { className: 'fa fa-comment fa-fw' }),
-                ' New Comment ',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted small' },
-                  '4 minutes ago'
-                ),
-                ' '
-              )
-            ),
-            _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
-            _react2.default.createElement(
-              _reactBootstrap.MenuItem,
-              { eventKey: '2' },
-              _react2.default.createElement(
-                'div',
-                null,
-                ' ',
-                _react2.default.createElement('i', { className: 'fa fa-twitter fa-fw' }),
-                ' 3 New Followers ',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted small' },
-                  '12 minutes ago'
-                ),
-                ' '
-              )
-            ),
-            _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
-            _react2.default.createElement(
-              _reactBootstrap.MenuItem,
-              { eventKey: '3' },
-              _react2.default.createElement(
-                'div',
-                null,
-                ' ',
-                _react2.default.createElement('i', { className: 'fa fa-envelope fa-fw' }),
-                ' Message Sent ',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted small' },
-                  '4 minutes ago'
-                ),
-                ' '
-              )
-            ),
-            _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
-            _react2.default.createElement(
-              _reactBootstrap.MenuItem,
-              { eventKey: '4' },
-              _react2.default.createElement(
-                'div',
-                null,
-                ' ',
-                _react2.default.createElement('i', { className: 'fa fa-tasks fa-fw' }),
-                ' New Task ',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted small' },
-                  '4 minutes ago'
-                ),
-                ' '
-              )
-            ),
-            _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
-            _react2.default.createElement(
-              _reactBootstrap.MenuItem,
-              { eventKey: '5' },
-              _react2.default.createElement(
-                'div',
-                null,
-                ' ',
-                _react2.default.createElement('i', { className: 'fa fa-upload fa-fw' }),
-                ' Server Rebooted ',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted small' },
-                  '4 minutes ago'
-                ),
-                ' '
-              )
-            ),
-            _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
-            _react2.default.createElement(
-              _reactBootstrap.MenuItem,
-              { eventKey: '6' },
-              _react2.default.createElement(
-                'strong',
-                null,
-                'See All Alerts'
-              ),
-              ' ',
-              _react2.default.createElement('i', { className: 'fa fa-angle-right' })
-            )
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.NavDropdown,
             { title: _react2.default.createElement('i', { className: 'fa fa-user fa-fw' }), id: 'navDropdown4' },
             _react2.default.createElement(
               _reactBootstrap.MenuItem,
-              { eventKey: '1' },
-              _react2.default.createElement(
-                'span',
-                null,
-                ' ',
-                _react2.default.createElement('i', { className: 'fa fa-user fa-fw' }),
-                ' User Profile '
-              )
-            ),
-            _react2.default.createElement(
-              _reactBootstrap.MenuItem,
-              { eventKey: '2' },
-              _react2.default.createElement(
-                'span',
-                null,
-                _react2.default.createElement('i', { className: 'fa fa-gear fa-fw' }),
-                ' Settings '
-              )
-            ),
-            _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
-            _react2.default.createElement(
-              _reactBootstrap.MenuItem,
-              { eventKey: '3', href: 'http://www.strapui.com' },
-              _react2.default.createElement(
-                'span',
-                null,
-                ' ',
-                _react2.default.createElement('i', { className: 'fa fa-eye fa-fw' }),
-                ' Premium React Themes '
-              )
-            ),
-            _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
-            _react2.default.createElement(
-              _reactBootstrap.MenuItem,
-              { eventKey: '4', onClick: function onClick(event) {
+              { eventKey: '1', onClick: function onClick(event) {
                   localStorage.removeItem("userId");
                   localStorage.removeItem("userName");
                   localStorage.removeItem("userType");
@@ -2056,8 +1704,13 @@ module.exports =
     (0, _createClass3.default)(Sidebar, [{
       key: 'render',
       value: function render() {
-        var _this2 = this;
-  
+        try {
+          if (localStorage.getItem("userType") !== "admin") {
+            _history2.default.push('/login');
+          }
+        } catch (error) {
+          _history2.default.push('/login');
+        }
         return _react2.default.createElement(
           'div',
           { className: 'navbar-default sidebar', style: { marginLeft: '-20px' }, role: 'navigation' },
@@ -2069,84 +1722,14 @@ module.exports =
               { className: 'nav in', id: 'side-menu' },
               _react2.default.createElement(
                 'li',
-                { className: 'sidebar-search' },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'input-group custom-search-form' },
-                  _react2.default.createElement('input', { type: 'text', className: 'form-control', placeholder: 'Search...' }),
-                  _react2.default.createElement(
-                    'span',
-                    { className: 'input-group-btn' },
-                    _react2.default.createElement(
-                      'button',
-                      { className: 'btn btn-default', type: 'button' },
-                      _react2.default.createElement('i', { className: 'fa fa-search' })
-                    )
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'li',
                 null,
                 _react2.default.createElement(
                   'a',
                   { href: '', onClick: function onClick(e) {
                       e.preventDefault();_history2.default.push('/');
                     } },
-                  _react2.default.createElement('i', { className: 'fa fa-dashboard fa-fw' }),
-                  ' \xA0Dashboard'
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                { className: (0, _classnames2.default)({ active: !this.state.chartsElementsCollapsed }) },
-                _react2.default.createElement(
-                  'a',
-                  {
-                    href: '',
-                    onClick: function onClick(e) {
-                      e.preventDefault();
-                      _this2.setState({ chartsElementsCollapsed: !_this2.state.chartsElementsCollapsed });
-                      return false;
-                    }
-                  },
-                  _react2.default.createElement('i', { className: 'fa fa-bar-chart-o fa-fw' }),
-                  ' \xA0Charts',
-                  _react2.default.createElement('span', { className: 'fa arrow' })
-                ),
-                _react2.default.createElement(
-                  'ul',
-                  {
-                    className: (0, _classnames2.default)({
-                      'nav nav-second-level': true,
-                      collapse: this.state.chartsElementsCollapsed
-                    })
-                  },
-                  _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                      'a',
-                      { href: '', onClick: function onClick(e) {
-                          e.preventDefault();_history2.default.push('/flotcharts');
-                        } },
-                      'FlotCharts'
-                    )
-                  ),
-                  _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                      'a',
-                      {
-                        href: '',
-                        onClick: function onClick(e) {
-                          e.preventDefault();_history2.default.push('/morrisjscharts');
-                        }
-                      },
-                      'Morrisjs Charts'
-                    )
-                  )
+                  _react2.default.createElement('i', { className: 'fa fa-home fa-fw' }),
+                  ' \xA0Home'
                 )
               ),
               _react2.default.createElement(
@@ -2155,300 +1738,10 @@ module.exports =
                 _react2.default.createElement(
                   'a',
                   { href: '', onClick: function onClick(e) {
-                      e.preventDefault();_history2.default.push('/table');
+                      e.preventDefault();_history2.default.push('/ps');
                     } },
                   _react2.default.createElement('i', { className: 'fa fa-table fa-fw' }),
-                  ' \xA0Tables'
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  'a',
-                  { href: '', onClick: function onClick(e) {
-                      e.preventDefault();_history2.default.push('/forms');
-                    } },
-                  _react2.default.createElement('i', { className: 'fa fa-table fa-fw' }),
-                  ' \xA0Forms'
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                { className: (0, _classnames2.default)({ active: !this.state.uiElementsCollapsed }) },
-                _react2.default.createElement(
-                  'a',
-                  {
-                    href: '',
-                    onClick: function onClick(e) {
-                      e.preventDefault();
-                      _this2.setState({ uiElementsCollapsed: !_this2.state.uiElementsCollapsed
-                      });return false;
-                    }
-                  },
-                  _react2.default.createElement('i', { className: 'fa fa-edit fa-fw' }),
-                  ' UI Elements',
-                  _react2.default.createElement('span', { className: 'fa arrow' })
-                ),
-                _react2.default.createElement(
-                  'ul',
-                  {
-                    className: (0, _classnames2.default)({
-                      'nav nav-second-level': true,
-                      collapse: this.state.uiElementsCollapsed
-                    })
-                  },
-                  _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                      'a',
-                      { href: '', onClick: function onClick(e) {
-                          e.preventDefault();_history2.default.push('/panelwells');
-                        } },
-                      'Panels And Wells'
-                    )
-                  ),
-                  _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                      'a',
-                      { href: '', onClick: function onClick(e) {
-                          e.preventDefault();_history2.default.push('/button');
-                        } },
-                      'Buttons'
-                    )
-                  ),
-                  _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                      'a',
-                      {
-                        href: '',
-                        onClick: function onClick(e) {
-                          e.preventDefault();_history2.default.push('/notification');
-                        }
-                      },
-                      'Notification'
-                    )
-                  ),
-                  _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                      'a',
-                      { href: '', onClick: function onClick(e) {
-                          e.preventDefault();_history2.default.push('/typography');
-                        } },
-                      'Typography'
-                    )
-                  ),
-                  _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                      'a',
-                      { href: '', onClick: function onClick(e) {
-                          e.preventDefault();_history2.default.push('/icons');
-                        } },
-                      'Icons'
-                    )
-                  ),
-                  _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                      'a',
-                      { href: '', onClick: function onClick(e) {
-                          e.preventDefault();_history2.default.push('/grid');
-                        } },
-                      'Grid'
-                    )
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                { className: (0, _classnames2.default)({ active: !this.state.multiLevelDropdownCollapsed }) },
-                _react2.default.createElement(
-                  'a',
-                  {
-                    href: '',
-                    onClick: function onClick(e) {
-                      e.preventDefault();
-                      _this2.setState({
-                        multiLevelDropdownCollapsed: !_this2.state.multiLevelDropdownCollapsed
-                      });
-                      return false;
-                    }
-                  },
-                  _react2.default.createElement('i', { className: 'fa fa-sitemap fa-fw' }),
-                  '\xA0Multi-Level Dropdown',
-                  _react2.default.createElement('span', { className: 'fa arrow' })
-                ),
-                _react2.default.createElement(
-                  'ul',
-                  {
-                    className: (0, _classnames2.default)({
-                      'nav nav-second-level': true, collapse: this.state.multiLevelDropdownCollapsed
-                    })
-                  },
-                  _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                      'a',
-                      { href: '', onClick: function onClick(e) {
-                          e.preventDefault();
-                        } },
-                      'Second Level Item'
-                    )
-                  ),
-                  _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                      'a',
-                      { href: '', onClick: function onClick(e) {
-                          e.preventDefault();
-                        } },
-                      'Second Level Item'
-                    )
-                  ),
-                  _react2.default.createElement(
-                    'li',
-                    { className: (0, _classnames2.default)({ active: !this.state.thirdLevelDropdownCollapsed }) },
-                    _react2.default.createElement(
-                      'a',
-                      {
-                        href: '',
-                        onClick: function onClick(e) {
-                          e.preventDefault();
-                          _this2.setState({
-                            thirdLevelDropdownCollapsed: !_this2.state.thirdLevelDropdownCollapsed
-                          });
-                          return false;
-                        }
-                      },
-                      'Third Level',
-                      _react2.default.createElement('span', { className: 'fa arrow' })
-                    ),
-                    _react2.default.createElement(
-                      'ul',
-                      {
-                        className: (0, _classnames2.default)({
-                          'nav nav-second-level': true,
-                          collapse: this.state.thirdLevelDropdownCollapsed
-                        })
-                      },
-                      _react2.default.createElement(
-                        'li',
-                        null,
-                        _react2.default.createElement(
-                          'a',
-                          { href: '', onClick: function onClick(e) {
-                              e.preventDefault();
-                            } },
-                          'Third Level Item'
-                        )
-                      ),
-                      _react2.default.createElement(
-                        'li',
-                        null,
-                        _react2.default.createElement(
-                          'a',
-                          { href: '', onClick: function onClick(e) {
-                              e.preventDefault();
-                            } },
-                          'Third Level Item'
-                        )
-                      ),
-                      _react2.default.createElement(
-                        'li',
-                        null,
-                        _react2.default.createElement(
-                          'a',
-                          { href: '', onClick: function onClick(e) {
-                              e.preventDefault();
-                            } },
-                          'Third Level Item'
-                        )
-                      ),
-                      _react2.default.createElement(
-                        'li',
-                        null,
-                        _react2.default.createElement(
-                          'a',
-                          { href: '', onClick: function onClick(e) {
-                              e.preventDefault();
-                            } },
-                          'Third Level Item'
-                        )
-                      )
-                    )
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                { className: (0, _classnames2.default)({ active: !this.state.samplePagesCollapsed }) },
-                _react2.default.createElement(
-                  'a',
-                  {
-                    href: '',
-                    onClick: function onClick(e) {
-                      e.preventDefault();
-                      _this2.setState({
-                        samplePagesCollapsed: !_this2.state.samplePagesCollapsed
-                      });
-                      return false;
-                    }
-                  },
-                  _react2.default.createElement('i', { className: 'fa fa-files-o fa-fw' }),
-                  '\xA0Sample Pages',
-                  _react2.default.createElement('span', { className: 'fa arrow' })
-                ),
-                _react2.default.createElement(
-                  'ul',
-                  {
-                    className: (0, _classnames2.default)({
-                      'nav nav-second-level': true,
-                      collapse: this.state.samplePagesCollapsed
-                    })
-                  },
-                  _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                      'a',
-                      { href: '', onClick: function onClick(e) {
-                          e.preventDefault();_history2.default.push('/blank');
-                        } },
-                      'Blank'
-                    )
-                  ),
-                  _react2.default.createElement(
-                    'li',
-                    null,
-                    _react2.default.createElement(
-                      'a',
-                      { href: '', onClick: function onClick(e) {
-                          e.preventDefault();_history2.default.push('/login');
-                        } },
-                      'Login'
-                    )
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  'a',
-                  { href: 'http://www.strapui.com/' },
-                  'Premium React Themes'
+                  ' \xA0Processo Seletivo'
                 )
               )
             )
@@ -2468,12 +1761,7 @@ module.exports =
   module.exports = require("classnames");
 
 /***/ }),
-/* 47 */
-/***/ (function(module, exports) {
-
-  module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAmCAYAAACyAQkgAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpGODdGMTE3NDA3MjA2ODExODA4M0E3MjY3MTQwRTY5RSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1RTIzNTA3RUM5OEExMUU0QjRCOUUwQTIyNkYzQTlCNiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1RTIzNTA3REM5OEExMUU0QjRCOUUwQTIyNkYzQTlCNiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Rjk3RjExNzQwNzIwNjgxMTgwODNBNzI2NzE0MEU2OUUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Rjg3RjExNzQwNzIwNjgxMTgwODNBNzI2NzE0MEU2OUUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5xbRMYAAAIAklEQVR42qyZC5BNdRzH//9zd++6a1msRwi7SCrPXmZkSjU1pSmPEnrNoEQhjGEKq2xEKZRJHiEkRNIMkple8kiZyGu9GcZrsezL7tp7/n1/Z7+X47rn3mu2/8xnz7nnnP///M7v/3v9/6uNMSo3qFTOFaV8Wnk2A3A7GYem/HkEFKiba5VABo+HMcgleaWNk/p+DG55d0yQP5vzjPo6x1aB6JL2gqQTcJbOK6fBcjAd7IshYH0wALxAQaWdxZgTMOa0Ukg6vL5PtUr2HsAKaasMf4Le9ASLQXWwAMwHl8FAsAtMBIEI/SwwFGSDUXxGxpkDysBUMFKeNTG+NOGqxFCm1p7TNQ6U4OsfwnGHq+9T4AMwEjwOerm0Wwcs4PWTYDD4BhTzfj2wBWOOwXsX8pnoGo3R7gW3gbkuIaWVgVXgbjANtAWbQHvQBPxBIZeClmCeS0hFwaaCyuCRWELEI+hdPG7wuC8vHwJ6g1SwGmyk040GPcEFj76beWyj4p36KK22y3mitfkUdCp/i5bHx+hzLuwdFdJovO1W0J/nQXp42/9r8HgEzeWxRpRnAnSU5mAYp7sW+BbcEqVfatg74hDUGC9O8Jge5ZkpoAOYyvPlYChoAuYC7dGvAY/HYgWoazaqPePTQR5bq+tvJ1GTEpJep739CboBHzgE9oMnwfvgY3CZhFoLZ0ytspXSFXamw+AU6AD6gvtBK2aoFIYXaTU5/ZHaO4wMknKPg92MIk8w3+yuiNcHGN+eB9X4ew7vFYGjFE5U8SXYw+v5dCZJFFVAY6ZPSZDHGLbuAa9wLNvSesr2QrPkYlCvu2LUpZAAkrEaoga4IxBZ0FRO5SB6snzxeQq6iNN4kFMuGWUlUvWrutx6fM50loebU0pSJxKDT8bQaiiuLWZ/SQj9wAhwMVGrZ9bn2l0h2AU8N5sh7rTk6E41LAhq3eD1z1IzkzilnzLEPMj7aUyR8jETHQ0aNaKKz6l8bodfyBRuB+twfSfS8uFqPlUVxzH4LSaUychwiBqW1h2aaOb36axAgr6MwmgkyAYDpEhKpN+4Bc1iNSTTPIZT9hbT5l7wCx2jHq/Xx8vHlRpzsE9tS92VrCfiXEJSO8nzmML2df1qdGYDqxAfUhgst9NEji2z04P2v5HHTKbqN0Ap+Jxp2+fY6Hlk7P2XzYAE7aS7XfKFIDuCScg0P8wiRIqRAyzxFPqqgqBJ10rLR23l8znQwmbMWsifJee/RpMpYJyd6RQ715pEhBliTmJmGLf38VKTc7xUj7T2FJlaWwvMGL+lc3Czk4eQigXISTpBGm2tUG74IUzzZL3aVkY+5F3ej9Sy6Hz9KOBij+ckXXeBTDsg3/Ct+XYLC1LfB2OuC/uaxdDh1aSw+Irnf9OxrraGSVqE+AKMlaIYEX6hT5n0sDF+A9/xfCVNyqsVwHanwUwt2OlDbhvVccRU7TqGP1/CMCS2PV5r3R3h5ue8oEqzdMQxrJt4n/PwVk6pTEejKJ3SXLFP4uBLHs/JWioTmnji7BWTsbfIPOy/JmhH0JXnncGdUd5XhUlCYvKvFlNfFoP3GnCHR8fO9Pj57DM6lJUQR60iaE5fr+UEGTzJUsWuLC4eb9NEJAW/6PGuuuAHFtwfSeYKqV86vscv3EY7C6+WXnalw+nMMIORVdSFMpW0JtfekqC1xOBlYC1i9bo6fr2xSUCvL7Wdfj2Z6STNDnUWd+URIMn1DomtA8FOal8y3ijHBjbl2WrGaRshxtFHF1z7jBnpEh1mrmN/WMTh/hqGpuqMrzVxvVWKTx0sstVL0OwzeEayUjGc8ydEg9lVfSo/t0xVw71/cK8e64R9TjIxyH5aPcZ03IerBCkLL3IdNqsEHXukWTek0O/Bz4x3shh7k1xw1Y13sip62/kQrSbDYbpY5eeL3MWYaPKs7UTssbiXTnPZx8AeWj8tw6NVS4LGh1k4h+fGU1lnHA+FoGX46nCNhq8+O7Io6YmvD7juF1MLTVnYzGPqlYxyhfVBIqe1ASt/P4WsR0cJ7WoEsVRf+WiqXppeySlK8t1CSGHSrFL06kmE+RH8ztR5ik7XjkaewUySwimL1QqYnrOZATewbGxvGzO8TWXrWOvkitWjjWk3C+jx83ndT633ojOeZ54u4bjyoZ+AZq7CuThsySw7KA9wpXss9lLEe4khNOXx37DrpSAPzAQzQBqXI6vACtAcNAOrQSa4CIrDxtjFY/P4liKhZUjk3NTgaiD3zl3DqJVB1MwJMJmFS1/lLcVx5rhG/8dSpFocK8VimsB6CmgzTnYPea9Hy4tjhevaJIsy8y5dxKoFJA3Pdo27JGwLyHuj0CgTa5fMSXOonpyaMpIo6H82eG3TK1rrS4fJpYYH08HGRekjaVv2Zc9YMdSQ0CZFq0kZvogr5SRc21agds85YysUFg96rDKlWv+QqU9qgKc53euYlluyqjoXoW/7YgT0bmnWjpbJMaZehKkFS63pu5EqUDdS4F+mPBP1CduiSeQafjuF3MadvC2soCTsrAXPMXe/6lonhbaAhmDaC1IsJxtWbEsHQpZgsEzgB7+CRWABOABWgAwwAXTgtZB954CngAhTGcwGR8ASMBf8BW4FWbH2RuPyelTqytL2Uqs8fE1wlWYnuUqdzjDktfU/jXtQ/dm3B++dKa++zGdxVezGRHe3QgSaU6VXw2yAqdMwXhbd5KacnzssUgMcxSD58o+G2jCiVF/0jv8JMABBEldD7PKL3QAAAABJRU5ErkJggg=="
-
-/***/ }),
+/* 47 */,
 /* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2591,507 +1879,7 @@ module.exports =
             _reactBootstrap.PageHeader,
             null,
             'Bem vindo, ',
-            localStorage.getItem("userType"),
-            ' ',
             localStorage.getItem("userName")
-          )
-        )
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'row' },
-        _react2.default.createElement(
-          'div',
-          { className: 'col-lg-3 col-md-6' },
-          _react2.default.createElement(_Widget2.default, {
-            style: 'panel-primary',
-            icon: 'fa fa-comments fa-5x',
-            count: '26',
-            headerText: 'New Comments!',
-            footerText: 'View Details',
-            linkTo: '/'
-          })
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'col-lg-3 col-md-6' },
-          _react2.default.createElement(_Widget2.default, {
-            style: 'panel-green',
-            icon: 'fa fa-tasks fa-5x',
-            count: '12',
-            headerText: 'New Tasks!',
-            footerText: 'View Details',
-            linkTo: '/'
-          })
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'col-lg-3 col-md-6' },
-          _react2.default.createElement(_Widget2.default, {
-            style: 'panel-yellow',
-            icon: 'fa fa-shopping-cart fa-5x',
-            count: '124',
-            headerText: 'New Orders!',
-            footerText: 'View Details',
-            linkTo: '/'
-          })
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'col-lg-3 col-md-6' },
-          _react2.default.createElement(_Widget2.default, {
-            style: 'panel-red',
-            icon: 'fa fa-support fa-5x',
-            count: '13',
-            headerText: 'Support Tickets!',
-            footerText: 'View Details',
-            linkTo: '/'
-          })
-        )
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'row' },
-        _react2.default.createElement(
-          'div',
-          { className: 'col-lg-8' },
-          _react2.default.createElement(
-            _reactBootstrap.Panel,
-            {
-              header: _react2.default.createElement(
-                'span',
-                null,
-                _react2.default.createElement('i', { className: 'fa fa-bar-chart-o fa-fw' }),
-                ' Area Chart Example',
-                _react2.default.createElement(
-                  'div',
-                  { className: 'pull-right' },
-                  _react2.default.createElement(
-                    _reactBootstrap.DropdownButton,
-                    { title: 'Dropdown', bsSize: 'xs', pullRight: true, id: 'dropdownButton1' },
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: '1' },
-                      'Action'
-                    ),
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: '2' },
-                      'Another action'
-                    ),
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: '3' },
-                      'Something else here'
-                    ),
-                    _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: '4' },
-                      'Separated link'
-                    )
-                  )
-                )
-              )
-            },
-            _react2.default.createElement(
-              'div',
-              null,
-              _react2.default.createElement(
-                _recharts.ResponsiveContainer,
-                { width: '100%', aspect: 2 },
-                _react2.default.createElement(
-                  _recharts.AreaChart,
-                  { data: data, margin: { top: 10, right: 30, left: 0, bottom: 0 } },
-                  _react2.default.createElement(_recharts.XAxis, { dataKey: 'name' }),
-                  _react2.default.createElement(_recharts.YAxis, null),
-                  _react2.default.createElement(_recharts.CartesianGrid, { stroke: '#ccc' }),
-                  _react2.default.createElement(_recharts.Tooltip, null),
-                  _react2.default.createElement(_recharts.Area, { type: 'monotone', dataKey: 'uv', stackId: '1', stroke: '#8884d8', fill: '#8884d8' }),
-                  _react2.default.createElement(_recharts.Area, { type: 'monotone', dataKey: 'pv', stackId: '1', stroke: '#82ca9d', fill: '#82ca9d' }),
-                  _react2.default.createElement(_recharts.Area, { type: 'monotone', dataKey: 'amt', stackId: '1', stroke: '#ffc658', fill: '#ffc658' })
-                )
-              )
-            )
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Panel,
-            {
-              header: _react2.default.createElement(
-                'span',
-                null,
-                _react2.default.createElement('i', { className: 'fa fa-bar-chart-o fa-fw' }),
-                ' Bar Chart Example',
-                _react2.default.createElement(
-                  'div',
-                  { className: 'pull-right' },
-                  _react2.default.createElement(
-                    _reactBootstrap.DropdownButton,
-                    { title: 'Dropdown', bsSize: 'xs', pullRight: true, id: 'dropdownButton2' },
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: '1' },
-                      'Action'
-                    ),
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: '2' },
-                      'Another action'
-                    ),
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: '3' },
-                      'Something else here'
-                    ),
-                    _react2.default.createElement(_reactBootstrap.MenuItem, { divider: true }),
-                    _react2.default.createElement(
-                      _reactBootstrap.MenuItem,
-                      { eventKey: '4' },
-                      'Separated link'
-                    )
-                  )
-                )
-              )
-            },
-            _react2.default.createElement(
-              'div',
-              null,
-              _react2.default.createElement(
-                _recharts.ResponsiveContainer,
-                { width: '100%', aspect: 2 },
-                _react2.default.createElement(
-                  _recharts.BarChart,
-                  { data: data, margin: { top: 10, right: 30, left: 0, bottom: 0 } },
-                  _react2.default.createElement(_recharts.CartesianGrid, { stroke: '#ccc' }),
-                  _react2.default.createElement(_recharts.XAxis, { dataKey: 'name' }),
-                  _react2.default.createElement(_recharts.YAxis, null),
-                  _react2.default.createElement(_recharts.Tooltip, null),
-                  _react2.default.createElement(_recharts.Bar, { dataKey: 'pv', stackId: '1', fill: '#8884d8' }),
-                  _react2.default.createElement(_recharts.Bar, { dataKey: 'uv', stackId: '1', fill: '#82ca9d' }),
-                  _react2.default.createElement(_recharts.Bar, { type: 'monotone', dataKey: 'amt', fill: '#ffc658' })
-                )
-              )
-            )
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Panel,
-            {
-              header: _react2.default.createElement(
-                'span',
-                null,
-                _react2.default.createElement('i', { className: 'fa fa-clock-o fa-fw' }),
-                ' Responsive Timeline'
-              )
-            },
-            _react2.default.createElement(
-              'div',
-              null,
-              _react2.default.createElement(
-                'ul',
-                { className: 'timeline' },
-                _react2.default.createElement(
-                  'li',
-                  null,
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'timeline-badge' },
-                    _react2.default.createElement('i', { className: 'fa fa-check' })
-                  ),
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'timeline-panel' },
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'timeline-heading' },
-                      _react2.default.createElement(
-                        'h4',
-                        { className: 'timeline-title' },
-                        'Lorem ipsum dolor'
-                      ),
-                      _react2.default.createElement(
-                        'p',
-                        null,
-                        _react2.default.createElement(
-                          'small',
-                          { className: 'text-muted' },
-                          _react2.default.createElement('i', { className: 'fa fa-clock-o' }),
-                          ' 11 hours ago via Twitter'
-                        )
-                      )
-                    ),
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'timeline-body' },
-                      _react2.default.createElement(
-                        'p',
-                        null,
-                        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero laboriosam dolor perspiciatis omnis exercitationem. Beatae, officia pariatur? Est cum veniam excepturi. Maiores praesentium, porro voluptas suscipit facere rem dicta, debitis.'
-                      )
-                    )
-                  )
-                ),
-                _react2.default.createElement(
-                  'li',
-                  { className: 'timeline-inverted' },
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'timeline-badge warning' },
-                    _react2.default.createElement('i', { className: 'fa fa-credit-card' })
-                  ),
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'timeline-panel' },
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'timeline-heading' },
-                      _react2.default.createElement(
-                        'h4',
-                        { className: 'timeline-title' },
-                        'Lorem ipsum dolor'
-                      )
-                    ),
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'timeline-body' },
-                      _react2.default.createElement(
-                        'p',
-                        null,
-                        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolorem quibusdam, tenetur commodi provident cumque magni voluptatem libero, quis rerum. Fugiat esse debitis optio, tempore. Animi officiis alias, officia repellendus.'
-                      ),
-                      _react2.default.createElement(
-                        'p',
-                        null,
-                        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium maiores odit qui est tempora eos, nostrum provident explicabo dignissimos debitis vel! Adipisci eius voluptates, ad aut recusandae minus eaque facere.'
-                      )
-                    )
-                  )
-                ),
-                _react2.default.createElement(
-                  'li',
-                  null,
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'timeline-badge danger' },
-                    _react2.default.createElement('i', { className: 'fa fa-bomb' })
-                  ),
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'timeline-panel' },
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'timeline-heading' },
-                      _react2.default.createElement(
-                        'h4',
-                        { className: 'timeline-title' },
-                        'Lorem ipsum dolor'
-                      )
-                    ),
-                    _react2.default.createElement(
-                      'div',
-                      { className: 'timeline-body' },
-                      _react2.default.createElement(
-                        'p',
-                        null,
-                        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus numquam facilis enim eaque, tenetur nam id qui vel velit similique nihil iure molestias aliquam, voluptatem totam quaerat, magni commodi quisquam.'
-                      )
-                    )
-                  )
-                )
-              )
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'col-lg-4' },
-          _react2.default.createElement(
-            _reactBootstrap.Panel,
-            {
-              header: _react2.default.createElement(
-                'span',
-                null,
-                _react2.default.createElement('i', { className: 'fa fa-bell fa-fw' }),
-                ' Notifications Panel'
-              )
-            },
-            _react2.default.createElement(
-              _reactBootstrap.ListGroup,
-              null,
-              _react2.default.createElement(
-                _reactBootstrap.ListGroupItem,
-                { href: '', onClick: function onClick(e) {
-                    e.preventDefault();
-                  } },
-                _react2.default.createElement('i', { className: 'fa fa-comment fa-fw' }),
-                ' New Comment',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted small' },
-                  _react2.default.createElement(
-                    'em',
-                    null,
-                    '4 minutes ago'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                _reactBootstrap.ListGroupItem,
-                { href: '', onClick: function onClick(e) {
-                    e.preventDefault();
-                  } },
-                _react2.default.createElement('i', { className: 'fa fa-twitter fa-fw' }),
-                ' 3 New Followers',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted small' },
-                  _react2.default.createElement(
-                    'em',
-                    null,
-                    '12 minutes ago'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                _reactBootstrap.ListGroupItem,
-                { href: '', onClick: function onClick(e) {
-                    e.preventDefault();
-                  } },
-                _react2.default.createElement('i', { className: 'fa fa-envelope fa-fw' }),
-                ' Message Sent',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted small' },
-                  _react2.default.createElement(
-                    'em',
-                    null,
-                    '27 minutes ago'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                _reactBootstrap.ListGroupItem,
-                { href: '', onClick: function onClick(e) {
-                    e.preventDefault();
-                  } },
-                _react2.default.createElement('i', { className: 'fa fa-tasks fa-fw' }),
-                ' New Task',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted small' },
-                  _react2.default.createElement(
-                    'em',
-                    null,
-                    '43 minutes ago'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                _reactBootstrap.ListGroupItem,
-                { href: '', onClick: function onClick(e) {
-                    e.preventDefault();
-                  } },
-                _react2.default.createElement('i', { className: 'fa fa-upload fa-fw' }),
-                ' Server Rebooted',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted small' },
-                  _react2.default.createElement(
-                    'em',
-                    null,
-                    '11:32 AM'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                _reactBootstrap.ListGroupItem,
-                { href: '', onClick: function onClick(e) {
-                    e.preventDefault();
-                  } },
-                _react2.default.createElement('i', { className: 'fa fa-bolt fa-fw' }),
-                ' Server Crashed!',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted small' },
-                  _react2.default.createElement(
-                    'em',
-                    null,
-                    '11:13 AM'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                _reactBootstrap.ListGroupItem,
-                { href: '', onClick: function onClick(e) {
-                    e.preventDefault();
-                  } },
-                _react2.default.createElement('i', { className: 'fa fa-warning fa-fw' }),
-                ' Server Not Responding',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted small' },
-                  _react2.default.createElement(
-                    'em',
-                    null,
-                    '10:57 AM'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                _reactBootstrap.ListGroupItem,
-                { href: '', onClick: function onClick(e) {
-                    e.preventDefault();
-                  } },
-                _react2.default.createElement('i', { className: 'fa fa-shopping-cart fa-fw' }),
-                ' New Order Placed',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted small' },
-                  _react2.default.createElement(
-                    'em',
-                    null,
-                    '9:49 AM'
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                _reactBootstrap.ListGroupItem,
-                { href: '', onClick: function onClick(e) {
-                    e.preventDefault();
-                  } },
-                _react2.default.createElement('i', { className: 'fa fa-money fa-fw' }),
-                ' Payment Received',
-                _react2.default.createElement(
-                  'span',
-                  { className: 'pull-right text-muted small' },
-                  _react2.default.createElement(
-                    'em',
-                    null,
-                    'Yesterday'
-                  )
-                )
-              )
-            ),
-            _react2.default.createElement(
-              _reactBootstrap.Button,
-              { block: true },
-              'View All Alerts'
-            )
-          ),
-          _react2.default.createElement(
-            _reactBootstrap.Panel,
-            {
-              header: _react2.default.createElement(
-                'span',
-                null,
-                _react2.default.createElement('i', { className: 'fa fa-bar-chart-o fa-fw' }),
-                ' Donut Chart Example'
-              )
-            },
-            _react2.default.createElement(
-              'div',
-              null,
-              _react2.default.createElement(_Donut2.default, { data: data, color: '#8884d8', innerRadius: '70%', outerRadius: '90%' })
-            )
           )
         )
       )
@@ -21000,8 +19788,9 @@ module.exports =
               _this2.setState({ type: "admin" });
               localStorage.setItem("userId", response.data.id);
               localStorage.setItem("userName", response.data.nome);
+              localStorage.setItem("userCargo", response.data.cargo);
               localStorage.setItem("userType", "admin");
-              _history2.default.push('/admin');
+              _history2.default.push('/');
             } else {
               _this2.setState({ type: "user" });
               localStorage.setItem("userId", response.data.id);
@@ -21021,27 +19810,22 @@ module.exports =
       value: function render() {
         var _this3 = this;
   
+        var logo = __webpack_require__(209);
         return _react2.default.createElement(
           'div',
           { className: 'col-md-4 col-md-offset-4' },
           _react2.default.createElement(
             'div',
-            { className: 'text-center' },
+            { className: 'hidden-sm-down' },
             _react2.default.createElement(
-              'h1',
-              { className: 'login-brand-text' },
-              'SB Admin React'
+              'div',
+              { style: { 'visibility': 'hidden' } },
+              _react2.default.createElement(_Panel2.default, { header: _react2.default.createElement('h3', null), className: 'login-panel' })
             ),
             _react2.default.createElement(
-              'h3',
-              { className: 'text-muted' },
-              'Created by ',
-              _react2.default.createElement(
-                'a',
-                { href: 'http://startreact.com' },
-                'StartReact.com'
-              ),
-              ' team'
+              'div',
+              { className: 'text-center' },
+              _react2.default.createElement('img', { src: logo, alt: 'Bandtec', title: 'Bandtec' })
             )
           ),
           _react2.default.createElement(
@@ -30615,6 +29399,10 @@ module.exports =
     value: true
   });
   
+  var _defineProperty2 = __webpack_require__(53);
+  
+  var _defineProperty3 = _interopRequireDefault(_defineProperty2);
+  
   var _getPrototypeOf = __webpack_require__(29);
   
   var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -30645,10 +29433,6 @@ module.exports =
   
   var _axios2 = _interopRequireDefault(_axios);
   
-  var _reactSelect = __webpack_require__(193);
-  
-  var _reactSelect2 = _interopRequireDefault(_reactSelect);
-  
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
   
   function getParameterByName(name, url) {
@@ -30669,8 +29453,8 @@ module.exports =
   
       var _this = (0, _possibleConstructorReturn3.default)(this, (ProcessoSeletivoEdit.__proto__ || (0, _getPrototypeOf2.default)(ProcessoSeletivoEdit)).call(this, props));
   
-      _this.handleChange = function (e) {
-        _this.setState({ descricao: e.target.value });
+      _this.handleChange = function (event) {
+        _this.setState((0, _defineProperty3.default)({}, event.target.id, event.target.value));
       };
   
       _this.state = {
@@ -30703,7 +29487,9 @@ module.exports =
       }
     }, {
       key: 'handleSubmitButton',
-      value: function handleSubmitButton() {
+      value: function handleSubmitButton(e) {
+        e.preventDefault();
+        console.log(x);
         if (this.state.id !== null) {
           var x = {
             id: this.state.id,
@@ -30711,13 +29497,21 @@ module.exports =
             dataInicio: this.state.dataInicio,
             dataFim: this.state.dataFim
           };
-          console.log(x);
-          // if (x !== this.state.schemas) {
-          //   axios
-          //   .put(this.theurl + "processoseletivo/" + x.id, x)
-          //   .catch(error => console.log(error.response));
-          // }
-        } else {}
+  
+          if (x !== this.state.schemas) {
+            _axios2.default.put(this.theurl + "processoseletivo/" + x.id, x).then(function (response) {
+              console.log(response);
+              if (response.status === 204) {
+                document.getElementById('successPanel').style.display = "block";
+              };
+            }).catch(function (error) {
+              document.getElementById('errorPanel').style.display = "block";
+              console.log(error.response);
+            });
+          }
+        } else {
+          document.getElementById('errorPanel').style.display = "block";
+        }
       }
     }, {
       key: 'render',
@@ -30748,6 +29542,24 @@ module.exports =
             { className: 'row' },
             _react2.default.createElement(
               'div',
+              { id: 'successPanel', style: { 'display': 'none' } },
+              _react2.default.createElement(_reactBootstrap.Panel, { header: _react2.default.createElement(
+                  'span',
+                  null,
+                  'Processo Seletivo Editado com Sucesso!'
+                ), className: 'panel-success' })
+            ),
+            _react2.default.createElement(
+              'div',
+              { id: 'errorPanel', style: { 'display': 'none' } },
+              _react2.default.createElement(_reactBootstrap.Panel, { header: _react2.default.createElement(
+                  'span',
+                  null,
+                  'Houve erro ao criar o Processo Seletivo'
+                ), className: 'panel-danger' })
+            ),
+            _react2.default.createElement(
+              'div',
               { className: 'col-lg-12' },
               _react2.default.createElement(
                 _reactBootstrap.Panel,
@@ -30767,7 +29579,7 @@ module.exports =
                       { className: 'col-lg-12' },
                       _react2.default.createElement(
                         _reactBootstrap.FormGroup,
-                        { controlId: 'descInput' },
+                        { controlId: 'descricao' },
                         _react2.default.createElement(
                           _reactBootstrap.ControlLabel,
                           null,
@@ -30783,17 +29595,50 @@ module.exports =
                     ),
                     _react2.default.createElement(
                       'div',
-                      { className: 'col-lg-12' },
-                      _react2.default.createElement(_reactSelect2.default, null)
+                      { className: 'col-lg-6' },
+                      _react2.default.createElement(
+                        _reactBootstrap.FormGroup,
+                        { controlId: 'dataInicio' },
+                        _react2.default.createElement(
+                          _reactBootstrap.ControlLabel,
+                          null,
+                          'Data \xCDnicio'
+                        ),
+                        _react2.default.createElement(_reactBootstrap.FormControl, {
+                          type: 'text',
+                          value: this.state.dataInicio,
+                          placeholder: this.state.schemas.dataInicio,
+                          onChange: this.handleChange
+                        })
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'col-lg-6' },
+                      _react2.default.createElement(
+                        _reactBootstrap.FormGroup,
+                        { controlId: 'dataFim' },
+                        _react2.default.createElement(
+                          _reactBootstrap.ControlLabel,
+                          null,
+                          'Data Fim'
+                        ),
+                        _react2.default.createElement(_reactBootstrap.FormControl, {
+                          type: 'text',
+                          value: this.state.dataFim,
+                          placeholder: this.state.schemas.dataFim,
+                          onChange: this.handleChange
+                        })
+                      )
                     )
                   )
                 ),
                 _react2.default.createElement(
                   _reactBootstrap.Button,
-                  { onClick: function onClick() {
-                      return console.log(_this3.state.descricao);
+                  { onClick: function onClick(e) {
+                      return _this3.handleSubmitButton(e);
                     } },
-                  'Click Me'
+                  'Editar'
                 )
               )
             )
@@ -30807,13 +29652,9 @@ module.exports =
   exports.default = ProcessoSeletivoEdit;
 
 /***/ }),
-/* 193 */
-/***/ (function(module, exports) {
-
-  module.exports = require("react-select");
-
-/***/ }),
-/* 194 */
+/* 193 */,
+/* 194 */,
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -30826,7 +29667,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _create = __webpack_require__(195);
+  var _create = __webpack_require__(196);
   
   var _create2 = _interopRequireDefault(_create);
   
@@ -30842,55 +29683,6 @@ module.exports =
   };
 
 /***/ }),
-/* 195 */
-/***/ (function(module, exports, __webpack_require__) {
-
-  'use strict';
-  
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  
-  var _react = __webpack_require__(11);
-  
-  var _react2 = _interopRequireDefault(_react);
-  
-  var _reactBootstrap = __webpack_require__(38);
-  
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-  
-  var title = 'Criação de Processo Seletivo';
-  
-  function displayProcessoSeletivoCreate(props, context) {
-    context.setTitle(title);
-    return _react2.default.createElement(
-      'div',
-      null,
-      _react2.default.createElement(
-        'div',
-        { className: 'row' },
-        _react2.default.createElement(
-          'div',
-          { className: 'col-lg-12' },
-          _react2.default.createElement(
-            _reactBootstrap.PageHeader,
-            null,
-            'Cria\xE7\xE3o de Processo Seletivo'
-          )
-        )
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'row' },
-        _react2.default.createElement('div', { className: 'col-lg-12' })
-      )
-    );
-  }
-  
-  displayProcessoSeletivoCreate.contextTypes = { setTitle: _react.PropTypes.func.isRequired };
-  exports.default = displayProcessoSeletivoCreate;
-
-/***/ }),
 /* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -30900,28 +29692,221 @@ module.exports =
     value: true
   });
   
+  var _defineProperty2 = __webpack_require__(53);
+  
+  var _defineProperty3 = _interopRequireDefault(_defineProperty2);
+  
+  var _getPrototypeOf = __webpack_require__(29);
+  
+  var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+  
+  var _classCallCheck2 = __webpack_require__(30);
+  
+  var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+  
+  var _createClass2 = __webpack_require__(31);
+  
+  var _createClass3 = _interopRequireDefault(_createClass2);
+  
+  var _possibleConstructorReturn2 = __webpack_require__(32);
+  
+  var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+  
+  var _inherits2 = __webpack_require__(33);
+  
+  var _inherits3 = _interopRequireDefault(_inherits2);
+  
   var _react = __webpack_require__(11);
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _comoConheceu = __webpack_require__(197);
+  var _reactBootstrap = __webpack_require__(38);
   
-  var _comoConheceu2 = _interopRequireDefault(_comoConheceu);
+  var _axios = __webpack_require__(154);
   
-  var _jornadaCandidato = __webpack_require__(200);
-  
-  var _jornadaCandidato2 = _interopRequireDefault(_jornadaCandidato);
+  var _axios2 = _interopRequireDefault(_axios);
   
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
   
-  exports.default = {
+  var ProcessoSeletivoEdit = function (_Component) {
+    (0, _inherits3.default)(ProcessoSeletivoEdit, _Component);
   
-    path: '/',
+    function ProcessoSeletivoEdit(props) {
+      (0, _classCallCheck3.default)(this, ProcessoSeletivoEdit);
   
-    action: function action() {
-      return _react2.default.createElement(_jornadaCandidato2.default, null);
+      var _this = (0, _possibleConstructorReturn3.default)(this, (ProcessoSeletivoEdit.__proto__ || (0, _getPrototypeOf2.default)(ProcessoSeletivoEdit)).call(this, props));
+  
+      _this.handleChange = function (event) {
+        _this.setState((0, _defineProperty3.default)({}, event.target.id, event.target.value));
+      };
+  
+      _this.state = {
+        descricao: '',
+        dataInicio: null,
+        dataFim: null,
+        schemas: {}
+      };
+  
+      _this.theurl = 'https://jcapi-225112.appspot.com/';
+      return _this;
     }
-  };
+  
+    (0, _createClass3.default)(ProcessoSeletivoEdit, [{
+      key: 'handleSubmitButton',
+      value: function handleSubmitButton(e) {
+        e.preventDefault();
+        var x = {
+          descricao: this.state.descricao,
+          dataInicio: this.state.dataInicio,
+          dataFim: this.state.dataFim
+        };
+        _axios2.default.post(this.theurl + "processoseletivo/", x).then(function (response) {
+          console.log(response);
+          if (response.status === 204) {
+            document.getElementById('successPanel').style.display = "block";
+          };
+        }).catch(function (error) {
+          document.getElementById('errorPanel').style.display = "block";
+          console.log(error.response);
+        });
+      }
+    }, {
+      key: 'render',
+      value: function render() {
+        var _this2 = this;
+  
+        return _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement(
+            'div',
+            { className: 'row' },
+            _react2.default.createElement(
+              'div',
+              { className: 'col-lg-12' },
+              _react2.default.createElement(
+                _reactBootstrap.PageHeader,
+                null,
+                'Cria\xE7\xE3o de Processo Seletivo ',
+                this.state.id,
+                ': ',
+                this.state.schemas.descricao
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'row' },
+            _react2.default.createElement(
+              'div',
+              { id: 'successPanel', style: { 'display': 'none' } },
+              _react2.default.createElement(_reactBootstrap.Panel, { header: _react2.default.createElement(
+                  'span',
+                  null,
+                  'Processo Seletivo CRIADO com Sucesso!'
+                ), className: 'panel-success' })
+            ),
+            _react2.default.createElement(
+              'div',
+              { id: 'errorPanel', style: { 'display': 'none' } },
+              _react2.default.createElement(_reactBootstrap.Panel, { header: _react2.default.createElement(
+                  'span',
+                  null,
+                  'Houve erro ao criar o Processo Seletivo'
+                ), className: 'panel-danger' })
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'col-lg-12' },
+              _react2.default.createElement(
+                _reactBootstrap.Panel,
+                { header: _react2.default.createElement(
+                    'span',
+                    null,
+                    'Criar'
+                  ) },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'row' },
+                  _react2.default.createElement(
+                    _reactBootstrap.Form,
+                    null,
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'col-lg-12' },
+                      _react2.default.createElement(
+                        _reactBootstrap.FormGroup,
+                        { controlId: 'descricao' },
+                        _react2.default.createElement(
+                          _reactBootstrap.ControlLabel,
+                          null,
+                          'Descri\xE7\xE3o'
+                        ),
+                        _react2.default.createElement(_reactBootstrap.FormControl, {
+                          type: 'text',
+                          value: this.state.descricao,
+                          placeholder: this.state.schemas.descricao,
+                          onChange: this.handleChange
+                        })
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'col-lg-6' },
+                      _react2.default.createElement(
+                        _reactBootstrap.FormGroup,
+                        { controlId: 'dataInicio' },
+                        _react2.default.createElement(
+                          _reactBootstrap.ControlLabel,
+                          null,
+                          'Data \xCDnicio'
+                        ),
+                        _react2.default.createElement(_reactBootstrap.FormControl, {
+                          type: 'text',
+                          value: this.state.dataInicio,
+                          placeholder: this.state.schemas.dataInicio,
+                          onChange: this.handleChange
+                        })
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'col-lg-6' },
+                      _react2.default.createElement(
+                        _reactBootstrap.FormGroup,
+                        { controlId: 'dataFim' },
+                        _react2.default.createElement(
+                          _reactBootstrap.ControlLabel,
+                          null,
+                          'Data Fim'
+                        ),
+                        _react2.default.createElement(_reactBootstrap.FormControl, {
+                          type: 'text',
+                          value: this.state.dataFim,
+                          placeholder: this.state.schemas.dataFim,
+                          onChange: this.handleChange
+                        })
+                      )
+                    )
+                  )
+                ),
+                _react2.default.createElement(
+                  _reactBootstrap.Button,
+                  { onClick: function onClick(e) {
+                      return _this2.handleSubmitButton(e);
+                    } },
+                  'Editar'
+                )
+              )
+            )
+          )
+        );
+      }
+    }]);
+    return ProcessoSeletivoEdit;
+  }(_react.Component);
+  
+  exports.default = ProcessoSeletivoEdit;
 
 /***/ }),
 /* 197 */
@@ -30937,13 +29922,46 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
+  var _comoConheceu = __webpack_require__(198);
+  
+  var _comoConheceu2 = _interopRequireDefault(_comoConheceu);
+  
+  var _jornadaCandidato = __webpack_require__(201);
+  
+  var _jornadaCandidato2 = _interopRequireDefault(_jornadaCandidato);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  exports.default = {
+  
+    path: '/',
+  
+    action: function action() {
+      return _react2.default.createElement(_jornadaCandidato2.default, null);
+    }
+  };
+
+/***/ }),
+/* 198 */
+/***/ (function(module, exports, __webpack_require__) {
+
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  
+  var _react = __webpack_require__(11);
+  
+  var _react2 = _interopRequireDefault(_react);
+  
   var _reactBootstrap = __webpack_require__(38);
   
-  var _OrigemForm = __webpack_require__(198);
+  var _OrigemForm = __webpack_require__(199);
   
   var _OrigemForm2 = _interopRequireDefault(_OrigemForm);
   
-  var _EtapaForm = __webpack_require__(199);
+  var _EtapaForm = __webpack_require__(200);
   
   var _EtapaForm2 = _interopRequireDefault(_EtapaForm);
   
@@ -30995,7 +30013,7 @@ module.exports =
   exports.default = ComoConheceu;
 
 /***/ }),
-/* 198 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -31099,7 +30117,7 @@ module.exports =
   exports.default = OrigemForm;
 
 /***/ }),
-/* 199 */
+/* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -31203,7 +30221,7 @@ module.exports =
   exports.default = EtapaForm;
 
 /***/ }),
-/* 200 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -31222,7 +30240,7 @@ module.exports =
   
   var _Navbar2 = _interopRequireDefault(_Navbar);
   
-  var _Jornada = __webpack_require__(201);
+  var _Jornada = __webpack_require__(202);
   
   var _Jornada2 = _interopRequireDefault(_Jornada);
   
@@ -31302,7 +30320,7 @@ module.exports =
   exports.default = displayJornadaCandidato;
 
 /***/ }),
-/* 201 */
+/* 202 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -31341,15 +30359,15 @@ module.exports =
   
   var _axios2 = _interopRequireDefault(_axios);
   
-  var _Etapa = __webpack_require__(202);
+  var _Etapa = __webpack_require__(203);
   
   var _Etapa2 = _interopRequireDefault(_Etapa);
   
-  var _Modal = __webpack_require__(205);
+  var _Modal = __webpack_require__(206);
   
   var _Modal2 = _interopRequireDefault(_Modal);
   
-  var _util = __webpack_require__(204);
+  var _util = __webpack_require__(205);
   
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
   
@@ -31456,7 +30474,7 @@ module.exports =
   exports.default = EtapaForm;
 
 /***/ }),
-/* 202 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -31495,11 +30513,11 @@ module.exports =
   
   var _axios2 = _interopRequireDefault(_axios);
   
-  var _propTypes = __webpack_require__(203);
+  var _propTypes = __webpack_require__(204);
   
   var _propTypes2 = _interopRequireDefault(_propTypes);
   
-  var _util = __webpack_require__(204);
+  var _util = __webpack_require__(205);
   
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
   
@@ -31621,19 +30639,19 @@ module.exports =
   exports.default = EtapaForm;
 
 /***/ }),
-/* 203 */
+/* 204 */
 /***/ (function(module, exports) {
 
   module.exports = require("prop-types");
 
 /***/ }),
-/* 204 */
+/* 205 */
 /***/ (function(module, exports) {
 
   module.exports = require("util");
 
 /***/ }),
-/* 205 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -31754,7 +30772,7 @@ module.exports =
   exports.default = ModalMudancaEtapa;
 
 /***/ }),
-/* 206 */
+/* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -31803,10 +30821,819 @@ module.exports =
       */
 
 /***/ }),
-/* 207 */
+/* 208 */
 /***/ (function(module, exports) {
 
   module.exports = require("./assets");
+
+/***/ }),
+/* 209 */
+/***/ (function(module, exports, __webpack_require__) {
+
+  module.exports = __webpack_require__.p + "components/Header/logo_bandtec_ds_azul.png?57540bce96441ca6daca25a9e75a1aa4";
+
+/***/ }),
+/* 210 */
+/***/ (function(module, exports, __webpack_require__) {
+
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  
+  var _react = __webpack_require__(11);
+  
+  var _react2 = _interopRequireDefault(_react);
+  
+  var _publico = __webpack_require__(211);
+  
+  var _publico2 = _interopRequireDefault(_publico);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  // import ProcessoSeletivo from '../processoSeletivo/'
+  exports.default = {
+    path: '/inscricao-vestibular',
+    action: function action() {
+      return _react2.default.createElement(_publico2.default, null);
+    }
+  };
+
+/***/ }),
+/* 211 */
+/***/ (function(module, exports, __webpack_require__) {
+
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  
+  var _react = __webpack_require__(11);
+  
+  var _react2 = _interopRequireDefault(_react);
+  
+  var _reactBootstrap = __webpack_require__(38);
+  
+  var _OrigemForm = __webpack_require__(199);
+  
+  var _OrigemForm2 = _interopRequireDefault(_OrigemForm);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  var title = 'Inscrição Vestibular - Bandtec';
+  var origem = _react2.default.createElement(_OrigemForm2.default, null);
+  
+  function Publico(props, context) {
+    context.setTitle(title);
+    return _react2.default.createElement(
+      'div',
+      { className: 'col-md-4 col-md-offset-4' },
+      _react2.default.createElement(
+        'div',
+        { className: 'text-center' },
+        _react2.default.createElement(
+          'h1',
+          { className: 'login-brand-text' },
+          'Inscri\xE7\xE3o Vestibular'
+        )
+      ),
+      _react2.default.createElement(
+        _reactBootstrap.Panel,
+        { header: _react2.default.createElement(
+            'h3',
+            null,
+            'Como conheceu o projeto Gera\xE7\xE3o Futura?'
+          ) },
+        _react2.default.createElement(
+          'form',
+          { role: 'form' },
+          _react2.default.createElement(
+            'fieldset',
+            null,
+            _react2.default.createElement(
+              'div',
+              { className: 'form-group' },
+              origem
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Button,
+              { type: 'submit', className: 'btn btn-info', href: '/vestibular/DadosPessoais' },
+              'Pr\xF3ximo'
+            )
+          )
+        )
+      )
+    );
+  }
+  
+  Publico.contextTypes = { setTitle: _react.PropTypes.func.isRequired };
+  exports.default = Publico;
+
+/***/ }),
+/* 212 */
+/***/ (function(module, exports, __webpack_require__) {
+
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  
+  var _react = __webpack_require__(11);
+  
+  var _react2 = _interopRequireDefault(_react);
+  
+  var _dadosPessoais = __webpack_require__(213);
+  
+  var _dadosPessoais2 = _interopRequireDefault(_dadosPessoais);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  exports.default = {
+    path: '/DadosPessoais',
+    action: function action() {
+      return _react2.default.createElement(_dadosPessoais2.default, null);
+    }
+  };
+
+/***/ }),
+/* 213 */
+/***/ (function(module, exports, __webpack_require__) {
+
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  
+  var _react = __webpack_require__(11);
+  
+  var _react2 = _interopRequireDefault(_react);
+  
+  var _history = __webpack_require__(40);
+  
+  var _history2 = _interopRequireDefault(_history);
+  
+  var _reactBootstrap = __webpack_require__(38);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  // const validate = values => {
+  //   const errors = {};
+  //   if (!values.rg) {
+  //     errors.rg = 'RG Inválido';
+  //   } else if (values.rg.lenght > 9) {
+  //     errors.rg = 'Digite seu RG sem pontos ou traços';
+  //   }
+  //   if (!values.cpf) {
+  //     errors.cpf = 'CPF Inválido';
+  //   } else if (values.cpf.lenght > 11) {
+  //     errors.cpf = 'Digite seu CPF sem pontos ou traços';
+  //   }
+  //   if (values.email !== undefined) {
+  //     errors.email = 'Email is required';
+  //   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+  //     errors.email = 'Invalid email address';
+  //   }
+  //   return errors;
+  // };
+  
+  var title = 'Dados Pessoais';
+  // import reduxForm from 'redux-form';
+  
+  
+  function DadosPessoais(props, context) {
+    context.setTitle(title);
+  
+    return _react2.default.createElement(
+      'div',
+      { className: 'col-md-4 col-md-offset-4' },
+      _react2.default.createElement(
+        'div',
+        { className: 'text-center' },
+        _react2.default.createElement(
+          'h1',
+          { className: 'login-brand-text' },
+          'Inscri\xE7\xE3o Vestibular'
+        )
+      ),
+      _react2.default.createElement(
+        _reactBootstrap.Panel,
+        { header: _react2.default.createElement(
+            'h3',
+            null,
+            'Dados Pessoais'
+          ) },
+        _react2.default.createElement(
+          'form',
+          { role: 'form' },
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              _reactBootstrap.ControlLabel,
+              null,
+              'Nome Completo *'
+            ),
+            _react2.default.createElement(_reactBootstrap.FormControl, {
+              name: 'nome',
+              type: 'text'
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              _reactBootstrap.ControlLabel,
+              null,
+              'Email *'
+            ),
+            _react2.default.createElement(_reactBootstrap.FormControl, {
+              name: 'email',
+              type: 'email'
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              _reactBootstrap.ControlLabel,
+              null,
+              'Data de Nascimento*'
+            ),
+            _react2.default.createElement(_reactBootstrap.FormControl, {
+              name: 'date',
+              type: 'date'
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              _reactBootstrap.ControlLabel,
+              null,
+              'RG *'
+            ),
+            _react2.default.createElement(_reactBootstrap.FormControl, {
+              name: 'rg',
+              type: 'text'
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              _reactBootstrap.ControlLabel,
+              null,
+              'CPF *'
+            ),
+            _react2.default.createElement(_reactBootstrap.FormControl, {
+              name: 'cpf',
+              type: 'text'
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              _reactBootstrap.ControlLabel,
+              { 'col-md-3': true },
+              'Sexo *'
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              null,
+              _react2.default.createElement(
+                _reactBootstrap.Radio,
+                { inline: true, name: 'sexo' },
+                'Masculino'
+              ),
+              ' ',
+              _react2.default.createElement(
+                _reactBootstrap.Radio,
+                { inline: true, name: 'sexo' },
+                'Feminino'
+              ),
+              ' ',
+              _react2.default.createElement(
+                _reactBootstrap.Radio,
+                { inline: true, name: 'sexo' },
+                'N\xE3o declarado'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              _reactBootstrap.ControlLabel,
+              null,
+              'Nome da M\xE3e *'
+            ),
+            _react2.default.createElement(_reactBootstrap.FormControl, {
+              name: 'mae',
+              type: 'text'
+            }),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              null,
+              _react2.default.createElement(
+                _reactBootstrap.Radio,
+                { inline: true },
+                'N\xE3o declarado'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              _reactBootstrap.ControlLabel,
+              null,
+              'Nome do Pai *'
+            ),
+            _react2.default.createElement(_reactBootstrap.FormControl, {
+              name: 'pai',
+              type: 'text'
+            }),
+            _react2.default.createElement(
+              _reactBootstrap.Col,
+              null,
+              _react2.default.createElement(
+                _reactBootstrap.Radio,
+                { inline: true },
+                'N\xE3o declarado'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              _reactBootstrap.ControlLabel,
+              null,
+              'Telefone *'
+            ),
+            _react2.default.createElement(_reactBootstrap.FormControl, {
+              name: 'telefone',
+              type: 'text'
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              _reactBootstrap.ControlLabel,
+              null,
+              'Celular *'
+            ),
+            _react2.default.createElement(_reactBootstrap.FormControl, {
+              name: 'celular',
+              type: 'text'
+            })
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Button,
+            {
+              type: 'submit', className: 'btn btn-info',
+              onClick: function onClick(event) {
+                _history2.default.push('/vestibular/endereco');
+              }
+            },
+            'Pr\xF3ximo'
+          )
+        )
+      )
+    );
+  }
+  
+  DadosPessoais.contextTypes = { setTitle: _react.PropTypes.func.isRequired };
+  exports.default = DadosPessoais;
+  // export default reduxForm({
+  //   form: 'dadosPessoais',
+  //   validate,
+  // })(dadosPessoais);
+
+/***/ }),
+/* 214 */
+/***/ (function(module, exports, __webpack_require__) {
+
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  
+  var _react = __webpack_require__(11);
+  
+  var _react2 = _interopRequireDefault(_react);
+  
+  var _endereco = __webpack_require__(215);
+  
+  var _endereco2 = _interopRequireDefault(_endereco);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  exports.default = {
+    path: '/endereco',
+    action: function action() {
+      return _react2.default.createElement(_endereco2.default, null);
+    }
+  };
+
+/***/ }),
+/* 215 */
+/***/ (function(module, exports, __webpack_require__) {
+
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  
+  var _react = __webpack_require__(11);
+  
+  var _react2 = _interopRequireDefault(_react);
+  
+  var _reactBootstrap = __webpack_require__(38);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  // const validate = values => {
+  //   const errors = {};
+  //   if (!values.cep) {
+  //     errors.cep = 'CEP é necessário';
+  //   } else if (values.cep.lenght !== 8) {
+  //     errors.cep = 'CEP inválido';
+  //   }
+  //   return errors;
+  // };
+  
+  var title = 'Inscrição Vestibular - Bandtec';
+  
+  function Endereco(props, context) {
+    context.setTitle(title);
+    return _react2.default.createElement(
+      'div',
+      { className: 'col-md-4 col-md-offset-4' },
+      _react2.default.createElement(
+        'div',
+        { className: 'text-center' },
+        _react2.default.createElement(
+          'h1',
+          { className: 'login-brand-text' },
+          'Inscri\xE7\xE3o Vestibular'
+        )
+      ),
+      _react2.default.createElement(
+        _reactBootstrap.Panel,
+        { header: _react2.default.createElement(
+            'h3',
+            null,
+            'Endere\xE7o'
+          ) },
+        _react2.default.createElement(
+          'form',
+          { role: 'form' },
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              _reactBootstrap.ControlLabel,
+              null,
+              'Logradouro *'
+            ),
+            _react2.default.createElement(_reactBootstrap.FormControl, {
+              name: 'logradouro',
+              type: 'text'
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              _reactBootstrap.ControlLabel,
+              null,
+              'N\xFAmero *'
+            ),
+            _react2.default.createElement(_reactBootstrap.FormControl, {
+              name: 'numero',
+              type: 'text'
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              _reactBootstrap.ControlLabel,
+              null,
+              'Complemento'
+            ),
+            _react2.default.createElement(_reactBootstrap.FormControl, {
+              name: 'complemento',
+              type: 'text'
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              _reactBootstrap.ControlLabel,
+              null,
+              'Cidade*'
+            ),
+            _react2.default.createElement(_reactBootstrap.FormControl, {
+              name: 'complemento ',
+              type: 'text'
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              _reactBootstrap.ControlLabel,
+              null,
+              'Estado *'
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.FormGroup,
+              { controlId: 'formControlsEstado' },
+              _react2.default.createElement(
+                _reactBootstrap.FormControl,
+                { componentClass: 'select' },
+                _react2.default.createElement(
+                  'option',
+                  { value: 'AC' },
+                  'Acre'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'AL' },
+                  'Alagoas'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'AP' },
+                  'Amap\xE1'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'AM' },
+                  'Amazonas'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'BA' },
+                  'Bahia'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'CE' },
+                  'Cear\xE1'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'DF' },
+                  'Distrito Federal'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'ES' },
+                  'Esp\xEDrito Santo'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'GO' },
+                  'Goi\xE1s'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'MA' },
+                  'Maranh\xE3o'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'MT' },
+                  'Mato Grosso'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'MS' },
+                  'Mato Grosso do Sul'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'MG' },
+                  'Minas Gerais'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'PA' },
+                  'Par\xE1'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'PB' },
+                  'Para\xEDba'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'PR' },
+                  'Paran\xE1'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'PE' },
+                  'Pernambuco'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'PI' },
+                  'Piau\xED'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'RJ' },
+                  'Rio de Janeiro'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'RN' },
+                  'Rio Grande do Norte'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'RS' },
+                  'Rio Grande do Sul'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'RO' },
+                  'Rond\xF4nia'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'RR' },
+                  'Roraima'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'SC' },
+                  'Santa Catarina'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'SP' },
+                  'S\xE3o Paulo'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'SE' },
+                  'Sergipe'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'TO' },
+                  'Tocantins'
+                ),
+                _react2.default.createElement(
+                  'option',
+                  { value: 'ES' },
+                  'Estrangeiro'
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'form-group' },
+            _react2.default.createElement(
+              _reactBootstrap.ControlLabel,
+              null,
+              'CEP*'
+            ),
+            _react2.default.createElement(_reactBootstrap.FormControl, {
+              name: 'cep',
+              type: 'text'
+            })
+          ),
+          _react2.default.createElement(
+            _reactBootstrap.Button,
+            { type: 'submit', className: 'btn btn-info', href: '/vestibular/criarSenha' },
+            'Pr\xF3ximo'
+          )
+        )
+      )
+    );
+  }
+  
+  Endereco.contextTypes = { setTitle: _react.PropTypes.func.isRequired };
+  exports.default = Endereco;
+  
+  // export default reduxForm({
+  //   form: 'endereco',
+  //   validate,
+  // })(Endereco);
+
+/***/ }),
+/* 216 */
+/***/ (function(module, exports, __webpack_require__) {
+
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  
+  var _react = __webpack_require__(11);
+  
+  var _react2 = _interopRequireDefault(_react);
+  
+  var _criarSenha = __webpack_require__(217);
+  
+  var _criarSenha2 = _interopRequireDefault(_criarSenha);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  exports.default = {
+    path: '/criarSenha',
+    action: function action() {
+      return _react2.default.createElement(_criarSenha2.default, null);
+    }
+  };
+
+/***/ }),
+/* 217 */
+/***/ (function(module, exports, __webpack_require__) {
+
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  
+  var _react = __webpack_require__(11);
+  
+  var _react2 = _interopRequireDefault(_react);
+  
+  var _reactBootstrap = __webpack_require__(38);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  var title = 'Criar senha';
+  
+  function CriarSenha(props, context) {
+    context.setTitle(title);
+    return _react2.default.createElement(
+      'div',
+      { className: 'col-md-4 col-md-offset-4' },
+      _react2.default.createElement(
+        'div',
+        { className: 'text-center' },
+        _react2.default.createElement(
+          'h1',
+          { className: 'login-brand-text' },
+          'Inscri\xE7\xE3o Vestibular'
+        )
+      ),
+      _react2.default.createElement(
+        _reactBootstrap.Panel,
+        { header: _react2.default.createElement(
+            'h3',
+            null,
+            'Criar senha'
+          ) },
+        _react2.default.createElement(
+          'form',
+          { role: 'form' },
+          _react2.default.createElement(
+            'fieldset',
+            null,
+            _react2.default.createElement(
+              'div',
+              { className: 'form-group' },
+              _react2.default.createElement(_reactBootstrap.FormControl, {
+                className: 'form-control',
+                placeholder: 'Senha',
+                type: 'password',
+                name: 'password'
+              })
+            ),
+            _react2.default.createElement(
+              _reactBootstrap.Button,
+              { type: 'submit', className: 'btn btn-info', href: '/login' },
+              'Cadastrar'
+            )
+          )
+        )
+      )
+    );
+  }
+  
+  CriarSenha.contextTypes = { setTitle: _react.PropTypes.func.isRequired };
+  exports.default = CriarSenha;
 
 /***/ })
 /******/ ]);

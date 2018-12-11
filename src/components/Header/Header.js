@@ -21,7 +21,7 @@ import history from '../../core/history';
 import $ from "jquery";
 import Sidebar from '../Sidebar';
 
-const logo = require('./logo.png');
+const logo = require('./logo_bandtec_ds_azul.png');
 
 function Header() {
   return (
@@ -29,9 +29,8 @@ function Header() {
       <Navbar fluid={true}  style={ {margin: 0} }>
           <Brand>
             <span>
-              <img src={logo} alt="Start React" title="Start React" />
-              <span>&nbsp;SB Admin React - </span>
-                <a href="http://startreact.com/" title="Start React" rel="home">StartReact.com</a>
+            <img src={logo} alt="Bandtec" title="Bandtec" />
+                {/* <a href="http://startreact.com/" title="Start React" rel="home">StartReact.com</a> */}
                 <button type="button" className="navbar-toggle" onClick={() => {toggleMenu();}} style={{position: 'absolute', right: 0, top: 0}}>
                   <span className="sr-only">Toggle navigation</span>
                   <span className="icon-bar"></span>
@@ -42,7 +41,7 @@ function Header() {
           </Brand>
           <ul className="nav navbar-top-links navbar-right">
 
-              <NavDropdown bsClass="dropdown" title={<span><i className="fa fa-envelope fa-fw"></i></span>} id="navDropdown1">
+              {/* <NavDropdown bsClass="dropdown" title={<span><i className="fa fa-envelope fa-fw"></i></span>} id="navDropdown1">
                 <MenuItem style={ {width: 300} } eventKey="1">
                   <div> <strong>John Smith</strong> <span className="pull-right text-muted"> <em>Yesterday</em> </span> </div>
                   <div> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
@@ -61,9 +60,9 @@ function Header() {
                 <MenuItem eventKey="4" className="text-center">
                   <strong>Read All Messages</strong> <i className="fa fa-angle-right"></i>
                 </MenuItem>
-              </NavDropdown>
+              </NavDropdown> */}
 
-           <NavDropdown title={<span><i className="fa fa-tasks fa-fw"></i> </span>} id = 'navDropdown2222'>
+           {/* <NavDropdown title={<span><i className="fa fa-tasks fa-fw"></i> </span>} id = 'navDropdown2222'>
                   <MenuItem eventKey="1" style={ {width: 300} }>
                     <div>
                       <p> <strong>Task 1</strong> <span className="pull-right text-muted">40% Complete</span> </p>
@@ -103,9 +102,9 @@ function Header() {
                   <MenuItem eventKey="5">
                       <strong>See All Tasks</strong> <i className="fa fa-angle-right"></i>
                   </MenuItem>
-                </NavDropdown>
+                </NavDropdown> */}
 
-                   <NavDropdown title={<i className="fa fa-bell fa-fw"></i>} id = 'navDropdown3'>
+                   {/* <NavDropdown title={<i className="fa fa-bell fa-fw"></i>} id = 'navDropdown3'>
                   <MenuItem eventKey="1" style={ {width: 300} }>
                     <div> <i className="fa fa-comment fa-fw"></i> New Comment <span className="pull-right text-muted small">4 minutes ago</span> </div>
                   </MenuItem>
@@ -129,21 +128,10 @@ function Header() {
                   <MenuItem eventKey="6">
                     <strong>See All Alerts</strong> <i className="fa fa-angle-right"></i>
                   </MenuItem>
-                </NavDropdown>
+                </NavDropdown> */}
 
            <NavDropdown title={<i className="fa fa-user fa-fw"></i> } id = 'navDropdown4'>
-                  <MenuItem eventKey="1">
-                    <span> <i className="fa fa-user fa-fw"></i> User Profile </span>
-                  </MenuItem>
-                  <MenuItem eventKey="2">
-                    <span><i className="fa fa-gear fa-fw"></i> Settings </span>
-                  </MenuItem>
-                  <MenuItem divider />
-                  <MenuItem eventKey = "3" href = 'http://www.strapui.com' >
-                    <span> <i className = "fa fa-eye fa-fw" /> Premium React Themes </span>
-                  </MenuItem>
-                  <MenuItem divider />
-                  <MenuItem eventKey = "4" onClick = {(event) => { 
+                  <MenuItem eventKey = "1" onClick = {(event) => { 
                     localStorage.removeItem("userId");
                     localStorage.removeItem("userName");
                     localStorage.removeItem("userType");
