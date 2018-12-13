@@ -27,7 +27,7 @@ function Endereco(props, context) {
         <h1 className="login-brand-text">Inscrição Vestibular</h1>
       </div>
 
-      <Panel header={<h3>Endereço</h3>}>
+      <Panel className="panel-orange" header={<h3>Endereço</h3>}>
 
         <form role="form">
           <div className="form-group">
@@ -100,7 +100,7 @@ function Endereco(props, context) {
               type="text"
             />
           </div>
-          <Button type="submit" className="btn btn-info" href="/vestibular/criarSenha">
+          <Button type="submit" className="btn btn-cheetal" href="/vestibular/criarSenha">
                 Próximo
           </Button>
         </form>

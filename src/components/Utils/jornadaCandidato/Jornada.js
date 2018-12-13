@@ -43,6 +43,8 @@ class EtapaForm extends Component {
         .catch(error => console.log(error.response));
     }
 
+    
+
     render() {
         let close = () => this.setState({ showModal: false });
         let etapas = [];
@@ -55,15 +57,17 @@ class EtapaForm extends Component {
                 let calendario = null;
                 let icone = "fa fa-check";
                 let inverted = "";
-                let color = ""
+                let color = "";
+                let timeline = "";
                 if(arr.length - 1 === i && this.state.calendarioEtapaId !== isNullOrUndefined ) {
                     calendario=this.state.calendarioEtapaId;
                     icone = "fa fa-book";
                     color = " warning";
+                    timeline = "warning";
                 }
                 if (i % 2 === 1) { inverted="timeline-inverted"; }
                 
-                return <Etapa key={i} inverted={inverted} icone={icone} calendarioEtapaId={calendario} color={color} IdEtapa={i + 1} />;
+                return <Etapa key={i} inverted={inverted} icone={icone} calendarioEtapaId={calendario} color={color} IdEtapa={i + 1} timeline={timeline} />;
                 })
         }
 

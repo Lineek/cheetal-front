@@ -15,7 +15,7 @@ function CriarSenha(props, context) {
         <h1 className="login-brand-text">Inscrição Vestibular</h1>
       </div>
 
-      <Panel header={<h3>Criar senha</h3>}>
+      <Panel className="panel-orange" header={<h3>Criar senha</h3>}>
         <form role="form">
           <fieldset>
             <div className="form-group">
@@ -26,7 +26,15 @@ function CriarSenha(props, context) {
                 name="password"
               />
             </div>
-            <Button type="submit" className="btn btn-info" href="/login">
+            <div className="form-group">
+              <FormControl
+                className="form-control"
+                placeholder="Confirmar Senha"
+                type="password"
+                name="password"
+              />
+            </div>
+            <Button type="submit" className="btn btn-cheetal" href="/login">
                 Cadastrar
           </Button>
           </fieldset>

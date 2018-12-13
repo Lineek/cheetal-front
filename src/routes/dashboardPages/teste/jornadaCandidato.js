@@ -7,9 +7,11 @@ import {
   import Navbar, {Brand} from 'react-bootstrap/lib/Navbar';
 import Jornada from '../../../components/Utils/jornadaCandidato/Jornada';
 import history from '../../../core/history';
+// import image from '../../../components/Header'
 
 
-  const title = 'Jornada do Candidato';
+const title = 'Jornada do Candidato';
+const image = require('../../../components/Header/icon.png');
 
 function displayJornadaCandidato(props, context) {
   context.setTitle(title);
@@ -32,15 +34,18 @@ function displayJornadaCandidato(props, context) {
                     localStorage.removeItem("userName");
                     localStorage.removeItem("userType");
                     history.push('/');}}>
-                    <span> <i className = "fa fa-sign-out fa-fw" /> Logout </span>
+                    <span> <i className="fa fa-sign-out fa-fw" /> Logout </span>
                 </MenuItem>
             </NavDropdown>
             </ul>
             </Navbar>
         </div>
-      <div className="row" style={{paddingLeft:-10}}>
+      <div className="row" >
             <div className="col-lg-12 row-margin">
-                <PageHeader>Olá {localStorage.getItem("userName")}, Bem vindo a sua Jornada!</PageHeader>
+            <div className="img-box">
+                <img src={image} alt={localStorage.getItem("userName")} />
+            </div>
+                <PageHeader>Olá {localStorage.getItem("userName")}, bem vindo!</PageHeader>
             </div>
       </div>
         <Jornada />

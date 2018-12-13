@@ -18,13 +18,13 @@ function Publico(props, context) {
         <h1 className="login-brand-text">Inscrição Vestibular</h1>
       </div>
 
-      <Panel header={<h3>Como conheceu o projeto Geração Futura?</h3>}>
+      <Panel className="panel-orange" header={<h3>Como conheceu o projeto Geração Futura?</h3>}>
         <form role="form">
           <fieldset>
             <div className="form-group">
               {origem}
             </div>
-            <Button type="submit" className="btn btn-info" href="/vestibular/DadosPessoais">
+            <Button type="submit" className="btn btn-cheetal" href="/vestibular/DadosPessoais">
                   Próximo
             </Button>
           </fieldset>  

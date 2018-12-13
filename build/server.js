@@ -116,7 +116,7 @@ module.exports =
   
   var _routes2 = _interopRequireDefault(_routes);
   
-  var _assets = __webpack_require__(214);
+  var _assets = __webpack_require__(215);
   
   var _assets2 = _interopRequireDefault(_assets);
   
@@ -919,83 +919,83 @@ module.exports =
   
   var _login2 = _interopRequireDefault(_login);
   
-  var _tables = __webpack_require__(155);
+  var _tables = __webpack_require__(156);
   
   var _tables2 = _interopRequireDefault(_tables);
   
-  var _buttons = __webpack_require__(160);
+  var _buttons = __webpack_require__(161);
   
   var _buttons2 = _interopRequireDefault(_buttons);
   
-  var _flotCharts = __webpack_require__(162);
+  var _flotCharts = __webpack_require__(163);
   
   var _flotCharts2 = _interopRequireDefault(_flotCharts);
   
-  var _forms = __webpack_require__(164);
+  var _forms = __webpack_require__(165);
   
   var _forms2 = _interopRequireDefault(_forms);
   
-  var _grid = __webpack_require__(169);
+  var _grid = __webpack_require__(170);
   
   var _grid2 = _interopRequireDefault(_grid);
   
-  var _icons = __webpack_require__(171);
+  var _icons = __webpack_require__(172);
   
   var _icons2 = _interopRequireDefault(_icons);
   
-  var _morrisjsCharts = __webpack_require__(173);
+  var _morrisjsCharts = __webpack_require__(174);
   
   var _morrisjsCharts2 = _interopRequireDefault(_morrisjsCharts);
   
-  var _notification = __webpack_require__(175);
+  var _notification = __webpack_require__(176);
   
   var _notification2 = _interopRequireDefault(_notification);
   
-  var _panelWells = __webpack_require__(182);
+  var _panelWells = __webpack_require__(183);
   
   var _panelWells2 = _interopRequireDefault(_panelWells);
   
-  var _typography = __webpack_require__(184);
+  var _typography = __webpack_require__(185);
   
   var _typography2 = _interopRequireDefault(_typography);
   
-  var _blank = __webpack_require__(186);
+  var _blank = __webpack_require__(187);
   
   var _blank2 = _interopRequireDefault(_blank);
   
-  var _processoSeletivo = __webpack_require__(188);
+  var _processoSeletivo = __webpack_require__(189);
   
   var _processoSeletivo2 = _interopRequireDefault(_processoSeletivo);
   
-  var _edit = __webpack_require__(191);
+  var _edit = __webpack_require__(192);
   
   var _edit2 = _interopRequireDefault(_edit);
   
-  var _create = __webpack_require__(193);
+  var _create = __webpack_require__(194);
   
   var _create2 = _interopRequireDefault(_create);
   
-  var _teste = __webpack_require__(195);
+  var _teste = __webpack_require__(196);
   
   var _teste2 = _interopRequireDefault(_teste);
   
-  var _publico = __webpack_require__(205);
+  var _publico = __webpack_require__(206);
   
   var _publico2 = _interopRequireDefault(_publico);
   
-  var _dadosPessoais = __webpack_require__(207);
+  var _dadosPessoais = __webpack_require__(208);
   
   var _dadosPessoais2 = _interopRequireDefault(_dadosPessoais);
   
-  var _endereco = __webpack_require__(209);
+  var _endereco = __webpack_require__(210);
   
   var _endereco2 = _interopRequireDefault(_endereco);
   
-  var _criarSenha = __webpack_require__(211);
+  var _criarSenha = __webpack_require__(212);
   
   var _criarSenha2 = _interopRequireDefault(_criarSenha);
   
-  var _error = __webpack_require__(213);
+  var _error = __webpack_require__(214);
   
   var _error2 = _interopRequireDefault(_error);
   
@@ -19815,7 +19815,7 @@ module.exports =
       value: function render() {
         var _this3 = this;
   
-        var logo = __webpack_require__(215);
+        var logo = __webpack_require__(155);
         return _react2.default.createElement(
           'div',
           { className: 'col-md-4 col-md-offset-4' },
@@ -19981,6 +19981,12 @@ module.exports =
 /* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
+  module.exports = __webpack_require__.p + "components/Header/Cheetal-Logo3.png?72e89121cf74607d2a4b871e5d3ebf69";
+
+/***/ }),
+/* 156 */
+/***/ (function(module, exports, __webpack_require__) {
+
   'use strict';
   
   Object.defineProperty(exports, "__esModule", {
@@ -19991,7 +19997,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _Table = __webpack_require__(156);
+  var _Table = __webpack_require__(157);
   
   var _Table2 = _interopRequireDefault(_Table);
   
@@ -20007,7 +20013,7 @@ module.exports =
   };
 
 /***/ }),
-/* 156 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -20028,15 +20034,15 @@ module.exports =
   
   var _Panel2 = _interopRequireDefault(_Panel);
   
-  var _Pagination = __webpack_require__(157);
+  var _Pagination = __webpack_require__(158);
   
   var _Pagination2 = _interopRequireDefault(_Pagination);
   
-  var _PageHeader = __webpack_require__(158);
+  var _PageHeader = __webpack_require__(159);
   
   var _PageHeader2 = _interopRequireDefault(_PageHeader);
   
-  var _Well = __webpack_require__(159);
+  var _Well = __webpack_require__(160);
   
   var _Well2 = _interopRequireDefault(_Well);
   
@@ -21383,25 +21389,25 @@ module.exports =
   exports.default = displayTable;
 
 /***/ }),
-/* 157 */
+/* 158 */
 /***/ (function(module, exports) {
 
   module.exports = require("react-bootstrap/lib/Pagination");
 
 /***/ }),
-/* 158 */
+/* 159 */
 /***/ (function(module, exports) {
 
   module.exports = require("react-bootstrap/lib/PageHeader");
 
 /***/ }),
-/* 159 */
+/* 160 */
 /***/ (function(module, exports) {
 
   module.exports = require("react-bootstrap/lib/Well");
 
 /***/ }),
-/* 160 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -21414,7 +21420,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _Button = __webpack_require__(161);
+  var _Button = __webpack_require__(162);
   
   var _Button2 = _interopRequireDefault(_Button);
   
@@ -21430,7 +21436,7 @@ module.exports =
   };
 
 /***/ }),
-/* 161 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -21451,7 +21457,7 @@ module.exports =
   
   var _Panel2 = _interopRequireDefault(_Panel);
   
-  var _PageHeader = __webpack_require__(158);
+  var _PageHeader = __webpack_require__(159);
   
   var _PageHeader2 = _interopRequireDefault(_PageHeader);
   
@@ -21990,7 +21996,7 @@ module.exports =
   exports.default = displayButtons;
 
 /***/ }),
-/* 162 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -22003,7 +22009,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _FlotCharts = __webpack_require__(163);
+  var _FlotCharts = __webpack_require__(164);
   
   var _FlotCharts2 = _interopRequireDefault(_FlotCharts);
   
@@ -22019,7 +22025,7 @@ module.exports =
   };
 
 /***/ }),
-/* 163 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -22040,7 +22046,7 @@ module.exports =
   
   var _Panel2 = _interopRequireDefault(_Panel);
   
-  var _PageHeader = __webpack_require__(158);
+  var _PageHeader = __webpack_require__(159);
   
   var _PageHeader2 = _interopRequireDefault(_PageHeader);
   
@@ -22259,7 +22265,7 @@ module.exports =
   exports.default = displayFlotCharts;
 
 /***/ }),
-/* 164 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -22272,7 +22278,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _forms = __webpack_require__(165);
+  var _forms = __webpack_require__(166);
   
   var _forms2 = _interopRequireDefault(_forms);
   
@@ -22288,7 +22294,7 @@ module.exports =
   };
 
 /***/ }),
-/* 165 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -22303,15 +22309,15 @@ module.exports =
   
   var _reactBootstrap = __webpack_require__(38);
   
-  var _FormControlFeedback = __webpack_require__(166);
+  var _FormControlFeedback = __webpack_require__(167);
   
   var _FormControlFeedback2 = _interopRequireDefault(_FormControlFeedback);
   
-  var _FormControlStatic = __webpack_require__(167);
+  var _FormControlStatic = __webpack_require__(168);
   
   var _FormControlStatic2 = _interopRequireDefault(_FormControlStatic);
   
-  var _InputGroupAddon = __webpack_require__(168);
+  var _InputGroupAddon = __webpack_require__(169);
   
   var _InputGroupAddon2 = _interopRequireDefault(_InputGroupAddon);
   
@@ -22797,25 +22803,25 @@ module.exports =
   exports.default = displayForms;
 
 /***/ }),
-/* 166 */
+/* 167 */
 /***/ (function(module, exports) {
 
   module.exports = require("react-bootstrap/lib/FormControlFeedback");
 
 /***/ }),
-/* 167 */
+/* 168 */
 /***/ (function(module, exports) {
 
   module.exports = require("react-bootstrap/lib/FormControlStatic");
 
 /***/ }),
-/* 168 */
+/* 169 */
 /***/ (function(module, exports) {
 
   module.exports = require("react-bootstrap/lib/InputGroupAddon");
 
 /***/ }),
-/* 169 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -22828,7 +22834,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _Grid = __webpack_require__(170);
+  var _Grid = __webpack_require__(171);
   
   var _Grid2 = _interopRequireDefault(_Grid);
   
@@ -22844,7 +22850,7 @@ module.exports =
   };
 
 /***/ }),
-/* 170 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -22861,7 +22867,7 @@ module.exports =
   
   var _Panel2 = _interopRequireDefault(_Panel);
   
-  var _PageHeader = __webpack_require__(158);
+  var _PageHeader = __webpack_require__(159);
   
   var _PageHeader2 = _interopRequireDefault(_PageHeader);
   
@@ -23732,7 +23738,7 @@ module.exports =
   exports.default = displayGrid;
 
 /***/ }),
-/* 171 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -23745,7 +23751,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _Icons = __webpack_require__(172);
+  var _Icons = __webpack_require__(173);
   
   var _Icons2 = _interopRequireDefault(_Icons);
   
@@ -23761,7 +23767,7 @@ module.exports =
   };
 
 /***/ }),
-/* 172 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -23778,7 +23784,7 @@ module.exports =
   
   var _Panel2 = _interopRequireDefault(_Panel);
   
-  var _PageHeader = __webpack_require__(158);
+  var _PageHeader = __webpack_require__(159);
   
   var _PageHeader2 = _interopRequireDefault(_PageHeader);
   
@@ -26860,7 +26866,7 @@ module.exports =
   exports.default = displayIcons;
 
 /***/ }),
-/* 173 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -26873,7 +26879,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _MorrisjsCharts = __webpack_require__(174);
+  var _MorrisjsCharts = __webpack_require__(175);
   
   var _MorrisjsCharts2 = _interopRequireDefault(_MorrisjsCharts);
   
@@ -26889,7 +26895,7 @@ module.exports =
   };
 
 /***/ }),
-/* 174 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -26910,7 +26916,7 @@ module.exports =
   
   var _Panel2 = _interopRequireDefault(_Panel);
   
-  var _PageHeader = __webpack_require__(158);
+  var _PageHeader = __webpack_require__(159);
   
   var _PageHeader2 = _interopRequireDefault(_PageHeader);
   
@@ -27100,7 +27106,7 @@ module.exports =
   exports.default = displayMorrisjsCharts;
 
 /***/ }),
-/* 175 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -27113,7 +27119,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _Notification = __webpack_require__(176);
+  var _Notification = __webpack_require__(177);
   
   var _Notification2 = _interopRequireDefault(_Notification);
   
@@ -27129,7 +27135,7 @@ module.exports =
   };
 
 /***/ }),
-/* 176 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -27166,7 +27172,7 @@ module.exports =
   
   var _Panel2 = _interopRequireDefault(_Panel);
   
-  var _Alert = __webpack_require__(177);
+  var _Alert = __webpack_require__(178);
   
   var _Alert2 = _interopRequireDefault(_Alert);
   
@@ -27174,23 +27180,23 @@ module.exports =
   
   var _Button2 = _interopRequireDefault(_Button);
   
-  var _OverlayTrigger = __webpack_require__(178);
+  var _OverlayTrigger = __webpack_require__(179);
   
   var _OverlayTrigger2 = _interopRequireDefault(_OverlayTrigger);
   
-  var _Tooltip = __webpack_require__(179);
+  var _Tooltip = __webpack_require__(180);
   
   var _Tooltip2 = _interopRequireDefault(_Tooltip);
   
-  var _Popover = __webpack_require__(180);
+  var _Popover = __webpack_require__(181);
   
   var _Popover2 = _interopRequireDefault(_Popover);
   
-  var _Modal = __webpack_require__(181);
+  var _Modal = __webpack_require__(182);
   
   var _Modal2 = _interopRequireDefault(_Modal);
   
-  var _PageHeader = __webpack_require__(158);
+  var _PageHeader = __webpack_require__(159);
   
   var _PageHeader2 = _interopRequireDefault(_PageHeader);
   
@@ -27689,37 +27695,37 @@ module.exports =
   exports.default = Notification;
 
 /***/ }),
-/* 177 */
+/* 178 */
 /***/ (function(module, exports) {
 
   module.exports = require("react-bootstrap/lib/Alert");
 
 /***/ }),
-/* 178 */
+/* 179 */
 /***/ (function(module, exports) {
 
   module.exports = require("react-bootstrap/lib/OverlayTrigger");
 
 /***/ }),
-/* 179 */
+/* 180 */
 /***/ (function(module, exports) {
 
   module.exports = require("react-bootstrap/lib/Tooltip");
 
 /***/ }),
-/* 180 */
+/* 181 */
 /***/ (function(module, exports) {
 
   module.exports = require("react-bootstrap/lib/Popover");
 
 /***/ }),
-/* 181 */
+/* 182 */
 /***/ (function(module, exports) {
 
   module.exports = require("react-bootstrap/lib/Modal");
 
 /***/ }),
-/* 182 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -27732,7 +27738,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _PanelWells = __webpack_require__(183);
+  var _PanelWells = __webpack_require__(184);
   
   var _PanelWells2 = _interopRequireDefault(_PanelWells);
   
@@ -27748,7 +27754,7 @@ module.exports =
   };
 
 /***/ }),
-/* 183 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -28343,7 +28349,7 @@ module.exports =
   exports.default = displayPanelWells;
 
 /***/ }),
-/* 184 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -28356,7 +28362,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _Typography = __webpack_require__(185);
+  var _Typography = __webpack_require__(186);
   
   var _Typography2 = _interopRequireDefault(_Typography);
   
@@ -28372,7 +28378,7 @@ module.exports =
   };
 
 /***/ }),
-/* 185 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -28389,7 +28395,7 @@ module.exports =
   
   var _Panel2 = _interopRequireDefault(_Panel);
   
-  var _PageHeader = __webpack_require__(158);
+  var _PageHeader = __webpack_require__(159);
   
   var _PageHeader2 = _interopRequireDefault(_PageHeader);
   
@@ -28987,7 +28993,7 @@ module.exports =
   exports.default = displayTypography;
 
 /***/ }),
-/* 186 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -29000,7 +29006,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _blank = __webpack_require__(187);
+  var _blank = __webpack_require__(188);
   
   var _blank2 = _interopRequireDefault(_blank);
   
@@ -29015,7 +29021,7 @@ module.exports =
   };
 
 /***/ }),
-/* 187 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -29059,7 +29065,7 @@ module.exports =
   exports.default = displayBlank;
 
 /***/ }),
-/* 188 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -29072,7 +29078,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _home = __webpack_require__(189);
+  var _home = __webpack_require__(190);
   
   var _home2 = _interopRequireDefault(_home);
   
@@ -29088,7 +29094,7 @@ module.exports =
   };
 
 /***/ }),
-/* 189 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -29103,7 +29109,7 @@ module.exports =
   
   var _reactBootstrap = __webpack_require__(38);
   
-  var _ProcessoSeletivoForm = __webpack_require__(190);
+  var _ProcessoSeletivoForm = __webpack_require__(191);
   
   var _ProcessoSeletivoForm2 = _interopRequireDefault(_ProcessoSeletivoForm);
   
@@ -29168,7 +29174,7 @@ module.exports =
   exports.default = displayProcessoSeletivo;
 
 /***/ }),
-/* 190 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -29366,7 +29372,7 @@ module.exports =
   exports.default = ProcessoSeletivoForm;
 
 /***/ }),
-/* 191 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -29379,7 +29385,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _edit = __webpack_require__(192);
+  var _edit = __webpack_require__(193);
   
   var _edit2 = _interopRequireDefault(_edit);
   
@@ -29395,7 +29401,7 @@ module.exports =
   };
 
 /***/ }),
-/* 192 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -29657,7 +29663,7 @@ module.exports =
   exports.default = ProcessoSeletivoEdit;
 
 /***/ }),
-/* 193 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -29670,7 +29676,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _create = __webpack_require__(194);
+  var _create = __webpack_require__(195);
   
   var _create2 = _interopRequireDefault(_create);
   
@@ -29686,7 +29692,7 @@ module.exports =
   };
 
 /***/ }),
-/* 194 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -29912,7 +29918,7 @@ module.exports =
   exports.default = ProcessoSeletivoEdit;
 
 /***/ }),
-/* 195 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -29925,11 +29931,11 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _comoConheceu = __webpack_require__(196);
+  var _comoConheceu = __webpack_require__(197);
   
   var _comoConheceu2 = _interopRequireDefault(_comoConheceu);
   
-  var _jornadaCandidato = __webpack_require__(199);
+  var _jornadaCandidato = __webpack_require__(200);
   
   var _jornadaCandidato2 = _interopRequireDefault(_jornadaCandidato);
   
@@ -29945,7 +29951,7 @@ module.exports =
   };
 
 /***/ }),
-/* 196 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -29960,11 +29966,11 @@ module.exports =
   
   var _reactBootstrap = __webpack_require__(38);
   
-  var _OrigemForm = __webpack_require__(197);
+  var _OrigemForm = __webpack_require__(198);
   
   var _OrigemForm2 = _interopRequireDefault(_OrigemForm);
   
-  var _EtapaForm = __webpack_require__(198);
+  var _EtapaForm = __webpack_require__(199);
   
   var _EtapaForm2 = _interopRequireDefault(_EtapaForm);
   
@@ -30016,7 +30022,7 @@ module.exports =
   exports.default = ComoConheceu;
 
 /***/ }),
-/* 197 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -30120,7 +30126,7 @@ module.exports =
   exports.default = OrigemForm;
 
 /***/ }),
-/* 198 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -30224,7 +30230,7 @@ module.exports =
   exports.default = EtapaForm;
 
 /***/ }),
-/* 199 */
+/* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -30243,7 +30249,7 @@ module.exports =
   
   var _Navbar2 = _interopRequireDefault(_Navbar);
   
-  var _Jornada = __webpack_require__(200);
+  var _Jornada = __webpack_require__(201);
   
   var _Jornada2 = _interopRequireDefault(_Jornada);
   
@@ -30253,7 +30259,11 @@ module.exports =
   
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
   
+  // import image from '../../../components/Header'
+  
+  
   var title = 'Jornada do Candidato';
+  var image = __webpack_require__(205);
   
   function displayJornadaCandidato(props, context) {
       context.setTitle(title);
@@ -30302,16 +30312,21 @@ module.exports =
           ),
           _react2.default.createElement(
               'div',
-              { className: 'row', style: { paddingLeft: -10 } },
+              { className: 'row' },
               _react2.default.createElement(
                   'div',
                   { className: 'col-lg-12 row-margin' },
+                  _react2.default.createElement(
+                      'div',
+                      { className: 'img-box' },
+                      _react2.default.createElement('img', { src: image, alt: localStorage.getItem("userName") })
+                  ),
                   _react2.default.createElement(
                       _reactBootstrap.PageHeader,
                       null,
                       'Ol\xE1 ',
                       localStorage.getItem("userName"),
-                      ', Bem vindo a sua Jornada!'
+                      ', bem vindo!'
                   )
               )
           ),
@@ -30323,7 +30338,7 @@ module.exports =
   exports.default = displayJornadaCandidato;
 
 /***/ }),
-/* 200 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -30362,7 +30377,7 @@ module.exports =
   
   var _axios2 = _interopRequireDefault(_axios);
   
-  var _Etapa = __webpack_require__(201);
+  var _Etapa = __webpack_require__(202);
   
   var _Etapa2 = _interopRequireDefault(_Etapa);
   
@@ -30436,16 +30451,18 @@ module.exports =
                       var icone = "fa fa-check";
                       var inverted = "";
                       var color = "";
+                      var timeline = "";
                       if (arr.length - 1 === i && _this3.state.calendarioEtapaId !== _util.isNullOrUndefined) {
                           calendario = _this3.state.calendarioEtapaId;
                           icone = "fa fa-book";
                           color = " warning";
+                          timeline = "warning";
                       }
                       if (i % 2 === 1) {
                           inverted = "timeline-inverted";
                       }
   
-                      return _react2.default.createElement(_Etapa2.default, { key: i, inverted: inverted, icone: icone, calendarioEtapaId: calendario, color: color, IdEtapa: i + 1 });
+                      return _react2.default.createElement(_Etapa2.default, { key: i, inverted: inverted, icone: icone, calendarioEtapaId: calendario, color: color, IdEtapa: i + 1, timeline: timeline });
                   });
               }
   
@@ -30477,7 +30494,7 @@ module.exports =
   exports.default = EtapaForm;
 
 /***/ }),
-/* 201 */
+/* 202 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -30510,15 +30527,9 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _reactBootstrap = __webpack_require__(38);
-  
   var _axios = __webpack_require__(154);
   
   var _axios2 = _interopRequireDefault(_axios);
-  
-  var _propTypes = __webpack_require__(202);
-  
-  var _propTypes2 = _interopRequireDefault(_propTypes);
   
   var _util = __webpack_require__(203);
   
@@ -30545,11 +30556,8 @@ module.exports =
       }
   
       (0, _createClass3.default)(EtapaForm, [{
-          key: 'handleClick',
-          value: function handleClick(e) {}
-      }, {
-          key: 'render',
-          value: function render() {
+          key: 'componentDidMount',
+          value: function componentDidMount() {
               var _this2 = this;
   
               var IdEtapa = this.props.IdEtapa;
@@ -30582,6 +30590,10 @@ module.exports =
                       return console.log(error.response);
                   });
               }
+          }
+      }, {
+          key: 'render',
+          value: function render() {
   
               return _react2.default.createElement(
                   'li',
@@ -30593,7 +30605,7 @@ module.exports =
                   ),
                   _react2.default.createElement(
                       'div',
-                      { className: 'timeline-panel' },
+                      { className: "timeline-panel" + this.props.timeline },
                       _react2.default.createElement(
                           'div',
                           { className: 'timeline-heading' },
@@ -30642,12 +30654,6 @@ module.exports =
   exports.default = EtapaForm;
 
 /***/ }),
-/* 202 */
-/***/ (function(module, exports) {
-
-  module.exports = require("prop-types");
-
-/***/ }),
 /* 203 */
 /***/ (function(module, exports) {
 
@@ -30689,7 +30695,7 @@ module.exports =
   
   var _reactBootstrap = __webpack_require__(38);
   
-  var _Modal = __webpack_require__(181);
+  var _Modal = __webpack_require__(182);
   
   var _Modal2 = _interopRequireDefault(_Modal);
   
@@ -30778,29 +30784,7 @@ module.exports =
 /* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
-  'use strict';
-  
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  
-  var _react = __webpack_require__(11);
-  
-  var _react2 = _interopRequireDefault(_react);
-  
-  var _publico = __webpack_require__(206);
-  
-  var _publico2 = _interopRequireDefault(_publico);
-  
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-  
-  // import ProcessoSeletivo from '../processoSeletivo/'
-  exports.default = {
-    path: '/inscricao-vestibular',
-    action: function action() {
-      return _react2.default.createElement(_publico2.default, null);
-    }
-  };
+  module.exports = __webpack_require__.p + "components/Header/icon.png?d89580c222d7e2e7b13905a9aa4ba247";
 
 /***/ }),
 /* 206 */
@@ -30816,9 +30800,37 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
+  var _publico = __webpack_require__(207);
+  
+  var _publico2 = _interopRequireDefault(_publico);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  // import ProcessoSeletivo from '../processoSeletivo/'
+  exports.default = {
+    path: '/inscricao-vestibular',
+    action: function action() {
+      return _react2.default.createElement(_publico2.default, null);
+    }
+  };
+
+/***/ }),
+/* 207 */
+/***/ (function(module, exports, __webpack_require__) {
+
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  
+  var _react = __webpack_require__(11);
+  
+  var _react2 = _interopRequireDefault(_react);
+  
   var _reactBootstrap = __webpack_require__(38);
   
-  var _OrigemForm = __webpack_require__(197);
+  var _OrigemForm = __webpack_require__(198);
   
   var _OrigemForm2 = _interopRequireDefault(_OrigemForm);
   
@@ -30843,7 +30855,7 @@ module.exports =
       ),
       _react2.default.createElement(
         _reactBootstrap.Panel,
-        { header: _react2.default.createElement(
+        { className: 'panel-orange', header: _react2.default.createElement(
             'h3',
             null,
             'Como conheceu o projeto Gera\xE7\xE3o Futura?'
@@ -30861,7 +30873,7 @@ module.exports =
             ),
             _react2.default.createElement(
               _reactBootstrap.Button,
-              { type: 'submit', className: 'btn btn-info', href: '/vestibular/DadosPessoais' },
+              { type: 'submit', className: 'btn btn-cheetal', href: '/vestibular/DadosPessoais' },
               'Pr\xF3ximo'
             )
           )
@@ -30874,7 +30886,7 @@ module.exports =
   exports.default = Publico;
 
 /***/ }),
-/* 207 */
+/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -30887,7 +30899,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _dadosPessoais = __webpack_require__(208);
+  var _dadosPessoais = __webpack_require__(209);
   
   var _dadosPessoais2 = _interopRequireDefault(_dadosPessoais);
   
@@ -30901,7 +30913,7 @@ module.exports =
   };
 
 /***/ }),
-/* 208 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -30963,7 +30975,7 @@ module.exports =
       ),
       _react2.default.createElement(
         _reactBootstrap.Panel,
-        { header: _react2.default.createElement(
+        { className: 'panel-orange', header: _react2.default.createElement(
             'h3',
             null,
             'Dados Pessoais'
@@ -31139,7 +31151,7 @@ module.exports =
           _react2.default.createElement(
             _reactBootstrap.Button,
             {
-              type: 'submit', className: 'btn btn-info',
+              type: 'submit', className: 'btn btn-cheetal',
               onClick: function onClick(event) {
                 _history2.default.push('/vestibular/endereco');
               }
@@ -31159,7 +31171,7 @@ module.exports =
   // })(dadosPessoais);
 
 /***/ }),
-/* 209 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -31172,7 +31184,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _endereco = __webpack_require__(210);
+  var _endereco = __webpack_require__(211);
   
   var _endereco2 = _interopRequireDefault(_endereco);
   
@@ -31186,7 +31198,7 @@ module.exports =
   };
 
 /***/ }),
-/* 210 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -31231,7 +31243,7 @@ module.exports =
       ),
       _react2.default.createElement(
         _reactBootstrap.Panel,
-        { header: _react2.default.createElement(
+        { className: 'panel-orange', header: _react2.default.createElement(
             'h3',
             null,
             'Endere\xE7o'
@@ -31463,7 +31475,7 @@ module.exports =
           ),
           _react2.default.createElement(
             _reactBootstrap.Button,
-            { type: 'submit', className: 'btn btn-info', href: '/vestibular/criarSenha' },
+            { type: 'submit', className: 'btn btn-cheetal', href: '/vestibular/criarSenha' },
             'Pr\xF3ximo'
           )
         )
@@ -31480,7 +31492,7 @@ module.exports =
   // })(Endereco);
 
 /***/ }),
-/* 211 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -31493,7 +31505,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _criarSenha = __webpack_require__(212);
+  var _criarSenha = __webpack_require__(213);
   
   var _criarSenha2 = _interopRequireDefault(_criarSenha);
   
@@ -31507,7 +31519,7 @@ module.exports =
   };
 
 /***/ }),
-/* 212 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -31542,7 +31554,7 @@ module.exports =
       ),
       _react2.default.createElement(
         _reactBootstrap.Panel,
-        { header: _react2.default.createElement(
+        { className: 'panel-orange', header: _react2.default.createElement(
             'h3',
             null,
             'Criar senha'
@@ -31564,8 +31576,18 @@ module.exports =
               })
             ),
             _react2.default.createElement(
+              'div',
+              { className: 'form-group' },
+              _react2.default.createElement(_reactBootstrap.FormControl, {
+                className: 'form-control',
+                placeholder: 'Confirmar Senha',
+                type: 'password',
+                name: 'password'
+              })
+            ),
+            _react2.default.createElement(
               _reactBootstrap.Button,
-              { type: 'submit', className: 'btn btn-info', href: '/login' },
+              { type: 'submit', className: 'btn btn-cheetal', href: '/login' },
               'Cadastrar'
             )
           )
@@ -31578,7 +31600,7 @@ module.exports =
   exports.default = CriarSenha;
 
 /***/ }),
-/* 213 */
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -31627,16 +31649,10 @@ module.exports =
       */
 
 /***/ }),
-/* 214 */
+/* 215 */
 /***/ (function(module, exports) {
 
   module.exports = require("./assets");
-
-/***/ }),
-/* 215 */
-/***/ (function(module, exports, __webpack_require__) {
-
-  module.exports = __webpack_require__.p + "components/Header/Cheetal-Logo3.png?72e89121cf74607d2a4b871e5d3ebf69";
 
 /***/ })
 /******/ ]);

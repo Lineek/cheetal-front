@@ -1,11 +1,5 @@
 import React, { Component } from 'react';
-import {
-  FormControl,
-  FormGroup,
-  ControlLabel
-   } from 'react-bootstrap';
 import axios from 'axios';
-import PropTypes from 'prop-types'
 import { isNullOrUndefined } from 'util';
 
 class EtapaForm extends Component {
@@ -22,11 +16,7 @@ class EtapaForm extends Component {
       this.theurl='https://jcapi-225112.appspot.com/'
     }
 
-    handleClick(e) {
-        
-    }
-
-    render() {
+    componentDidMount() {
         const IdEtapa = this.props.IdEtapa;
         if (IdEtapa !== null) {
             axios
@@ -60,11 +50,14 @@ class EtapaForm extends Component {
             )
             .catch(error => console.log(error.response));
         }
+    }
+
+    render() {
 
         return (
           <li className={this.props.inverted}>
             <div className={"timeline-badge" + this.props.color}><i className={this.props.icone} /></div>
-            <div className="timeline-panel">
+            <div className={"timeline-panel" + this.props.timeline}>
               <div className="timeline-heading">
                 <h4 className="timeline-title">{this.state.schemas.descricao}</h4>
               </div>

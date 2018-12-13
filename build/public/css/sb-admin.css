@@ -4,7 +4,7 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-body {
+ body {
     background-color: #f8f8f8;
 }
 
@@ -469,8 +469,8 @@ table.dataTable thead .sorting:after {
     padding: 20px;
     border: 1px solid #d4d4d4;
     border-radius: 2px;
-    -webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.175);
-    box-shadow: 0 1px 6px rgba(0,0,0,0.175);
+    -webkit-box-shadow: 0 1px 6px rgba(244,138,32,0.175);
+    box-shadow: 0 1px 6px rgba(244,138,32,0.175);
 }
 
 .timeline > li > .timeline-panel:before {
@@ -486,6 +486,42 @@ table.dataTable thead .sorting:after {
 }
 
 .timeline > li > .timeline-panel:after {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 27px;
+    right: -14px;
+    border-top: 14px solid transparent;
+    border-right: 0 solid #fff;
+    border-bottom: 14px solid transparent;
+    border-left: 14px solid #fff;
+}
+
+
+.timeline > li > .timeline-panelwarning {
+    float: left;
+    position: relative;
+    width: 46%;
+    padding: 20px;
+    border: 1px solid #d4d4d4;
+    border-radius: 2px;
+    -webkit-box-shadow: 10px 10px 10px rgba(244,138,32,0.175);
+    box-shadow: 10px 10px 10px rgba(244,138,32,0.175);
+}
+
+.timeline > li > .timeline-panelwarning:before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 26px;
+    right: -15px;
+    border-top: 15px solid transparent;
+    border-right: 0 solid #ccc;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #ccc;
+}
+
+.timeline > li > .timeline-panelwarning:after {
     content: " ";
     display: inline-block;
     position: absolute;
@@ -531,6 +567,24 @@ table.dataTable thead .sorting:after {
     border-left-width: 0;
 }
 
+.timeline > li.timeline-inverted > .timeline-panelwarning {
+    float: right;
+}
+
+.timeline > li.timeline-inverted > .timeline-panelwarning:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.timeline > li.timeline-inverted > .timeline-panelwarning:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
 .timeline-badge.primary {
     background-color: #2e6da4 !important;
 }
@@ -564,6 +618,25 @@ table.dataTable thead .sorting:after {
 .timeline-body > p + p {
     margin-top: 5px;
 }
+
+.img-box {
+    position: relative;
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.img-box img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+  }
 
 @media(max-width:767px) {
     ul.timeline:before {

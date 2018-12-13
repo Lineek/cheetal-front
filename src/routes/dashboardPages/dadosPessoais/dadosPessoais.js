@@ -40,7 +40,7 @@ function DadosPessoais(props, context) {
         <h1 className="login-brand-text">Inscrição Vestibular</h1>
       </div>
 
-      <Panel header={<h3>Dados Pessoais</h3>}>
+      <Panel className="panel-orange" header={<h3>Dados Pessoais</h3>}>
         <form role="form">
           <div className="form-group">
             <ControlLabel>Nome Completo *</ControlLabel>
@@ -132,7 +132,7 @@ function DadosPessoais(props, context) {
             />
           </div>
           <Button
-            type="submit" className="btn btn-info"
+            type="submit" className="btn btn-cheetal"
             onClick={(event) => { history.push('/vestibular/endereco'); }}
           >Próximo</Button>
         </form>

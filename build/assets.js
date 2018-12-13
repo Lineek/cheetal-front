@@ -1,1 +1,1 @@
-module.exports = {"main":{"js":"/assets/main.js?9c28d7f7c73f171fa5ff"},"":{"png":["/assets/components/Header/logo_bandtec_ds_azul.png?57540bce96441ca6daca25a9e75a1aa4","/assets/components/Header/Cheetal-Logo3.png?72e89121cf74607d2a4b871e5d3ebf69"]}};
+module.exports = {"main":{"js":"/assets/main.js?ab1b427051b030478933"},"":{"png":["/assets/components/Header/Cheetal-Logo3.png?72e89121cf74607d2a4b871e5d3ebf69","/assets/components/Header/icon.png?d89580c222d7e2e7b13905a9aa4ba247","/assets/components/Header/logo_bandtec_ds_azul.png?57540bce96441ca6daca25a9e75a1aa4"]}};
