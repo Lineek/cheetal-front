@@ -75,21 +75,20 @@ class Login extends Component {
   }
 
   render() {
-    const logo = require('../../components/Header/logo_bandtec_ds_azul.png');
+    const logo = require('../../components/Header/Cheetal-Logo3.png');
     return (
         <div className="col-md-4 col-md-offset-4">
           <div className="hidden-sm-down">
             <div style={{'visibility':'hidden'}}>
-              <Panel header={<h3></h3>} className="login-panel" />
+              <Panel className="login-panel" />
             </ div>
             <div className="text-center">
-              <img src={logo} alt="Bandtec" title="Bandtec" />
+              <img className="img-responsive" src={logo} alt="Bandtec" title="Bandtec" />
             </div>
           </div>
-        <Panel header={<h3>Por favor, entre com sua conta</h3>} className="login-panel">
+        <Panel header={<h3>Por favor, entre com sua conta</h3>} className="panel-orange login-panel">
           <div id='errorPanel' style={{'display':'none'}}>
-              <Panel header={<span>Email ou senha inválido</span>} className="panel-danger">
-              </Panel>
+              <Panel header={<span>Email ou senha inválido</span>} className="panel-warning" />
           </div>
           <form role="form" disabled={this.state.submit} onSubmit={(e) => { this.handleSubmit(e); }}>
             <fieldset>
@@ -114,7 +113,7 @@ class Login extends Component {
                   name="password"
                 />
               </FormGroup>
-              <Button type="submit" disabled={!this.validateForm()} bsSize="large" bsStyle="success" block>Entrar</Button>
+              <Button type="submit" bsSize="large" className="btn-cheetal" block>Entrar</Button>
             </fieldset>
           </form>
 

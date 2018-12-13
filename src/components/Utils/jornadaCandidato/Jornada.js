@@ -68,7 +68,7 @@ class EtapaForm extends Component {
         }
 
         return (
-                <Panel header={<span><i className="fa fa-clock-o fa-fw" /> Jornada de {localStorage.getItem('userName')}</span>}>
+                <Panel className="row-margin panel-orange2" header={<span><i className="fa fa-clock-o fa-fw" /> Jornada de {localStorage.getItem('userName')}</span>}>
                     <div>
                         <ul className="timeline">
                             {etapas}

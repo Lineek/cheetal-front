@@ -38,8 +38,8 @@ function displayJornadaCandidato(props, context) {
             </ul>
             </Navbar>
         </div>
-      <div className="row">
-            <div className="col-lg-12">
+      <div className="row" style={{paddingLeft:-10}}>
+            <div className="col-lg-12 row-margin">
                 <PageHeader>Olá {localStorage.getItem("userName")}, Bem vindo a sua Jornada!</PageHeader>
             </div>
       </div>

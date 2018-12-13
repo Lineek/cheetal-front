@@ -116,7 +116,7 @@ module.exports =
   
   var _routes2 = _interopRequireDefault(_routes);
   
-  var _assets = __webpack_require__(208);
+  var _assets = __webpack_require__(214);
   
   var _assets2 = _interopRequireDefault(_assets);
   
@@ -971,31 +971,31 @@ module.exports =
   
   var _edit2 = _interopRequireDefault(_edit);
   
-  var _create = __webpack_require__(195);
+  var _create = __webpack_require__(193);
   
   var _create2 = _interopRequireDefault(_create);
   
-  var _teste = __webpack_require__(197);
+  var _teste = __webpack_require__(195);
   
   var _teste2 = _interopRequireDefault(_teste);
   
-  var _publico = __webpack_require__(210);
+  var _publico = __webpack_require__(205);
   
   var _publico2 = _interopRequireDefault(_publico);
   
-  var _dadosPessoais = __webpack_require__(212);
+  var _dadosPessoais = __webpack_require__(207);
   
   var _dadosPessoais2 = _interopRequireDefault(_dadosPessoais);
   
-  var _endereco = __webpack_require__(214);
+  var _endereco = __webpack_require__(209);
   
   var _endereco2 = _interopRequireDefault(_endereco);
   
-  var _criarSenha = __webpack_require__(216);
+  var _criarSenha = __webpack_require__(211);
   
   var _criarSenha2 = _interopRequireDefault(_criarSenha);
   
-  var _error = __webpack_require__(207);
+  var _error = __webpack_require__(213);
   
   var _error2 = _interopRequireDefault(_error);
   
@@ -1491,7 +1491,7 @@ module.exports =
   
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
   
-  var logo = __webpack_require__(209); /**
+  var logo = __webpack_require__(47); /**
                                                      * React Starter Kit (https://www.reactstarterkit.com/)
                                                      *
                                                      * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.
@@ -1761,7 +1761,12 @@ module.exports =
   module.exports = require("classnames");
 
 /***/ }),
-/* 47 */,
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+  module.exports = __webpack_require__.p + "components/Header/logo_bandtec_ds_azul.png?57540bce96441ca6daca25a9e75a1aa4";
+
+/***/ }),
 /* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19810,7 +19815,7 @@ module.exports =
       value: function render() {
         var _this3 = this;
   
-        var logo = __webpack_require__(209);
+        var logo = __webpack_require__(215);
         return _react2.default.createElement(
           'div',
           { className: 'col-md-4 col-md-offset-4' },
@@ -19820,12 +19825,12 @@ module.exports =
             _react2.default.createElement(
               'div',
               { style: { 'visibility': 'hidden' } },
-              _react2.default.createElement(_Panel2.default, { header: _react2.default.createElement('h3', null), className: 'login-panel' })
+              _react2.default.createElement(_Panel2.default, { className: 'login-panel' })
             ),
             _react2.default.createElement(
               'div',
               { className: 'text-center' },
-              _react2.default.createElement('img', { src: logo, alt: 'Bandtec', title: 'Bandtec' })
+              _react2.default.createElement('img', { className: 'img-responsive', src: logo, alt: 'Bandtec', title: 'Bandtec' })
             )
           ),
           _react2.default.createElement(
@@ -19834,7 +19839,7 @@ module.exports =
                 'h3',
                 null,
                 'Por favor, entre com sua conta'
-              ), className: 'login-panel' },
+              ), className: 'panel-orange login-panel' },
             _react2.default.createElement(
               'div',
               { id: 'errorPanel', style: { 'display': 'none' } },
@@ -19842,7 +19847,7 @@ module.exports =
                   'span',
                   null,
                   'Email ou senha inv\xE1lido'
-                ), className: 'panel-danger' })
+                ), className: 'panel-warning' })
             ),
             _react2.default.createElement(
               'form',
@@ -19878,7 +19883,7 @@ module.exports =
                 ),
                 _react2.default.createElement(
                   _Button2.default,
-                  { type: 'submit', disabled: !this.validateForm(), bsSize: 'large', bsStyle: 'success', block: true },
+                  { type: 'submit', bsSize: 'large', className: 'btn-cheetal', block: true },
                   'Entrar'
                 )
               )
@@ -29652,9 +29657,7 @@ module.exports =
   exports.default = ProcessoSeletivoEdit;
 
 /***/ }),
-/* 193 */,
-/* 194 */,
-/* 195 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -29667,7 +29670,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _create = __webpack_require__(196);
+  var _create = __webpack_require__(194);
   
   var _create2 = _interopRequireDefault(_create);
   
@@ -29683,7 +29686,7 @@ module.exports =
   };
 
 /***/ }),
-/* 196 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -29909,7 +29912,7 @@ module.exports =
   exports.default = ProcessoSeletivoEdit;
 
 /***/ }),
-/* 197 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -29922,11 +29925,11 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _comoConheceu = __webpack_require__(198);
+  var _comoConheceu = __webpack_require__(196);
   
   var _comoConheceu2 = _interopRequireDefault(_comoConheceu);
   
-  var _jornadaCandidato = __webpack_require__(201);
+  var _jornadaCandidato = __webpack_require__(199);
   
   var _jornadaCandidato2 = _interopRequireDefault(_jornadaCandidato);
   
@@ -29942,7 +29945,7 @@ module.exports =
   };
 
 /***/ }),
-/* 198 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -29957,11 +29960,11 @@ module.exports =
   
   var _reactBootstrap = __webpack_require__(38);
   
-  var _OrigemForm = __webpack_require__(199);
+  var _OrigemForm = __webpack_require__(197);
   
   var _OrigemForm2 = _interopRequireDefault(_OrigemForm);
   
-  var _EtapaForm = __webpack_require__(200);
+  var _EtapaForm = __webpack_require__(198);
   
   var _EtapaForm2 = _interopRequireDefault(_EtapaForm);
   
@@ -30013,7 +30016,7 @@ module.exports =
   exports.default = ComoConheceu;
 
 /***/ }),
-/* 199 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -30117,7 +30120,7 @@ module.exports =
   exports.default = OrigemForm;
 
 /***/ }),
-/* 200 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -30221,7 +30224,7 @@ module.exports =
   exports.default = EtapaForm;
 
 /***/ }),
-/* 201 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -30240,7 +30243,7 @@ module.exports =
   
   var _Navbar2 = _interopRequireDefault(_Navbar);
   
-  var _Jornada = __webpack_require__(202);
+  var _Jornada = __webpack_require__(200);
   
   var _Jornada2 = _interopRequireDefault(_Jornada);
   
@@ -30299,10 +30302,10 @@ module.exports =
           ),
           _react2.default.createElement(
               'div',
-              { className: 'row' },
+              { className: 'row', style: { paddingLeft: -10 } },
               _react2.default.createElement(
                   'div',
-                  { className: 'col-lg-12' },
+                  { className: 'col-lg-12 row-margin' },
                   _react2.default.createElement(
                       _reactBootstrap.PageHeader,
                       null,
@@ -30320,7 +30323,7 @@ module.exports =
   exports.default = displayJornadaCandidato;
 
 /***/ }),
-/* 202 */
+/* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -30359,15 +30362,15 @@ module.exports =
   
   var _axios2 = _interopRequireDefault(_axios);
   
-  var _Etapa = __webpack_require__(203);
+  var _Etapa = __webpack_require__(201);
   
   var _Etapa2 = _interopRequireDefault(_Etapa);
   
-  var _Modal = __webpack_require__(206);
+  var _Modal = __webpack_require__(204);
   
   var _Modal2 = _interopRequireDefault(_Modal);
   
-  var _util = __webpack_require__(205);
+  var _util = __webpack_require__(203);
   
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
   
@@ -30448,7 +30451,7 @@ module.exports =
   
               return _react2.default.createElement(
                   _reactBootstrap.Panel,
-                  { header: _react2.default.createElement(
+                  { className: 'row-margin panel-orange2', header: _react2.default.createElement(
                           'span',
                           null,
                           _react2.default.createElement('i', { className: 'fa fa-clock-o fa-fw' }),
@@ -30474,7 +30477,7 @@ module.exports =
   exports.default = EtapaForm;
 
 /***/ }),
-/* 203 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -30513,11 +30516,11 @@ module.exports =
   
   var _axios2 = _interopRequireDefault(_axios);
   
-  var _propTypes = __webpack_require__(204);
+  var _propTypes = __webpack_require__(202);
   
   var _propTypes2 = _interopRequireDefault(_propTypes);
   
-  var _util = __webpack_require__(205);
+  var _util = __webpack_require__(203);
   
   function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
   
@@ -30639,19 +30642,19 @@ module.exports =
   exports.default = EtapaForm;
 
 /***/ }),
-/* 204 */
+/* 202 */
 /***/ (function(module, exports) {
 
   module.exports = require("prop-types");
 
 /***/ }),
-/* 205 */
+/* 203 */
 /***/ (function(module, exports) {
 
   module.exports = require("util");
 
 /***/ }),
-/* 206 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -30772,7 +30775,7 @@ module.exports =
   exports.default = ModalMudancaEtapa;
 
 /***/ }),
-/* 207 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -30785,68 +30788,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _App = __webpack_require__(28);
-  
-  var _App2 = _interopRequireDefault(_App);
-  
-  var _ErrorPage = __webpack_require__(17);
-  
-  var _ErrorPage2 = _interopRequireDefault(_ErrorPage);
-  
-  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-  
-  exports.default = {
-  
-    path: '/error',
-  
-    action: function action(_ref) {
-      var render = _ref.render,
-          context = _ref.context,
-          error = _ref.error;
-  
-      // console.log('error obj inside error index.js', error);
-      return render(_react2.default.createElement(
-        _App2.default,
-        { context: context, error: error },
-        _react2.default.createElement(_ErrorPage2.default, { error: error })
-      ), error.status || 500);
-    }
-  }; /**
-      * React Starter Kit (https://www.reactstarterkit.com/)
-      *
-      * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.
-      *
-      * This source code is licensed under the MIT license found in the
-      * LICENSE.txt file in the root directory of this source tree.
-      */
-
-/***/ }),
-/* 208 */
-/***/ (function(module, exports) {
-
-  module.exports = require("./assets");
-
-/***/ }),
-/* 209 */
-/***/ (function(module, exports, __webpack_require__) {
-
-  module.exports = __webpack_require__.p + "components/Header/logo_bandtec_ds_azul.png?57540bce96441ca6daca25a9e75a1aa4";
-
-/***/ }),
-/* 210 */
-/***/ (function(module, exports, __webpack_require__) {
-
-  'use strict';
-  
-  Object.defineProperty(exports, "__esModule", {
-    value: true
-  });
-  
-  var _react = __webpack_require__(11);
-  
-  var _react2 = _interopRequireDefault(_react);
-  
-  var _publico = __webpack_require__(211);
+  var _publico = __webpack_require__(206);
   
   var _publico2 = _interopRequireDefault(_publico);
   
@@ -30861,7 +30803,7 @@ module.exports =
   };
 
 /***/ }),
-/* 211 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -30876,7 +30818,7 @@ module.exports =
   
   var _reactBootstrap = __webpack_require__(38);
   
-  var _OrigemForm = __webpack_require__(199);
+  var _OrigemForm = __webpack_require__(197);
   
   var _OrigemForm2 = _interopRequireDefault(_OrigemForm);
   
@@ -30932,7 +30874,7 @@ module.exports =
   exports.default = Publico;
 
 /***/ }),
-/* 212 */
+/* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -30945,7 +30887,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _dadosPessoais = __webpack_require__(213);
+  var _dadosPessoais = __webpack_require__(208);
   
   var _dadosPessoais2 = _interopRequireDefault(_dadosPessoais);
   
@@ -30959,7 +30901,7 @@ module.exports =
   };
 
 /***/ }),
-/* 213 */
+/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -31217,7 +31159,7 @@ module.exports =
   // })(dadosPessoais);
 
 /***/ }),
-/* 214 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -31230,7 +31172,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _endereco = __webpack_require__(215);
+  var _endereco = __webpack_require__(210);
   
   var _endereco2 = _interopRequireDefault(_endereco);
   
@@ -31244,7 +31186,7 @@ module.exports =
   };
 
 /***/ }),
-/* 215 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -31538,7 +31480,7 @@ module.exports =
   // })(Endereco);
 
 /***/ }),
-/* 216 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -31551,7 +31493,7 @@ module.exports =
   
   var _react2 = _interopRequireDefault(_react);
   
-  var _criarSenha = __webpack_require__(217);
+  var _criarSenha = __webpack_require__(212);
   
   var _criarSenha2 = _interopRequireDefault(_criarSenha);
   
@@ -31565,7 +31507,7 @@ module.exports =
   };
 
 /***/ }),
-/* 217 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
   'use strict';
@@ -31634,6 +31576,67 @@ module.exports =
   
   CriarSenha.contextTypes = { setTitle: _react.PropTypes.func.isRequired };
   exports.default = CriarSenha;
+
+/***/ }),
+/* 213 */
+/***/ (function(module, exports, __webpack_require__) {
+
+  'use strict';
+  
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  
+  var _react = __webpack_require__(11);
+  
+  var _react2 = _interopRequireDefault(_react);
+  
+  var _App = __webpack_require__(28);
+  
+  var _App2 = _interopRequireDefault(_App);
+  
+  var _ErrorPage = __webpack_require__(17);
+  
+  var _ErrorPage2 = _interopRequireDefault(_ErrorPage);
+  
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  
+  exports.default = {
+  
+    path: '/error',
+  
+    action: function action(_ref) {
+      var render = _ref.render,
+          context = _ref.context,
+          error = _ref.error;
+  
+      // console.log('error obj inside error index.js', error);
+      return render(_react2.default.createElement(
+        _App2.default,
+        { context: context, error: error },
+        _react2.default.createElement(_ErrorPage2.default, { error: error })
+      ), error.status || 500);
+    }
+  }; /**
+      * React Starter Kit (https://www.reactstarterkit.com/)
+      *
+      * Copyright © 2014-2016 Kriasoft, LLC. All rights reserved.
+      *
+      * This source code is licensed under the MIT license found in the
+      * LICENSE.txt file in the root directory of this source tree.
+      */
+
+/***/ }),
+/* 214 */
+/***/ (function(module, exports) {
+
+  module.exports = require("./assets");
+
+/***/ }),
+/* 215 */
+/***/ (function(module, exports, __webpack_require__) {
+
+  module.exports = __webpack_require__.p + "components/Header/Cheetal-Logo3.png?72e89121cf74607d2a4b871e5d3ebf69";
 
 /***/ })
 /******/ ]);

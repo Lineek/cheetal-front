@@ -355,6 +355,50 @@ table.dataTable thead .sorting:after {
     background-color: #f0ad4e;
 }
 
+.panel-orange {
+    border-color: #2b2b2b;
+}
+
+.panel-orange .panel-heading {
+    border-color: #2b2b2b;
+    color: #fff;
+    background-color: #f48a20;
+}
+
+.panel-orange2 {
+    border-color: #f48a20;
+}
+
+.panel-orange2 .panel-heading {
+    border-color: #f48a20;
+    color: #fff;
+    background-color: #ffaf4d
+}
+
+.row-margin {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.panel-warning {
+    background-color: #ffffff;
+}
+
+.btn-cheetal {
+    background-color: #f48a20;
+    color: #ffffff;
+}
+
+.btn-cheetal:hover {
+    background-color: #ffAA00;
+    color: #ffffff;
+}
+
+.btn-cheetal:disabled .btn-cheetal:hover {
+    background-color: #ffAA00;
+    color: #ffffff;
+}
+
 .panel-yellow a {
     color: #f0ad4e;
 }
@@ -371,6 +415,9 @@ table.dataTable thead .sorting:after {
     display:none;
 }
 
+.form-control {
+    border-color: #2b2b2b;
+}
 
 /*Timeline*/
 .timeline {
